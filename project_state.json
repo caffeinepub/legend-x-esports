@@ -1,13 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 35,
+  "projectStateVersion": 37,
   "summary": "Building an esports app named Legend X Esports, inspired by a Google Sites page shared by the user.",
   "architectural_notes": [],
   "known_issues": [
     "Logo was not updated/changed as expected by the user."
   ],
   "isFixRequest": false,
-  "imageRequirements": "## Edit Images\n- Resize/crop to 512×512 for profile avatar use (quality_restoration_20260128182709920-4.jpg > profile-avatar.dim_512x512.png)\n- Resize/crop to 192×192 for PWA icon use (quality_restoration_20260128182709920-4.jpg > pwa-icon.dim_192x192.png)\n- Resize/crop to 512×512 for PWA icon use (quality_restoration_20260128182709920-4.jpg > pwa-icon.dim_512x512.png)",
   "existing_features": [
     {
       "id": "feature-build-a-public-facing-esports-organization-landing-page-for-legend-x-esports-with-the-following-sections-hero-team-name-tagline-call-to-action-about-us-our-team-roster-player-cards-with-name-and-role-news-announcements-and-a-contact-social-links-footer",
@@ -198,6 +197,14 @@
       "title": "Audit all frontend components (Navbar, AboutSection, RosterSection, PlayerCard, Footer, NewsSection, AnnouncementCard, PWAInstallBanner, LandingPage) and ensure every location that displays a profile image, player avatar, or logo uses /assets/generated/profile-avatar.dim_512x512.png. The hero background image (hero-bg.dim_1920x1080.png) must NOT be changed.",
       "reqIds": [
         "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-herosection-component-locate-the-stat-element-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-3-div-3-div-1-and-update-its-text-content-to-display-2026",
+      "title": "In the HeroSection component, locate the stat element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[3]/div[3]/div[1] and update its text content to display '2026'.",
+      "reqIds": [
+        "REQ-28"
       ],
       "version": 1
     }

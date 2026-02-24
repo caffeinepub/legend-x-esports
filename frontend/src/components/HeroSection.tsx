@@ -79,7 +79,7 @@ export default function HeroSection() {
           {[
             { value: '5+', label: 'Active Players' },
             { value: '3+', label: 'Tournaments' },
-            { value: '2024', label: 'Founded' },
+            { value: '2026', label: 'Founded' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-display text-3xl sm:text-4xl text-esports-red">{stat.value}</div>

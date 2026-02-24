@@ -2,64 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-save-the-newly-uploaded-gaming-artwork-image-quality-restoration-20260128182709920-4-jpg-a-masked-figure-in-a-white-turtleneck-with-a-gucci-cap-neon-red-halo-red-diamond-youtube-play-button-and-dark-esports-background-as-the-new-profile-avatar-static-asset-at-frontend-public-assets-generated-profile-avatar-dim-512x512-png-replacing-the-existing-file",
-      "featureTitle": "Save the newly uploaded gaming artwork image (quality_restoration_20260128182709920-4.jpg — a masked figure in a white turtleneck with a Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background) as the new profile avatar static asset at frontend/public/assets/generated/profile-avatar.dim_512x512.png, replacing the existing file.",
-      "files": [],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-24"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-generate-a-192-192-px-variant-of-the-newly-uploaded-image-quality-restoration-20260128182709920-4-jpg-and-save-it-as-frontend-public-assets-generated-pwa-icon-dim-192x192-png-replacing-the-existing-pwa-icon-at-that-size",
-      "featureTitle": "Generate a 192×192 px variant of the newly uploaded image (quality_restoration_20260128182709920-4.jpg) and save it as frontend/public/assets/generated/pwa-icon.dim_192x192.png, replacing the existing PWA icon at that size.",
-      "files": [],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-25"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-generate-a-512-512-px-variant-of-the-newly-uploaded-image-quality-restoration-20260128182709920-4-jpg-and-save-it-as-frontend-public-assets-generated-pwa-icon-dim-512x512-png-replacing-the-existing-pwa-icon-at-that-size",
-      "featureTitle": "Generate a 512×512 px variant of the newly uploaded image (quality_restoration_20260128182709920-4.jpg) and save it as frontend/public/assets/generated/pwa-icon.dim_512x512.png, replacing the existing PWA icon at that size.",
-      "files": [],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-26"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-audit-all-frontend-components-navbar-aboutsection-rostersection-playercard-footer-newssection-announcementcard-pwainstallbanner-landingpage-and-ensure-every-location-that-displays-a-profile-image-player-avatar-or-logo-uses-assets-generated-profile-avatar-dim-512x512-png-the-hero-background-image-hero-bg-dim-1920x1080-png-must-not-be-changed",
-      "featureTitle": "Audit all frontend components (Navbar, AboutSection, RosterSection, PlayerCard, Footer, NewsSection, AnnouncementCard, PWAInstallBanner, LandingPage) and ensure every location that displays a profile image, player avatar, or logo uses /assets/generated/profile-avatar.dim_512x512.png. The hero background image (hero-bg.dim_1920x1080.png) must NOT be changed.",
+      "featureId": "feature-in-the-herosection-component-locate-the-stat-element-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-3-div-3-div-1-and-update-its-text-content-to-display-2026",
+      "featureTitle": "In the HeroSection component, locate the stat element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[3]/div[3]/div[1] and update its text content to display '2026'.",
       "files": [
-        "frontend/src/components/AboutSection.tsx",
-        "frontend/src/components/Footer.tsx",
-        "frontend/src/components/Navbar.tsx",
-        "frontend/src/components/PlayerCard.tsx"
+        "frontend/src/components/HeroSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -70,7 +16,7 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-27"
+        "REQ-28"
       ],
       "confidence": "high"
     }

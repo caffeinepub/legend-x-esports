@@ -1,83 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace profile avatar with new uploaded image and use it everywhere (logos, player cards, PWA icons — not hero background)",
+  "title": "Update year to 2026 in HeroSection stats",
   "requirements": [
     {
-      "id": "REQ-24",
-      "summary": "Replace the existing profile-avatar.dim_512x512.png with the newly uploaded gaming artwork image at 512×512 px resolution",
+      "id": "REQ-28",
+      "summary": "Update the founding year stat in HeroSection from its current value to '2026'",
       "acceptanceCriteria": [
-        "The file frontend/public/assets/generated/profile-avatar.dim_512x512.png is replaced with the new uploaded image (quality_restoration_20260128182709920-4.jpg).",
-        "The image is saved at exactly 512×512 px resolution."
+        "The stat element identified by the given XPath in the HeroSection displays '2026'.",
+        "All other stat elements and content in the HeroSection remain unchanged.",
+        "The dark overlay and all text content remain fully readable on top of the hero background."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/profile-avatar.dim_512x512.png",
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Replace the existing profile avatar static asset with the newly uploaded gaming artwork image (quality_restoration_20260128182709920-4.jpg) resized to exactly 512×512 px. The image shows a masked figure in a white turtleneck with a Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background."
-        }
-      ]
-    },
-    {
-      "id": "REQ-25",
-      "summary": "Generate and save a 192×192 px PWA icon variant from the newly uploaded image",
-      "acceptanceCriteria": [
-        "frontend/public/assets/generated/pwa-icon.dim_192x192.png is replaced with the new image cropped/resized to 192×192 px."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/pwa-icon.dim_192x192.png",
-          "operation": "modify",
-          "description": "Replace the existing PWA icon with a 192×192 px variant of the newly uploaded gaming artwork image (quality_restoration_20260128182709920-4.jpg). Crop/resize to maintain the focal point (masked figure with Gucci cap and neon halo) centered in the square format."
-        }
-      ]
-    },
-    {
-      "id": "REQ-26",
-      "summary": "Generate and save a 512×512 px PWA icon variant from the newly uploaded image",
-      "acceptanceCriteria": [
-        "frontend/public/assets/generated/pwa-icon.dim_512x512.png is replaced with the new image cropped/resized to 512×512 px."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/pwa-icon.dim_512x512.png",
-          "operation": "modify",
-          "description": "Replace the existing PWA icon with a 512×512 px variant of the newly uploaded gaming artwork image (quality_restoration_20260128182709920-4.jpg). Crop/resize to maintain the focal point (masked figure with Gucci cap and neon halo) centered in the square format."
-        }
-      ]
-    },
-    {
-      "id": "REQ-27",
-      "summary": "Audit and update all frontend components to use the new profile-avatar.dim_512x512.png image for logos, player avatars, and profile images, while preserving the hero background",
-      "acceptanceCriteria": [
-        "The Navbar logo/avatar displays the new profile-avatar.dim_512x512.png image.",
-        "The AboutSection brand profile image displays the new profile-avatar.dim_512x512.png image.",
-        "All PlayerCard components use /assets/generated/profile-avatar.dim_512x512.png as the fallback or default avatar.",
-        "The Footer brand logo/avatar image uses /assets/generated/profile-avatar.dim_512x512.png.",
-        "No component references any old placeholder, 'neez3z', or third-party avatar URL.",
-        "The hero background image (hero-bg.dim_1920x1080.png) remains unchanged.",
-        "The PWA home screen icon (pwa-icon files) is updated to the new image but the hero background is untouched."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Navbar.tsx",
-          "operation": "modify",
-          "description": "Update the Navbar component to display the new profile avatar image. Change the logo/avatar image source from the current placeholder to /assets/generated/profile-avatar.dim_512x512.png. Ensure the image is properly sized and maintains the dark theme styling with glows and effects."
-        },
-        {
-          "path": "frontend/src/components/AboutSection.tsx",
-          "operation": "modify",
-          "description": "Update the AboutSection component to use the new profile avatar for the team's brand profile image. Replace the current clipped profile image panel source with /assets/generated/profile-avatar.dim_512x512.png. Maintain the existing diagonal clip-path styling and aspect ratio."
-        },
-        {
-          "path": "frontend/src/components/PlayerCard.tsx",
-          "operation": "modify",
-          "description": "Update the PlayerCard component to use /assets/generated/profile-avatar.dim_512x512.png as the default fallback avatar. Replace the current fallback avatar path (player-avatar-default.dim_256x256.png or any placeholder) with the new profile avatar. Ensure the onError handler sets the correct fallback image path."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Update the Footer component to display the new profile avatar as the brand logo/avatar. Change the footer logo image source to /assets/generated/profile-avatar.dim_512x512.png. Maintain the existing styling and dimensions for consistent branding across the footer section."
+          "description": "Locate the stat element that displays the founding year (currently at the third stat position in the stats grid) and update its text content to display '2026'. Preserve all other stats (players count, tournaments count) and maintain the existing styling, dark overlay, and hero background configuration."
         }
       ]
     }
