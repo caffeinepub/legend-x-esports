@@ -1,41 +1,98 @@
 {
   "kind": "build_request",
-  "title": "Replace app background with uploaded yellow-red polygonal artwork",
+  "title": "Replace profile avatar with new uploaded image and use it everywhere (logos, player cards, PWA icons — not hero background)",
   "projectName": "Legend X Esports",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-19",
-      "text": "Save the uploaded yellow-to-red polygonal low-poly geometric artwork image (quality_restoration_20260224213607352.jpg) as the new hero background static asset at frontend/public/assets/generated/hero-bg.dim_1920x1080.png, replacing the existing file. Update the HeroSection component to use this new image as its full-screen background, maintaining the existing dark overlay so all text and CTA elements remain fully readable on top.",
+      "id": "REQ-24",
+      "text": "Save the newly uploaded gaming artwork image (quality_restoration_20260128182709920-4.jpg — a masked figure in a white turtleneck with a Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background) as the new profile avatar static asset at frontend/public/assets/generated/profile-avatar.dim_512x512.png, replacing the existing file.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-3"
         ],
         "quotes": [
-          "Ye AAP background per Laga den"
+          "Is pic ko app Ka har jagha Jahan pics lagi hen wahan Laga do"
         ]
       },
       "acceptanceCriteria": [
-        "The uploaded yellow-red polygonal image is saved at frontend/public/assets/generated/hero-bg.dim_1920x1080.png, replacing the previous hero background file.",
-        "The HeroSection component displays the new polygonal artwork as its full-screen background image.",
-        "A dark overlay is applied on top of the background image so that all hero text, tagline, and CTA buttons remain clearly readable.",
-        "No other sections or components are affected by this background change."
+        "The file frontend/public/assets/generated/profile-avatar.dim_512x512.png is replaced with the new uploaded image (quality_restoration_20260128182709920-4.jpg).",
+        "The image is saved at exactly 512×512 px resolution."
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "text": "Generate a 192×192 px variant of the newly uploaded image (quality_restoration_20260128182709920-4.jpg) and save it as frontend/public/assets/generated/pwa-icon.dim_192x192.png, replacing the existing PWA icon at that size.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "app open karte waqat app download hone ke Baad us Ka icon"
+        ]
+      },
+      "acceptanceCriteria": [
+        "frontend/public/assets/generated/pwa-icon.dim_192x192.png is replaced with the new image cropped/resized to 192×192 px."
+      ]
+    },
+    {
+      "id": "REQ-26",
+      "text": "Generate a 512×512 px variant of the newly uploaded image (quality_restoration_20260128182709920-4.jpg) and save it as frontend/public/assets/generated/pwa-icon.dim_512x512.png, replacing the existing PWA icon at that size.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "app open karte waqat app download hone ke Baad us Ka icon"
+        ]
+      },
+      "acceptanceCriteria": [
+        "frontend/public/assets/generated/pwa-icon.dim_512x512.png is replaced with the new image cropped/resized to 512×512 px."
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "text": "Audit all frontend components (Navbar, AboutSection, RosterSection, PlayerCard, Footer, NewsSection, AnnouncementCard, PWAInstallBanner, LandingPage) and ensure every location that displays a profile image, player avatar, or logo uses /assets/generated/profile-avatar.dim_512x512.png. The hero background image (hero-bg.dim_1920x1080.png) must NOT be changed.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Jahan Jahan profiles hen wahan wahan ye pic Laga do",
+          "Sirf background ko chor kar Baki Jahan Jahan logo hen wahan wahan ye pic Laga do"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Navbar logo/avatar displays the new profile-avatar.dim_512x512.png image.",
+        "The AboutSection brand profile image displays the new profile-avatar.dim_512x512.png image.",
+        "All PlayerCard components use /assets/generated/profile-avatar.dim_512x512.png as the fallback or default avatar.",
+        "The Footer brand logo/avatar image uses /assets/generated/profile-avatar.dim_512x512.png.",
+        "No component references any old placeholder, 'neez3z', or third-party avatar URL.",
+        "The hero background image (hero-bg.dim_1920x1080.png) remains unchanged.",
+        "The PWA home screen icon (pwa-icon files) is updated to the new image but the hero background is untouched."
       ]
     }
   ],
   "constraints": [
-    "Do not remove or modify the dark overlay on the HeroSection — text readability must be preserved."
+    "Do not change the hero background image (frontend/public/assets/generated/hero-bg.dim_1920x1080.png).",
+    "Do not modify any file listed in frontend.immutablePaths.",
+    "Do not modify the backend."
   ],
   "nonGoals": [
-    "Changing any other section backgrounds.",
-    "Modifying backend logic or data.",
-    "Altering Navbar, Footer, or any other component styling."
+    "Changing the hero section background image.",
+    "Adding new sections or features to the landing page.",
+    "Any backend data model changes."
   ],
   "imageRequirements": {
     "required": [],
     "edits": [
-      "Resize and save as full-screen hero background (quality_restoration_20260224213607352.jpg > hero-bg.dim_1920x1080.png)"
+      "Resize/crop to 512×512 for profile avatar use (quality_restoration_20260128182709920-4.jpg > profile-avatar.dim_512x512.png)",
+      "Resize/crop to 192×192 for PWA icon use (quality_restoration_20260128182709920-4.jpg > pwa-icon.dim_192x192.png)",
+      "Resize/crop to 512×512 for PWA icon use (quality_restoration_20260128182709920-4.jpg > pwa-icon.dim_512x512.png)"
     ]
   }
 }

@@ -82,7 +82,7 @@ export default function AboutSection() {
               style={{ clipPath: 'polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%)' }}
             >
               <img
-                src="/assets/quality_restoration_20260128182709920-1.jpg"
+                src="/assets/quality_restoration_20260128182709920-4.jpg"
                 alt="Mr Q Legend YT — Legend X Esports"
                 className="w-48 h-48 md:w-64 md:h-64 object-cover object-top"
               />

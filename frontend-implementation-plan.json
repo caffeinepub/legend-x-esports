@@ -1,27 +1,83 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace app background with uploaded yellow-red polygonal artwork",
+  "title": "Replace profile avatar with new uploaded image and use it everywhere (logos, player cards, PWA icons — not hero background)",
   "requirements": [
     {
-      "id": "REQ-19",
-      "summary": "Replace hero background with uploaded yellow-red polygonal artwork while preserving text readability",
+      "id": "REQ-24",
+      "summary": "Replace the existing profile-avatar.dim_512x512.png with the newly uploaded gaming artwork image at 512×512 px resolution",
       "acceptanceCriteria": [
-        "The uploaded yellow-red polygonal image is saved at frontend/public/assets/generated/hero-bg.dim_1920x1080.png, replacing the previous hero background file.",
-        "The HeroSection component displays the new polygonal artwork as its full-screen background image.",
-        "A dark overlay is applied on top of the background image so that all hero text, tagline, and CTA buttons remain clearly readable.",
-        "No other sections or components are affected by this background change."
+        "The file frontend/public/assets/generated/profile-avatar.dim_512x512.png is replaced with the new uploaded image (quality_restoration_20260128182709920-4.jpg).",
+        "The image is saved at exactly 512×512 px resolution."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
-          "operation": "create",
-          "description": "Save the uploaded yellow-to-red polygonal low-poly geometric artwork (quality_restoration_20260224213607352.jpg) as the new hero background static asset at frontend/public/assets/generated/hero-bg.dim_1920x1080.png, replacing any existing file with the same name. This image will serve as the full-screen background for the HeroSection component."
+          "path": "frontend/public/assets/generated/profile-avatar.dim_512x512.png",
+          "operation": "modify",
+          "description": "Replace the existing profile avatar static asset with the newly uploaded gaming artwork image (quality_restoration_20260128182709920-4.jpg) resized to exactly 512×512 px. The image shows a masked figure in a white turtleneck with a Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background."
+        }
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "summary": "Generate and save a 192×192 px PWA icon variant from the newly uploaded image",
+      "acceptanceCriteria": [
+        "frontend/public/assets/generated/pwa-icon.dim_192x192.png is replaced with the new image cropped/resized to 192×192 px."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/pwa-icon.dim_192x192.png",
+          "operation": "modify",
+          "description": "Replace the existing PWA icon with a 192×192 px variant of the newly uploaded gaming artwork image (quality_restoration_20260128182709920-4.jpg). Crop/resize to maintain the focal point (masked figure with Gucci cap and neon halo) centered in the square format."
+        }
+      ]
+    },
+    {
+      "id": "REQ-26",
+      "summary": "Generate and save a 512×512 px PWA icon variant from the newly uploaded image",
+      "acceptanceCriteria": [
+        "frontend/public/assets/generated/pwa-icon.dim_512x512.png is replaced with the new image cropped/resized to 512×512 px."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/pwa-icon.dim_512x512.png",
+          "operation": "modify",
+          "description": "Replace the existing PWA icon with a 512×512 px variant of the newly uploaded gaming artwork image (quality_restoration_20260128182709920-4.jpg). Crop/resize to maintain the focal point (masked figure with Gucci cap and neon halo) centered in the square format."
+        }
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "summary": "Audit and update all frontend components to use the new profile-avatar.dim_512x512.png image for logos, player avatars, and profile images, while preserving the hero background",
+      "acceptanceCriteria": [
+        "The Navbar logo/avatar displays the new profile-avatar.dim_512x512.png image.",
+        "The AboutSection brand profile image displays the new profile-avatar.dim_512x512.png image.",
+        "All PlayerCard components use /assets/generated/profile-avatar.dim_512x512.png as the fallback or default avatar.",
+        "The Footer brand logo/avatar image uses /assets/generated/profile-avatar.dim_512x512.png.",
+        "No component references any old placeholder, 'neez3z', or third-party avatar URL.",
+        "The hero background image (hero-bg.dim_1920x1080.png) remains unchanged.",
+        "The PWA home screen icon (pwa-icon files) is updated to the new image but the hero background is untouched."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Update the Navbar component to display the new profile avatar image. Change the logo/avatar image source from the current placeholder to /assets/generated/profile-avatar.dim_512x512.png. Ensure the image is properly sized and maintains the dark theme styling with glows and effects."
         },
         {
-          "path": "frontend/src/components/HeroSection.tsx",
+          "path": "frontend/src/components/AboutSection.tsx",
           "operation": "modify",
-          "description": "Update the HeroSection component to use the new polygonal artwork background image (frontend/public/assets/generated/hero-bg.dim_1920x1080.png) as its full-screen background. Ensure the existing dark overlay remains in place on top of the background image to preserve full readability of all text elements (title, tagline) and CTA buttons. Verify that the background image covers the full viewport height and width appropriately without affecting any other styling or layout of hero content."
+          "description": "Update the AboutSection component to use the new profile avatar for the team's brand profile image. Replace the current clipped profile image panel source with /assets/generated/profile-avatar.dim_512x512.png. Maintain the existing diagonal clip-path styling and aspect ratio."
+        },
+        {
+          "path": "frontend/src/components/PlayerCard.tsx",
+          "operation": "modify",
+          "description": "Update the PlayerCard component to use /assets/generated/profile-avatar.dim_512x512.png as the default fallback avatar. Replace the current fallback avatar path (player-avatar-default.dim_256x256.png or any placeholder) with the new profile avatar. Ensure the onError handler sets the correct fallback image path."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the Footer component to display the new profile avatar as the brand logo/avatar. Change the footer logo image source to /assets/generated/profile-avatar.dim_512x512.png. Maintain the existing styling and dimensions for consistent branding across the footer section."
         }
       ]
     }

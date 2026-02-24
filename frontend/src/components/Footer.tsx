@@ -38,9 +38,9 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/assets/generated/legend-x-logo.dim_512x512.png"
+                src="/assets/quality_restoration_20260128182709920-4.jpg"
                 alt="Legend X Esports"
-                className="h-10 w-10 object-contain"
+                className="h-10 w-10 rounded-full object-cover object-top border border-esports-red/50 shadow-[0_0_8px_oklch(0.55_0.22_25/0.4)]"
               />
               <span className="font-display text-xl tracking-widest">
                 LEGEND <span className="text-esports-red">X</span> ESPORTS
@@ -110,26 +110,18 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="h-px bg-esports-dark-4 mb-6" />
-
-        {/* Bottom Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-esports-gray font-body">
-          <p>
-            &copy; {year} <span className="text-esports-gray-light">Legend X Esports</span>. All rights reserved.
+        {/* Bottom bar */}
+        <div className="border-t border-esports-dark-4 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="font-body text-xs text-esports-gray text-center sm:text-left">
+            © {year} Legend X Esports. All rights reserved.
           </p>
-          <p className="flex items-center gap-1.5">
-            Built with{' '}
-            <Heart
-              size={12}
-              className="text-esports-red fill-esports-red animate-pulse-glow"
-            />{' '}
-            using{' '}
+          <p className="font-body text-xs text-esports-gray flex items-center gap-1">
+            Built with <Heart size={12} className="text-esports-red fill-esports-red" /> using{' '}
             <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appId}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-esports-gray-light hover:text-esports-red transition-colors"
+              className="text-esports-red hover:text-esports-gold transition-colors"
             >
               caffeine.ai
             </a>

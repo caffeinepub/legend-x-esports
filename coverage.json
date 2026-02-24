@@ -1,26 +1,63 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-24T16:39:30.151Z",
+  "generatedAt": "2026-02-24T17:23:11.501Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
+    "total": 4,
+    "implemented": 4,
     "items": [
       {
-        "id": "REQ-19",
-        "summary": "Save the uploaded yellow-to-red polygonal low-poly geometric artwork image (quality_restoration_20260224213607352.jpg) as the new hero background static asset at frontend/public/assets/generated/hero-bg.dim_1920x1080.png, replacing the existing file. Update the HeroSection component to use this new image as its full-screen background, maintaining the existing dark overlay so all text and CTA elements remain fully readable on top.",
+        "id": "REQ-24",
+        "summary": "Save the newly uploaded gaming artwork image (quality_restoration_20260128182709920-4.jpg — a masked figure in a white turtleneck with a Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background) as the new profile avatar static asset at frontend/public/assets/generated/profile-avatar.dim_512x512.png, replacing the existing file.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
-          "frontend/src/components/HeroSection.tsx"
+          "frontend/public/assets/generated/profile-avatar.dim_512x512.png"
         ],
         "matchedFiles": [
-          "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
-          "frontend/src/components/HeroSection.tsx"
+          "frontend/public/assets/generated/profile-avatar.dim_512x512.png"
+        ]
+      },
+      {
+        "id": "REQ-25",
+        "summary": "Generate a 192×192 px variant of the newly uploaded image (quality_restoration_20260128182709920-4.jpg) and save it as frontend/public/assets/generated/pwa-icon.dim_192x192.png, replacing the existing PWA icon at that size.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/pwa-icon.dim_192x192.png"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/pwa-icon.dim_192x192.png"
+        ]
+      },
+      {
+        "id": "REQ-26",
+        "summary": "Generate a 512×512 px variant of the newly uploaded image (quality_restoration_20260128182709920-4.jpg) and save it as frontend/public/assets/generated/pwa-icon.dim_512x512.png, replacing the existing PWA icon at that size.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/pwa-icon.dim_512x512.png"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/pwa-icon.dim_512x512.png"
+        ]
+      },
+      {
+        "id": "REQ-27",
+        "summary": "Audit all frontend components (Navbar, AboutSection, RosterSection, PlayerCard, Footer, NewsSection, AnnouncementCard, PWAInstallBanner, LandingPage) and ensure every location that displays a profile image, player avatar, or logo uses /assets/generated/profile-avatar.dim_512x512.png. The hero background image (hero-bg.dim_1920x1080.png) must NOT be changed.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/components/AboutSection.tsx",
+          "frontend/src/components/PlayerCard.tsx",
+          "frontend/src/components/Footer.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/components/AboutSection.tsx",
+          "frontend/src/components/PlayerCard.tsx",
+          "frontend/src/components/Footer.tsx"
         ]
       }
     ]
@@ -30,8 +67,13 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
-    "frontend/src/components/HeroSection.tsx",
+    "frontend/public/assets/generated/profile-avatar.dim_512x512.png",
+    "frontend/public/assets/generated/pwa-icon.dim_192x192.png",
+    "frontend/public/assets/generated/pwa-icon.dim_512x512.png",
+    "frontend/src/components/AboutSection.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/components/PlayerCard.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

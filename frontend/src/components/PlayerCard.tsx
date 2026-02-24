@@ -6,10 +6,12 @@ interface PlayerCardProps {
   avatarUrl?: string;
 }
 
+const DEFAULT_AVATAR = '/assets/quality_restoration_20260128182709920-4.jpg';
+
 export default function PlayerCard({ name, role, avatarUrl }: PlayerCardProps) {
   const displayAvatar = avatarUrl && avatarUrl.trim() !== ''
     ? avatarUrl
-    : '/assets/generated/player-avatar-default.dim_256x256.png';
+    : DEFAULT_AVATAR;
 
   return (
     <div className="group relative bg-esports-dark-2 border border-esports-dark-4 overflow-hidden card-hover cursor-default">
@@ -23,7 +25,7 @@ export default function PlayerCard({ name, role, avatarUrl }: PlayerCardProps) {
           alt={`${name} avatar`}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           onError={(e) => {
-            (e.target as HTMLImageElement).src = '/assets/generated/player-avatar-default.dim_256x256.png';
+            (e.target as HTMLImageElement).src = DEFAULT_AVATAR;
           }}
         />
         {/* Gradient overlay */}

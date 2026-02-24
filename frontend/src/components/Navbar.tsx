@@ -36,7 +36,7 @@ export default function Navbar() {
             {/* Profile Avatar */}
             <div className="relative flex-shrink-0">
               <img
-                src="/assets/quality_restoration_20260128182709920-1.jpg"
+                src="/assets/quality_restoration_20260128182709920-4.jpg"
                 alt="MRQ Legend Profile"
                 className="h-9 w-9 md:h-10 md:w-10 rounded-full object-cover object-top border-2 border-esports-red shadow-[0_0_8px_oklch(0.55_0.22_25/0.6)] group-hover:shadow-[0_0_14px_oklch(0.55_0.22_25/0.9)] transition-shadow duration-300"
               />

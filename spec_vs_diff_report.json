@@ -1,16 +1,36 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-24T16:39:30.149Z",
-  "summary": "The diff updates HeroSection.tsx to use a new background image and maintains dark overlays for text readability. However, the image source used in the component points to the original uploaded file path (/assets/quality_restoration_20260224213607352.jpg) rather than the specified target path (frontend/public/assets/generated/hero-bg.dim_1920x1080.png). There is no evidence in the diff that the image was saved/converted to the required PNG asset path.",
+  "generatedAt": "2026-02-24T17:23:11.496Z",
+  "summary": "The diff modifies 6 files: Navbar.tsx, AboutSection.tsx, Footer.tsx, PlayerCard.tsx, frontend-file-summaries.txt, and project_state.json. All component updates reference the raw uploaded file path '/assets/quality_restoration_20260128182709920-4.jpg' directly instead of the generated asset paths specified in the requirements. The actual image asset files (profile-avatar.dim_512x512.png, pwa-icon.dim_192x192.png, pwa-icon.dim_512x512.png) do not appear to have been added or replaced in the diff. No changes to index.html or manifest are visible in the diff to confirm PWA icon updates.",
   "missing_requirements": [
     {
-      "id": "REQ-19",
-      "requirement": "Save the uploaded yellow-to-red polygonal artwork as frontend/public/assets/generated/hero-bg.dim_1920x1080.png (replacing existing file) and update HeroSection to reference this new asset path.",
-      "reason": "The HeroSection component references /assets/quality_restoration_20260224213607352.jpg (the original source file path) instead of /assets/generated/hero-bg.dim_1920x1080.png. There are no added files in the diff, so the required PNG asset at frontend/public/assets/generated/hero-bg.dim_1920x1080.png was never created or saved. The acceptance criterion requiring the image to be saved at the specified path is not fulfilled.",
+      "id": "REQ-24",
+      "requirement": "Save the newly uploaded gaming artwork image as the new profile avatar static asset at frontend/public/assets/generated/profile-avatar.dim_512x512.png, replacing the existing file.",
+      "reason": "No file addition or replacement of frontend/public/assets/generated/profile-avatar.dim_512x512.png is present in the diff. The ADDED FILES section shows none, and no binary asset replacement is recorded.",
+      "evidence": []
+    },
+    {
+      "id": "REQ-25",
+      "requirement": "Generate a 192x192 px variant and save it as frontend/public/assets/generated/pwa-icon.dim_192x192.png.",
+      "reason": "No file addition or replacement of frontend/public/assets/generated/pwa-icon.dim_192x192.png is present in the diff.",
+      "evidence": []
+    },
+    {
+      "id": "REQ-26",
+      "requirement": "Generate a 512x512 px variant and save it as frontend/public/assets/generated/pwa-icon.dim_512x512.png.",
+      "reason": "No file addition or replacement of frontend/public/assets/generated/pwa-icon.dim_512x512.png is present in the diff.",
+      "evidence": []
+    },
+    {
+      "id": "REQ-27",
+      "requirement": "All components must use /assets/generated/profile-avatar.dim_512x512.png instead of any old placeholder or third-party URL.",
+      "reason": "All modified components reference '/assets/quality_restoration_20260128182709920-4.jpg' directly rather than '/assets/generated/profile-avatar.dim_512x512.png' as required.",
       "evidence": [
-        "frontend/src/components/HeroSection.tsx",
-        "frontend-file-summaries.txt"
+        "frontend/src/components/Navbar.tsx",
+        "frontend/src/components/AboutSection.tsx",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/PlayerCard.tsx"
       ]
     }
   ],
@@ -18,7 +38,10 @@
   "confidence": 0.88,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/AboutSection.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/components/PlayerCard.tsx",
     "project_state.json"
   ]
 }

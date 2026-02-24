@@ -1,11 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 29,
+  "projectStateVersion": 35,
   "summary": "Building an esports app named Legend X Esports, inspired by a Google Sites page shared by the user.",
   "architectural_notes": [],
-  "known_issues": [],
+  "known_issues": [
+    "Logo was not updated/changed as expected by the user."
+  ],
   "isFixRequest": false,
-  "imageRequirements": "## Edit Images\n- Resize and save as full-screen hero background (quality_restoration_20260224213607352.jpg > hero-bg.dim_1920x1080.png)",
+  "imageRequirements": "## Edit Images\n- Resize/crop to 512×512 for profile avatar use (quality_restoration_20260128182709920-4.jpg > profile-avatar.dim_512x512.png)\n- Resize/crop to 192×192 for PWA icon use (quality_restoration_20260128182709920-4.jpg > pwa-icon.dim_192x192.png)\n- Resize/crop to 512×512 for PWA icon use (quality_restoration_20260128182709920-4.jpg > pwa-icon.dim_512x512.png)",
   "existing_features": [
     {
       "id": "feature-build-a-public-facing-esports-organization-landing-page-for-legend-x-esports-with-the-following-sections-hero-team-name-tagline-call-to-action-about-us-our-team-roster-player-cards-with-name-and-role-news-announcements-and-a-contact-social-links-footer",
@@ -142,6 +144,62 @@
         "REQ-19"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-save-the-newly-uploaded-gaming-artwork-image-quality-restoration-20260128182709920-3-jpg-a-masked-figure-in-a-white-turtleneck-with-a-gucci-cap-neon-red-halo-red-diamond-youtube-play-button-and-dark-esports-background-as-the-new-profile-avatar-static-asset-at-frontend-public-assets-generated-profile-avatar-dim-512x512-png-replacing-the-existing-file",
+      "title": "Save the newly uploaded gaming artwork image (quality_restoration_20260128182709920-3.jpg — a masked figure in a white turtleneck with a Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background) as the new profile avatar static asset at frontend/public/assets/generated/profile-avatar.dim_512x512.png, replacing the existing file.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-audit-all-frontend-components-navbar-aboutsection-rostersection-playercard-footer-herosection-newssection-announcementcard-pwainstallbanner-landingpage-for-any-remaining-references-to-the-old-neez3z-placeholder-image-or-any-hardcoded-third-party-avatar-urls-and-replace-them-with-assets-generated-profile-avatar-dim-512x512-png-so-the-user-s-own-picture-is-used-consistently-everywhere",
+      "title": "Audit all frontend components (Navbar, AboutSection, RosterSection, PlayerCard, Footer, HeroSection, NewsSection, AnnouncementCard, PWAInstallBanner, LandingPage) for any remaining references to the old 'neez3z' placeholder image or any hardcoded third-party avatar URLs, and replace them with /assets/generated/profile-avatar.dim_512x512.png so the user's own picture is used consistently everywhere.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-navbar-component-replace-the-current-text-based-or-placeholder-logo-with-the-profile-avatar-image-at-assets-generated-profile-avatar-dim-512x512-png-display-it-as-a-circular-avatar-or-small-logo-image-on-the-left-side-of-the-navigation-bar-clearly-visible-on-both-desktop-and-mobile-layouts-remove-or-update-any-existing-logo-text-icon-that-was-not-reflecting-the-user-s-own-image",
+      "title": "In the Navbar component, replace the current text-based or placeholder logo with the profile avatar image at /assets/generated/profile-avatar.dim_512x512.png. Display it as a circular avatar (or small logo image) on the left side of the navigation bar, clearly visible on both desktop and mobile layouts. Remove or update any existing logo text/icon that was not reflecting the user's own image.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-save-the-newly-uploaded-gaming-artwork-image-quality-restoration-20260128182709920-4-jpg-a-masked-figure-in-a-white-turtleneck-with-a-gucci-cap-neon-red-halo-red-diamond-youtube-play-button-and-dark-esports-background-as-the-new-profile-avatar-static-asset-at-frontend-public-assets-generated-profile-avatar-dim-512x512-png-replacing-the-existing-file",
+      "title": "Save the newly uploaded gaming artwork image (quality_restoration_20260128182709920-4.jpg — a masked figure in a white turtleneck with a Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background) as the new profile avatar static asset at frontend/public/assets/generated/profile-avatar.dim_512x512.png, replacing the existing file.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-192-192-px-variant-of-the-newly-uploaded-image-quality-restoration-20260128182709920-4-jpg-and-save-it-as-frontend-public-assets-generated-pwa-icon-dim-192x192-png-replacing-the-existing-pwa-icon-at-that-size",
+      "title": "Generate a 192×192 px variant of the newly uploaded image (quality_restoration_20260128182709920-4.jpg) and save it as frontend/public/assets/generated/pwa-icon.dim_192x192.png, replacing the existing PWA icon at that size.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-a-512-512-px-variant-of-the-newly-uploaded-image-quality-restoration-20260128182709920-4-jpg-and-save-it-as-frontend-public-assets-generated-pwa-icon-dim-512x512-png-replacing-the-existing-pwa-icon-at-that-size",
+      "title": "Generate a 512×512 px variant of the newly uploaded image (quality_restoration_20260128182709920-4.jpg) and save it as frontend/public/assets/generated/pwa-icon.dim_512x512.png, replacing the existing PWA icon at that size.",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-audit-all-frontend-components-navbar-aboutsection-rostersection-playercard-footer-newssection-announcementcard-pwainstallbanner-landingpage-and-ensure-every-location-that-displays-a-profile-image-player-avatar-or-logo-uses-assets-generated-profile-avatar-dim-512x512-png-the-hero-background-image-hero-bg-dim-1920x1080-png-must-not-be-changed",
+      "title": "Audit all frontend components (Navbar, AboutSection, RosterSection, PlayerCard, Footer, NewsSection, AnnouncementCard, PWAInstallBanner, LandingPage) and ensure every location that displays a profile image, player avatar, or logo uses /assets/generated/profile-avatar.dim_512x512.png. The hero background image (hero-bg.dim_1920x1080.png) must NOT be changed.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -230,6 +288,32 @@
     {
       "id": "AR-15",
       "summary": "Use the PWA app icon image (pwa-icon.dim_512x512.png or profile-avatar.dim_512x512.png) as the hero/main background image of the app, replacing the current hero background.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Replace all instances of the 'neez3z' image throughout the app with the user's own profile picture (profile-avatar.dim_512x512.png).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "In the Footer component, locate the <img> element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/footer[1]/div[3]/div[1]/div[1]/div[1]/img[1] — which is the 'neez3z' / placeholder avatar image in the footer — and replace its src with the profile avatar at /assets/generated/profile-avatar.dim_512x512.png so the user's own picture is displayed there.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Change/update the logo in the app (user reports logo was not changed as expected).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Use the uploaded profile picture everywhere in the app where there are profile images or logos (except the hero background). This includes: all player/profile cards, the PWA app icon (home screen icon after install), and all navbar/logo locations. The hero background should remain unchanged.",
       "reqIds": [],
       "status": "pending"
     }
