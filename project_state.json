@@ -1,0 +1,141 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 15,
+  "summary": "Building an esports app named Legend X Esports, inspired by a Google Sites page shared by the user.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Edit Images\n- Crop and resize to a square 512×512 portrait avatar, centered on the figure's upper body and face (quality_restoration_20260128182709920-1.jpg > profile-avatar.dim_512x512.png)",
+  "existing_features": [
+    {
+      "id": "feature-build-a-public-facing-esports-organization-landing-page-for-legend-x-esports-with-the-following-sections-hero-team-name-tagline-call-to-action-about-us-our-team-roster-player-cards-with-name-and-role-news-announcements-and-a-contact-social-links-footer",
+      "title": "Build a public-facing esports organization landing page for 'Legend X Esports' with the following sections: Hero (team name, tagline, call-to-action), About Us, Our Team / Roster (player cards with name and role), News / Announcements, and a Contact / Social Links footer.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-connect-the-frontend-to-the-backend-canister-using-react-query-fetch-and-display-live-roster-and-announcements-data-from-the-motoko-actor",
+      "title": "Connect the frontend to the backend canister using React Query: fetch and display live roster and announcements data from the Motoko actor.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-bold-dark-esports-visual-theme-across-the-entire-application-dark-background-near-black-vivid-accent-color-e-g-electric-red-or-neon-gold-aggressive-typography-with-strong-hierarchy-subtle-glowing-or-metallic-ui-elements-and-a-consistent-grid-based-layout-the-theme-should-feel-high-energy-and-professional",
+      "title": "Apply a bold, dark esports visual theme across the entire application: dark background (near-black), vivid accent color (e.g. electric red or neon gold), aggressive typography with strong hierarchy, subtle glowing or metallic UI elements, and a consistent grid-based layout. The theme should feel high-energy and professional.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-the-uploaded-free-fire-battle-artwork-image-as-the-background-image-for-the-herosection-component-save-it-as-a-static-asset-at-frontend-public-assets-generated-hero-bg-dim-1920x1080-png-and-apply-it-as-the-full-screen-background-of-the-hero-section-with-a-dark-overlay-to-ensure-text-readability",
+      "title": "Use the uploaded Free Fire battle artwork image as the background image for the HeroSection component. Save it as a static asset at frontend/public/assets/generated/hero-bg.dim_1920x1080.png and apply it as the full-screen background of the hero section, with a dark overlay to ensure text readability.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-footer-component-update-the-youtube-social-media-icon-link-to-point-to-https-youtube-com-mrqlegendff-si-iubfstd9j-pgwenq-so-that-clicking-the-youtube-icon-opens-the-legend-x-esports-youtube-channel",
+      "title": "In the Footer component, update the YouTube social media icon link to point to https://youtube.com/@mrqlegendff?si=IUBFSTd9J-PGWeNQ so that clicking the YouTube icon opens the Legend X Esports YouTube channel.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-herosection-component-reduce-the-zoom-scale-of-the-hero-background-image-so-it-is-less-zoomed-in-and-more-of-the-scene-is-visible-adjust-the-background-size-background-position-or-css-transform-scale-properties-on-the-background-image-or-its-container-to-achieve-a-more-zoomed-out-appearance-while-keeping-the-overlay-and-text-readable",
+      "title": "In the HeroSection component, reduce the zoom / scale of the hero background image so it is less zoomed-in and more of the scene is visible. Adjust the background-size, background-position, or CSS transform/scale properties on the background image or its container to achieve a more zoomed-out appearance while keeping the overlay and text readable.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-herosection-component-adjust-the-hero-background-image-frontend-public-assets-generated-hero-bg-dim-1920x1080-png-so-it-is-displayed-with-a-portrait-mobile-screen-aspect-ratio-fitted-from-the-sides-left-and-right-edges-constrained-so-the-image-fills-the-section-vertically-like-a-mobile-screen-without-horizontal-overflow-use-css-background-size-background-position-or-an-img-with-object-fit-object-position-so-the-image-behaves-as-if-it-were-cropped-and-fitted-to-a-tall-narrow-portrait-viewport-centred-horizontally-the-dark-overlay-and-all-text-content-must-remain-fully-readable-on-top",
+      "title": "In the HeroSection component, adjust the hero background image (frontend/public/assets/generated/hero-bg.dim_1920x1080.png) so it is displayed with a portrait / mobile-screen aspect ratio — fitted from the sides (left and right edges constrained) so the image fills the section vertically like a mobile screen, without horizontal overflow. Use CSS background-size, background-position, or an <img> with object-fit/object-position so the image behaves as if it were cropped and fitted to a tall, narrow (portrait) viewport, centred horizontally. The dark overlay and all text content must remain fully readable on top.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-save-the-uploaded-profile-image-as-a-static-asset-at-frontend-public-assets-generated-profile-avatar-dim-512x512-png-and-use-it-as-the-organization-s-profile-brand-avatar-throughout-the-app-display-it-in-the-navbar-replacing-or-alongside-the-text-logo-as-a-small-circular-avatar-and-display-it-prominently-in-the-aboutsection-as-the-team-s-brand-profile-image",
+      "title": "Save the uploaded profile image as a static asset at frontend/public/assets/generated/profile-avatar.dim_512x512.png and use it as the organization's profile/brand avatar throughout the app: display it in the Navbar (replacing or alongside the text logo) as a small circular avatar, and display it prominently in the AboutSection as the team's brand profile image.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-save-the-newly-uploaded-gaming-artwork-image-quality-restoration-20260128182709920-1-jpg-a-masked-figure-in-a-white-turtleneck-with-a-gucci-cap-neon-red-halo-red-diamond-youtube-play-button-and-dark-esports-background-as-the-new-profile-avatar-static-asset-at-frontend-public-assets-generated-profile-avatar-dim-512x512-png-replacing-the-existing-file-this-asset-is-already-referenced-in-the-navbar-circular-avatar-and-aboutsection-brand-profile-image-so-both-components-will-automatically-display-the-new-image-without-any-code-changes",
+      "title": "Save the newly uploaded gaming artwork image (quality_restoration_20260128182709920-1.jpg — a masked figure in a white turtleneck with a Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background) as the new profile avatar static asset at frontend/public/assets/generated/profile-avatar.dim_512x512.png, replacing the existing file. This asset is already referenced in the Navbar (circular avatar) and AboutSection (brand profile image), so both components will automatically display the new image without any code changes.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-2",
+      "summary": "Create a Motoko backend actor that stores and serves: team announcements (title, body, timestamp) and roster entries (name, role, avatarUrl). Expose query functions to retrieve all announcements and all roster members, and update functions to add or modify entries.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a background image to the app (hero/main background picture).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Link the YouTube icon to the channel https://youtube.com/@mrqlegendff",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Zoom out / reduce zoom level of the hero background image",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Update the year '2024' to '2026' in the app (likely in the footer copyright or similar text).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "In the Footer component, find all occurrences of the year '2024' (e.g. in the copyright notice or any other text) and replace them with '2026'.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Adjust the hero background image to fit like a mobile screen ratio — fit it sideways (cover/contain adjusted so it resembles a mobile screen aspect ratio, fitted from the sides).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Display the profile avatar image on the profile/player card(s) in the roster or team section.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Legend X Esports",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

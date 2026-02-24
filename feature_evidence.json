@@ -1,0 +1,21 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-save-the-newly-uploaded-gaming-artwork-image-quality-restoration-20260128182709920-1-jpg-a-masked-figure-in-a-white-turtleneck-with-a-gucci-cap-neon-red-halo-red-diamond-youtube-play-button-and-dark-esports-background-as-the-new-profile-avatar-static-asset-at-frontend-public-assets-generated-profile-avatar-dim-512x512-png-replacing-the-existing-file-this-asset-is-already-referenced-in-the-navbar-circular-avatar-and-aboutsection-brand-profile-image-so-both-components-will-automatically-display-the-new-image-without-any-code-changes",
+      "featureTitle": "Save the newly uploaded gaming artwork image (quality_restoration_20260128182709920-1.jpg — a masked figure in a white turtleneck with a Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background) as the new profile avatar static asset at frontend/public/assets/generated/profile-avatar.dim_512x512.png, replacing the existing file. This asset is already referenced in the Navbar (circular avatar) and AboutSection (brand profile image), so both components will automatically display the new image without any code changes.",
+      "files": [],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "frontend/src/index.css": "Global styles with dark esports theme using OKLCH color tokens, Google Fonts imports (Bebas Neue, Rajdhani, Inter), glow effects, clip-path utilities, card hover animations, and custom button component classes.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with esports color palette (electric red, metallic gold, near-black grays), custom font families (display/heading/body), glow box shadows, and keyframe animations for pulse-glow and slide-up effects.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations — useAnnouncements, useRoster, useAddAnnouncement, useAddOrUpdateRosterMember, useRemoveAnnouncement, and useRemoveRosterMember with proper cache invalidation.",
+  "frontend/src/components/Navbar.tsx": "Fixed top navigation bar with scroll-aware background blur, now using the new gaming artwork image (`quality_restoration_20260128182709920-1.jpg`) as the circular profile avatar with `object-top` cropping, red online-indicator dot, desktop nav links, and responsive mobile hamburger menu.",
+  "frontend/src/components/HeroSection.tsx": "Full-screen hero section with the Free Fire battle artwork displayed as a full-width cover image (side-to-side, portrait-fitted via object-fit: cover) using an absolutely positioned img element, layered dark overlays, hero text, CTA buttons, and stat counters.",
+  "frontend/src/components/AboutSection.tsx": "About section with team mission text, now using the new gaming artwork image (`quality_restoration_20260128182709920-1.jpg`) with `object-top` cropping in the clipped profile panel, red gradient overlay, decorative corner accents, \"MRQ Legend\" name tag, and a four-card values grid.",
+  "frontend/src/components/PlayerCard.tsx": "Individual player card component with avatar image, role badge overlay, name display, fallback to default avatar on error, and hover glow/lift effects.",
+  "frontend/src/components/RosterSection.tsx": "Roster section that fetches live data via useRoster hook, renders PlayerCard grid, and handles loading skeletons, error state, and empty state gracefully.",
+  "frontend/src/components/AnnouncementCard.tsx": "Individual announcement card with formatted nanosecond timestamp, title, body excerpt, left accent bar, and hover reveal \"Read More\" indicator.",
+  "frontend/src/components/NewsSection.tsx": "News section that fetches live announcements via useAnnouncements hook, renders AnnouncementCard grid, and handles loading skeletons, error state, and empty state.",
+  "frontend/src/components/Footer.tsx": "Full footer with brand logo, social media links (X, Discord, Twitch, YouTube linked to https://youtube.com/@mrqlegendff?si=IUBFSTd9J-PGWeNQ, Instagram), quick nav links, contact info, copyright, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/pages/LandingPage.tsx": "Landing page composition component that assembles all five sections (Hero, About, Roster, News, Footer) in a vertical layout.",
+  "frontend/src/App.tsx": "Root app component that renders the fixed Navbar and LandingPage together as the single-page application layout."
+}
