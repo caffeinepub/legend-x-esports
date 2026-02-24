@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 15,
+  "projectStateVersion": 29,
   "summary": "Building an esports app named Legend X Esports, inspired by a Google Sites page shared by the user.",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Edit Images\n- Crop and resize to a square 512×512 portrait avatar, centered on the figure's upper body and face (quality_restoration_20260128182709920-1.jpg > profile-avatar.dim_512x512.png)",
+  "imageRequirements": "## Edit Images\n- Resize and save as full-screen hero background (quality_restoration_20260224213607352.jpg > hero-bg.dim_1920x1080.png)",
   "existing_features": [
     {
       "id": "feature-build-a-public-facing-esports-organization-landing-page-for-legend-x-esports-with-the-following-sections-hero-team-name-tagline-call-to-action-about-us-our-team-roster-player-cards-with-name-and-role-news-announcements-and-a-contact-social-links-footer",
@@ -78,6 +78,70 @@
         "REQ-11"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-a-medium-sized-glowing-button-in-the-navbar-component-that-links-to-https-sites-google-com-view-mrqlegendyt-home-the-button-should-open-the-link-in-a-new-tab-use-the-site-s-accent-color-red-gold-glow-pulse-or-glow-on-hover-and-be-clearly-visible-in-the-top-navigation-bar-on-both-desktop-and-mobile-layouts-label-it-something-like-visit-website-or-our-site",
+      "title": "Add a medium-sized glowing button in the Navbar component that links to https://sites.google.com/view/mrqlegendyt/home. The button should open the link in a new tab, use the site's accent color (red/gold glow), pulse or glow on hover, and be clearly visible in the top navigation bar on both desktop and mobile layouts. Label it something like 'Visit Website' or 'Our Site'.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-pwa-install-prompt-that-appears-prominently-at-the-very-top-of-the-page-above-the-navbar-as-a-full-width-banner-the-banner-must-display-the-text-download-app-or-install-app-with-a-clear-call-to-action-button-when-a-user-opens-the-link-this-banner-should-be-the-first-thing-they-see-giving-them-confidence-to-install-before-proceeding-the-banner-must-use-the-site-s-accent-colors-red-gold-and-match-the-existing-dark-esports-theme-on-desktop-and-mobile-it-should-be-clearly-visible-and-dismissible",
+      "title": "Implement a PWA install prompt that appears prominently at the very top of the page (above the Navbar) as a full-width banner. The banner must display the text 'Download App' (or 'Install App') with a clear call-to-action button. When a user opens the link, this banner should be the first thing they see, giving them confidence to install before proceeding. The banner must use the site's accent colors (red/gold) and match the existing dark esports theme. On desktop and mobile, it should be clearly visible and dismissible.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-frontend-locate-the-element-identified-by-the-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-2-div-2-div-2-div-5-span-1-which-is-a-span-inside-the-about-section-and-replace-its-text-content-with-mr-q-legend-yt",
+      "title": "In the frontend, locate the element identified by the XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[2]/div[2]/div[2]/div[5]/span[1] — which is a <span> inside the About section — and replace its text content with 'Mr Q Legend YT'.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-consistent-text-shadow-and-subtle-glow-effect-to-all-visible-text-elements-across-every-frontend-component-herosection-navbar-aboutsection-rostersection-playercard-newssection-announcementcard-footer-pwainstallbanner-and-landingpage-define-reusable-css-utility-classes-in-frontend-src-index-css-e-g-a-text-glow-class-using-text-shadow-with-the-site-s-accent-color-red-or-gold-and-apply-them-globally-via-tailwind-s-base-layer-or-a-global-selector-so-that-every-heading-paragraph-label-button-text-and-span-benefits-from-improved-contrast-and-visibility-against-dark-backgrounds",
+      "title": "Apply a consistent text shadow and subtle glow effect to all visible text elements across every frontend component (HeroSection, Navbar, AboutSection, RosterSection, PlayerCard, NewsSection, AnnouncementCard, Footer, PWAInstallBanner, and LandingPage). Define reusable CSS utility classes in frontend/src/index.css (e.g. a 'text-glow' class using text-shadow with the site's accent color — red or gold) and apply them globally via Tailwind's base layer or a global selector so that every heading, paragraph, label, button text, and span benefits from improved contrast and visibility against dark backgrounds.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-save-the-newly-uploaded-gaming-artwork-image-quality-restoration-20260128182709920-2-jpg-a-masked-figure-in-a-white-turtleneck-with-a-gucci-cap-neon-red-halo-red-diamond-youtube-play-button-and-dark-esports-background-as-the-pwa-app-icon-assets-generate-icon-variants-at-the-required-pwa-sizes-192-192-and-512-512-and-save-them-as-static-assets-at-frontend-public-assets-generated-pwa-icon-dim-192x192-png-and-frontend-public-assets-generated-pwa-icon-dim-512x512-png-respectively",
+      "title": "Save the newly uploaded gaming artwork image (quality_restoration_20260128182709920-2.jpg — a masked figure in a white turtleneck with a Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background) as the PWA app icon assets. Generate icon variants at the required PWA sizes (192×192 and 512×512) and save them as static assets at frontend/public/assets/generated/pwa-icon.dim_192x192.png and frontend/public/assets/generated/pwa-icon.dim_512x512.png respectively.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-frontend-public-manifest-json-to-reference-the-new-pwa-icon-files-pwa-icon-dim-192x192-png-and-pwa-icon-dim-512x512-png-for-the-icons-array-entries-at-sizes-192-192-and-512-512-replacing-any-previously-referenced-icon-paths-also-set-these-icons-as-the-splash-screen-maskable-icons-so-they-appear-on-the-home-screen-and-app-launch-screen-when-the-pwa-is-installed",
+      "title": "Update frontend/public/manifest.json to reference the new PWA icon files (pwa-icon.dim_192x192.png and pwa-icon.dim_512x512.png) for the 'icons' array entries at sizes 192×192 and 512×512, replacing any previously referenced icon paths. Also set these icons as the splash screen / maskable icons so they appear on the home screen and app launch screen when the PWA is installed.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-save-the-uploaded-red-black-hexagonal-mesh-artwork-image-quality-restoration-20260224212439860-jpg-as-the-new-hero-background-static-asset-at-frontend-public-assets-generated-hero-bg-dim-1920x1080-png-replacing-the-existing-file-update-the-herosection-component-to-use-this-new-image-as-its-full-screen-background-maintaining-the-existing-dark-overlay-so-all-text-and-cta-elements-remain-fully-readable-on-top",
+      "title": "Save the uploaded red/black hexagonal mesh artwork image (quality_restoration_20260224212439860.jpg) as the new hero background static asset at frontend/public/assets/generated/hero-bg.dim_1920x1080.png, replacing the existing file. Update the HeroSection component to use this new image as its full-screen background, maintaining the existing dark overlay so all text and CTA elements remain fully readable on top.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-save-the-uploaded-yellow-to-red-polygonal-low-poly-geometric-artwork-image-quality-restoration-20260224213607352-jpg-as-the-new-hero-background-static-asset-at-frontend-public-assets-generated-hero-bg-dim-1920x1080-png-replacing-the-existing-file-update-the-herosection-component-to-use-this-new-image-as-its-full-screen-background-maintaining-the-existing-dark-overlay-so-all-text-and-cta-elements-remain-fully-readable-on-top",
+      "title": "Save the uploaded yellow-to-red polygonal low-poly geometric artwork image (quality_restoration_20260224213607352.jpg) as the new hero background static asset at frontend/public/assets/generated/hero-bg.dim_1920x1080.png, replacing the existing file. Update the HeroSection component to use this new image as its full-screen background, maintaining the existing dark overlay so all text and CTA elements remain fully readable on top.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -130,6 +194,42 @@
     {
       "id": "AR-9",
       "summary": "Display the profile avatar image on the profile/player card(s) in the roster or team section.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Add a medium-sized glowing button linking to https://sites.google.com/view/mrqlegendyt/home that is visible at the top of the page (e.g. in the Navbar or Hero section).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Add a prominent 'Download App' button/prompt so that when users open the link, they are first shown a download option. The app should be installable as a standalone app (PWA with install prompt) without needing to visit the website separately — displayed clearly at the top with a 'Download App' label.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Update the app text to display 'Mr Q Legend YT' at a specific location the user pointed to.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Add text shadow and subtle glow effect to all text elements across the app to improve readability and visibility.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Use the profile avatar image (profile-avatar.dim_512x512.png) as the PWA app icon — so when the app is installed as a PWA, the home screen icon and splash screen show this image.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Use the PWA app icon image (pwa-icon.dim_512x512.png or profile-avatar.dim_512x512.png) as the hero/main background image of the app, replacing the current hero background.",
       "reqIds": [],
       "status": "pending"
     }

@@ -1,0 +1,27 @@
+{
+  "name": "Legend X Esports",
+  "short_name": "LegendX",
+  "description": "Pakistan ka number 1 Free Fire esports team. Rosters, news, announcements aur zyada!",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0a0a",
+  "theme_color": "#ef4444",
+  "categories": ["games", "sports", "entertainment"],
+  "icons": [
+    {
+      "src": "/assets/generated/pwa-icon.dim_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/generated/pwa-icon.dim_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "lang": "ur"
+}

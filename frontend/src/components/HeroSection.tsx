@@ -6,18 +6,18 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image - fitted side-to-side like a mobile screen portrait ratio */}
+      {/* Background Image - yellow/red polygonal low-poly artwork */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="/assets/generated/hero-bg.dim_1920x1080.png"
+          src="/assets/quality_restoration_20260224213607352.jpg"
           alt=""
           aria-hidden="true"
-          className="absolute top-0 left-0 w-full h-full object-cover object-center"
-          style={{ objectFit: 'cover', objectPosition: 'center center' }}
+          className="absolute top-0 left-0 w-full h-full"
+          style={{ objectFit: 'cover', objectPosition: 'center center', width: '100%', height: '100%' }}
         />
       </div>
 
-      {/* Primary dark overlay for text readability */}
+      {/* Primary dark overlay for text readability — stronger for bright yellow/red image */}
       <div className="absolute inset-0 bg-esports-dark/75" />
 
       {/* Bottom fade to dark */}
@@ -27,7 +27,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-esports-dark/60 via-transparent to-esports-dark/60" />
 
       {/* Red accent glow overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-esports-red/15 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-esports-red/25 via-transparent to-transparent" />
 
       {/* Diagonal accent lines */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

@@ -1,41 +1,41 @@
 {
   "kind": "build_request",
-  "title": "Replace profile avatar with newly uploaded gaming artwork image",
+  "title": "Replace app background with uploaded yellow-red polygonal artwork",
   "projectName": "Legend X Esports",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-11",
-      "text": "Save the newly uploaded gaming artwork image (quality_restoration_20260128182709920-1.jpg — a masked figure in a white turtleneck with a Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background) as the new profile avatar static asset at frontend/public/assets/generated/profile-avatar.dim_512x512.png, replacing the existing file. This asset is already referenced in the Navbar (circular avatar) and AboutSection (brand profile image), so both components will automatically display the new image without any code changes.",
+      "id": "REQ-19",
+      "text": "Save the uploaded yellow-to-red polygonal low-poly geometric artwork image (quality_restoration_20260224213607352.jpg) as the new hero background static asset at frontend/public/assets/generated/hero-bg.dim_1920x1080.png, replacing the existing file. Update the HeroSection component to use this new image as its full-screen background, maintaining the existing dark overlay so all text and CTA elements remain fully readable on top.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "Ye profile per Laga do"
+          "Ye AAP background per Laga den"
         ]
       },
       "acceptanceCriteria": [
-        "The new gaming artwork image is saved at frontend/public/assets/generated/profile-avatar.dim_512x512.png",
-        "The Navbar circular avatar displays the new image",
-        "The AboutSection brand profile image displays the new image",
-        "The image is cropped/resized to 512×512 pixels"
+        "The uploaded yellow-red polygonal image is saved at frontend/public/assets/generated/hero-bg.dim_1920x1080.png, replacing the previous hero background file.",
+        "The HeroSection component displays the new polygonal artwork as its full-screen background image.",
+        "A dark overlay is applied on top of the background image so that all hero text, tagline, and CTA buttons remain clearly readable.",
+        "No other sections or components are affected by this background change."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any component code — only replace the static asset file",
-    "Output image must be exactly 512×512 pixels to match the existing filename convention"
+    "Do not remove or modify the dark overlay on the HeroSection — text readability must be preserved."
   ],
   "nonGoals": [
-    "Changing layout or positioning of the avatar in Navbar or AboutSection",
-    "Adding the image to any new locations beyond the existing avatar placements"
+    "Changing any other section backgrounds.",
+    "Modifying backend logic or data.",
+    "Altering Navbar, Footer, or any other component styling."
   ],
   "imageRequirements": {
     "required": [],
     "edits": [
-      "Crop and resize to a square 512×512 portrait avatar, centered on the figure's upper body and face (quality_restoration_20260128182709920-1.jpg > profile-avatar.dim_512x512.png)"
+      "Resize and save as full-screen hero background (quality_restoration_20260224213607352.jpg > hero-bg.dim_1920x1080.png)"
     ]
   }
 }

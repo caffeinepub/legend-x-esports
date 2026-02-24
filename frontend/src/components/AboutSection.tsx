@@ -83,7 +83,7 @@ export default function AboutSection() {
             >
               <img
                 src="/assets/quality_restoration_20260128182709920-1.jpg"
-                alt="MRQ Legend — Legend X Esports"
+                alt="Mr Q Legend YT — Legend X Esports"
                 className="w-48 h-48 md:w-64 md:h-64 object-cover object-top"
               />
               {/* Red overlay tint at bottom */}
@@ -102,7 +102,7 @@ export default function AboutSection() {
               className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-esports-dark-2 border border-esports-red/40 px-4 py-1 whitespace-nowrap"
               style={{ clipPath: 'polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%)' }}
             >
-              <span className="font-heading text-xs tracking-widest uppercase text-esports-red">MRQ Legend</span>
+              <span className="font-heading text-xs tracking-widest uppercase text-esports-red">Mr Q Legend YT</span>
             </div>
           </div>
         </div>

@@ -3,9 +3,26 @@
         <meta charset='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <title>Legend X Esports</title>
+        <meta name='description' content='Legend X Esports - Pakistan ka number 1 Free Fire esports team. Download our app for free!' />
+        <meta name='theme-color' content='#ef4444' />
+        <meta name='mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+        <meta name='apple-mobile-web-app-title' content='LegendX' />
+        <link rel='manifest' href='/manifest.json' />
+        <link rel='apple-touch-icon' href='/assets/generated/pwa-icon.dim_512x512.png' />
+        <link rel='apple-touch-icon' sizes='192x192' href='/assets/generated/pwa-icon.dim_192x192.png' />
+        <link rel='apple-touch-icon' sizes='512x512' href='/assets/generated/pwa-icon.dim_512x512.png' />
     </head>
     <body>
         <div id='root'></div>
         <script type='module' src='/src/main.tsx'></script>
+        <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+              navigator.serviceWorker.register('/sw.js').catch(function() {});
+            });
+          }
+        </script>
     </body>
 </html>

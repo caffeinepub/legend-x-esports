@@ -1,22 +1,27 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace profile avatar with newly uploaded gaming artwork image",
+  "title": "Replace app background with uploaded yellow-red polygonal artwork",
   "requirements": [
     {
-      "id": "REQ-11",
-      "summary": "Replace the existing profile avatar static asset with the newly uploaded gaming artwork image",
+      "id": "REQ-19",
+      "summary": "Replace hero background with uploaded yellow-red polygonal artwork while preserving text readability",
       "acceptanceCriteria": [
-        "The new gaming artwork image is saved at frontend/public/assets/generated/profile-avatar.dim_512x512.png",
-        "The Navbar circular avatar displays the new image",
-        "The AboutSection brand profile image displays the new image",
-        "The image is cropped/resized to 512×512 pixels"
+        "The uploaded yellow-red polygonal image is saved at frontend/public/assets/generated/hero-bg.dim_1920x1080.png, replacing the previous hero background file.",
+        "The HeroSection component displays the new polygonal artwork as its full-screen background image.",
+        "A dark overlay is applied on top of the background image so that all hero text, tagline, and CTA buttons remain clearly readable.",
+        "No other sections or components are affected by this background change."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/profile-avatar.dim_512x512.png",
+          "path": "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Save the uploaded yellow-to-red polygonal low-poly geometric artwork (quality_restoration_20260224213607352.jpg) as the new hero background static asset at frontend/public/assets/generated/hero-bg.dim_1920x1080.png, replacing any existing file with the same name. This image will serve as the full-screen background for the HeroSection component."
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Replace the existing profile avatar with the newly uploaded gaming artwork image (quality_restoration_20260128182709920-1.jpg). Crop and resize to a square 512×512 portrait avatar, centered on the figure's upper body and face (masked figure in white turtleneck with Gucci cap, neon red halo, red diamond YouTube play button, and dark esports background). This file is already referenced by Navbar for the circular avatar and AboutSection for the brand profile image, so both components will automatically display the new image without code changes."
+          "description": "Update the HeroSection component to use the new polygonal artwork background image (frontend/public/assets/generated/hero-bg.dim_1920x1080.png) as its full-screen background. Ensure the existing dark overlay remains in place on top of the background image to preserve full readability of all text elements (title, tagline) and CTA buttons. Verify that the background image covers the full viewport height and width appropriately without affecting any other styling or layout of hero content."
         }
       ]
     }

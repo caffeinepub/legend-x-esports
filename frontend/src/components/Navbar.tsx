@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ExternalLink } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -8,6 +8,8 @@ const navLinks = [
   { label: 'News', href: '#news' },
   { label: 'Contact', href: '#contact' },
 ];
+
+const WEBSITE_URL = 'https://sites.google.com/view/mrqlegendyt/home';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,7 +49,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -58,16 +60,39 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-esports-red group-hover:w-full transition-all duration-300" />
               </a>
             ))}
+
+            {/* Visit Website CTA Button */}
+            <a
+              href={WEBSITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-website-glow"
+            >
+              <ExternalLink size={14} className="flex-shrink-0" />
+              Visit Website
+            </a>
           </nav>
 
-          {/* Mobile Toggle */}
-          <button
-            className="md:hidden text-foreground hover:text-esports-red transition-colors p-2"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile: Visit Website + Toggle */}
+          <div className="md:hidden flex items-center gap-2">
+            <a
+              href={WEBSITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-website-glow-sm"
+              aria-label="Visit Website"
+            >
+              <ExternalLink size={13} className="flex-shrink-0" />
+              <span className="hidden xs:inline">Visit</span>
+            </a>
+            <button
+              className="text-foreground hover:text-esports-red transition-colors p-2"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -85,6 +110,19 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            {/* Visit Website in mobile menu */}
+            <div className="pt-3">
+              <a
+                href={WEBSITE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="btn-website-glow w-full justify-center"
+              >
+                <ExternalLink size={14} className="flex-shrink-0" />
+                Visit Website
+              </a>
+            </div>
           </nav>
         </div>
       )}
