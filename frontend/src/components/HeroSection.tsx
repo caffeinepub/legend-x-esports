@@ -67,7 +67,7 @@ export default function HeroSection() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="#roster" className="btn-primary text-sm">
-            Meet Our Roster
+            How to Meet the Legend
           </a>
           <a href="#about" className="btn-outline text-sm">
             Our Story

@@ -1,39 +1,43 @@
 {
   "kind": "build_request",
-  "title": "Update app title/heading to 'Professional Esports Tournament's App'",
+  "title": "Update PWA app icon to fire-and-ice tiger illustration",
+  "projectName": "Legend X Esports",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "In the Hero section, replace the subtitle/tagline text that currently reads 'Professional eSports organization' with 'Professional Esports Tournament's App'. Target the element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[1] — this corresponds to a text block inside HeroSection.tsx. Update only this specific text node; do not change any other content.",
+      "text": "Generate new PWA app icons (192×192 and 512×512) inspired by the uploaded image: a dramatic split fire-and-ice dual tiger design with a dark background — a glowing blue ice tiger on the left and a blazing red/orange fire tiger on the right, facing outward. The icon should be rendered as a square icon suitable for PWA use.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-4"
         ],
         "quotes": [
-          "Professional eSports organization",
-          "Ki jagha likho Professional Esports Tournament's App"
+          "Ye wala lagao icon"
         ]
       },
       "acceptanceCriteria": [
-        "The selected element in the Hero section displays the text 'Professional Esports Tournament's App'",
-        "The text 'Professional eSports organization' no longer appears in that element",
-        "No other sections or components are altered"
+        "Two PNG icon files are generated: icon-192x192.png and icon-512x512.png featuring the fire-and-ice dual tiger design",
+        "Icons are placed in frontend/public/assets/generated/ or the existing icon asset path used by the PWA manifest",
+        "frontend/public/manifest.json icon entries point to the new icon files",
+        "frontend/index.html favicon and apple-touch-icon references are updated to use the new icon"
       ]
     }
   ],
   "constraints": [
-    "Only modify the single text node identified by the provided XPath in HeroSection.tsx",
-    "Do not alter layout, styling, or any other content"
+    "Do not modify files under frontend/src/hooks/ or frontend/src/components/ui/",
+    "Do not change the PWA manifest structure — only update icon file references"
   ],
   "nonGoals": [
-    "Redesigning the Hero section",
-    "Changing any other headings or labels across the app",
-    "Backend changes"
+    "Changing the app name, theme colors, or any other PWA metadata",
+    "Modifying any backend logic",
+    "Redesigning any UI components"
   ],
   "imageRequirements": {
-    "required": [],
+    "required": [
+      "Square PWA app icon featuring a split dual-tiger composition: glowing neon blue ice tiger on the left half and blazing red-orange fire tiger on the right half, dramatic dark background with intense neon glow lighting (app-icon-512.dim_512x512.png)",
+      "Square PWA app icon featuring a split dual-tiger composition: glowing neon blue ice tiger on the left half and blazing red-orange fire tiger on the right half, dramatic dark background with intense neon glow lighting (app-icon-192.dim_192x192.png)"
+    ],
     "edits": []
   }
 }

@@ -1,21 +1,27 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update Hero Section Tagline Text",
+  "title": "Update PWA app icon to fire-and-ice tiger illustration",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the Hero section subtitle text 'Professional eSports organization' with 'Professional Esports Tournament's App'",
+      "summary": "Replace existing PWA app icons with new fire-and-ice dual tiger design",
       "acceptanceCriteria": [
-        "The selected element in the Hero section displays the text 'Professional Esports Tournament's App'",
-        "The text 'Professional eSports organization' no longer appears in that element",
-        "No other sections or components are altered"
+        "Two PNG icon files are generated: icon-192x192.png and icon-512x512.png featuring the fire-and-ice dual tiger design",
+        "Icons are placed in frontend/public/assets/generated/ or the existing icon asset path used by the PWA manifest",
+        "frontend/public/manifest.json icon entries point to the new icon files",
+        "frontend/index.html favicon and apple-touch-icon references are updated to use the new icon"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/HeroSection.tsx",
+          "path": "frontend/public/manifest.json",
           "operation": "modify",
-          "description": "Update the subtitle/tagline text node in the Hero section from 'Professional eSports organization' to 'Professional Esports Tournament's App'. Locate the text element corresponding to XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[1] and replace only that specific text content. Do not modify any other elements, styling, or layout."
+          "description": "Update the icons array to reference the newly generated fire-and-ice tiger icon files. Change icon src paths from current generated icon assets to frontend/public/assets/generated/app-icon-192.dim_192x192.png and frontend/public/assets/generated/app-icon-512.dim_512x512.png while preserving sizes and type fields."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update favicon and apple-touch-icon link elements to reference the new fire-and-ice tiger icon. Change the favicon href to ./assets/generated/app-icon-192.dim_192x192.png and apple-touch-icon href to ./assets/generated/app-icon-512.dim_512x512.png to match the newly generated PWA icon files."
         }
       ]
     }

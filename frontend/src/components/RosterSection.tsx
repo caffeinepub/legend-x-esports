@@ -19,13 +19,13 @@ export default function RosterSection() {
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-4">
             <div className="h-px flex-1 max-w-12 bg-esports-gold" />
-            <span className="font-heading text-xs tracking-widest uppercase text-esports-gold">The Squad</span>
+            <span className="font-heading text-xs tracking-widest uppercase text-esports-gold">Meet Up</span>
           </div>
           <h2 className="font-display text-5xl sm:text-6xl md:text-7xl text-foreground leading-none">
-            OUR <span className="text-esports-gold">ROSTER</span>
+            How to Meet the <span className="text-esports-gold">LEGEND</span>👇
           </h2>
           <p className="mt-4 font-body text-esports-gray max-w-xl">
-            Meet the elite players who carry the Legend X banner into battle. Each one a specialist, together unstoppable.
+            If you want to contact the LEGEND, you can reach out via social media like YouTube or TikTok, and they will send you their WhatsApp number there. Thank you.
           </p>
         </div>
 
