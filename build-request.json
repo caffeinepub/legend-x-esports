@@ -1,35 +1,36 @@
 {
   "kind": "build_request",
-  "title": "Update year to 2026 in HeroSection stats",
-  "projectName": "Legend X Esports",
+  "title": "Replace footer social icon with WhatsApp logo and link",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-28",
-      "text": "In the HeroSection component, locate the stat element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[3]/div[3]/div[1] and update its text content to display '2026'.",
+      "id": "REQ-1",
+      "text": "In the Footer component, replace the third social media link's SVG icon (located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/footer[1]/div[3]/div[1]/div[1]/div[2]/a[3]/svg[1]) with the WhatsApp SVG logo, and update its href to https://whatsapp.com/channel/0029Vb8BEFtFXUuarLwqVs0C. The link must open in a new tab with rel='noopener noreferrer'. The WhatsApp icon should match the same size and styling (hover effects, color) as the other social icons in the footer.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-last"
+          "msg-10"
         ],
         "quotes": [
-          "Yahan par 2026 likh do"
+          "Is ki jagha Whatsapp Ka logo daal do Mera Matlab change kardo or us me ye link Bhi daal do :https://whatsapp.com/channel/0029Vb8BEFtFXUuarLwqVs0C"
         ]
       },
       "acceptanceCriteria": [
-        "The stat element identified by the given XPath in the HeroSection displays '2026'.",
-        "All other stat elements and content in the HeroSection remain unchanged.",
-        "The dark overlay and all text content remain fully readable on top of the hero background."
+        "The third social icon in the footer is now the WhatsApp logo (recognizable green telephone-in-bubble icon using standard WhatsApp SVG path).",
+        "Clicking the icon opens https://whatsapp.com/channel/0029Vb8BEFtFXUuarLwqVs0C in a new browser tab.",
+        "The icon size and hover styling are consistent with the other social media icons in the same row.",
+        "No other footer icons or links are changed."
       ]
     }
   ],
   "constraints": [
-    "Only the element at the specified XPath should be changed — no other text in the app should be modified."
+    "Only the third social link icon and its href in the footer must be changed; all other social links remain untouched.",
+    "Do not modify any immutable frontend paths."
   ],
   "nonGoals": [
-    "Changing the hero background image.",
-    "Modifying the Footer copyright year or any other year references outside the targeted element.",
-    "Any backend changes."
+    "Changing any other section of the site.",
+    "Adding WhatsApp links anywhere other than the footer social icon row.",
+    "Modifying backend logic."
   ],
   "imageRequirements": {
     "required": [],

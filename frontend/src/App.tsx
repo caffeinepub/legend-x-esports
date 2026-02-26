@@ -1,13 +1,17 @@
-import Navbar from './components/Navbar';
-import LandingPage from './pages/LandingPage';
-import PWAInstallBanner from './components/PWAInstallBanner';
+import PWAInstallBanner from "./components/PWAInstallBanner";
+import Navbar from "./components/Navbar";
+import LandingPage from "./pages/LandingPage";
+import AdminPanel from "./components/AdminPanel";
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-esports-dark text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <PWAInstallBanner />
       <Navbar />
       <LandingPage />
+      <AdminPanel />
     </div>
   );
 }
+
+export default App;

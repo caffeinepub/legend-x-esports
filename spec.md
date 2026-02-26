@@ -1,9 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Update a stat element in the HeroSection to display the year "2026".
+**Goal:** Replace the third social media icon in the footer with the WhatsApp logo and update its link.
 
 **Planned changes:**
-- In the HeroSection component, update the third stat element's text content to display "2026".
+- Replace the third social icon's SVG in the Footer component with the WhatsApp SVG logo
+- Update the third social link's `href` to `https://whatsapp.com/channel/0029Vb8BEFtFXUuarLwqVs0C`
+- Set the link to open in a new tab with `rel="noopener noreferrer"`
+- Ensure the WhatsApp icon matches the same size and hover styling as the other footer social icons
 
-**User-visible outcome:** The HeroSection stats section now shows "2026" in the targeted stat element, with all other content remaining unchanged.
+**User-visible outcome:** The third social icon in the footer now displays the WhatsApp logo and, when clicked, opens the specified WhatsApp channel in a new browser tab.

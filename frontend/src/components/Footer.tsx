@@ -1,12 +1,12 @@
 import { Heart } from 'lucide-react';
-import { SiX, SiDiscord, SiTwitch, SiYoutube, SiInstagram } from 'react-icons/si';
+import { SiX, SiDiscord, SiWhatsapp, SiYoutube, SiInstagram } from 'react-icons/si';
 
 const socialLinks = [
-  { icon: SiX, label: 'X (Twitter)', href: 'https://x.com' },
-  { icon: SiDiscord, label: 'Discord', href: 'https://discord.gg' },
-  { icon: SiTwitch, label: 'Twitch', href: 'https://twitch.tv' },
-  { icon: SiYoutube, label: 'YouTube', href: 'https://youtube.com/@mrqlegendff?si=IUBFSTd9J-PGWeNQ' },
-  { icon: SiInstagram, label: 'Instagram', href: 'https://instagram.com' },
+  { icon: SiX, label: 'X (Twitter)', href: 'https://x.com', hoverClass: 'hover:text-esports-red hover:border-esports-red/40 hover:bg-esports-red/10' },
+  { icon: SiDiscord, label: 'Discord', href: 'https://discord.gg', hoverClass: 'hover:text-esports-red hover:border-esports-red/40 hover:bg-esports-red/10' },
+  { icon: SiWhatsapp, label: 'WhatsApp', href: 'https://whatsapp.com/channel/0029Vb8BEFtFXUuarLwqVs0C', hoverClass: 'hover:text-[#25D366] hover:border-[#25D366]/40 hover:bg-[#25D366]/10' },
+  { icon: SiYoutube, label: 'YouTube', href: 'https://youtube.com/@mrqlegendff?si=IUBFSTd9J-PGWeNQ', hoverClass: 'hover:text-esports-red hover:border-esports-red/40 hover:bg-esports-red/10' },
+  { icon: SiInstagram, label: 'Instagram', href: 'https://instagram.com', hoverClass: 'hover:text-esports-red hover:border-esports-red/40 hover:bg-esports-red/10' },
 ];
 
 const footerLinks = [
@@ -51,14 +51,14 @@ export default function Footer() {
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-3">
-              {socialLinks.map(({ icon: Icon, label, href }) => (
+              {socialLinks.map(({ icon: Icon, label, href, hoverClass }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-2 bg-esports-dark-3 border border-esports-dark-4 text-esports-gray hover:text-esports-red hover:border-esports-red/40 hover:bg-esports-red/10 transition-all duration-200"
+                  className={`p-2 bg-esports-dark-3 border border-esports-dark-4 text-esports-gray transition-all duration-200 ${hoverClass}`}
                 >
                   <Icon size={16} />
                 </a>

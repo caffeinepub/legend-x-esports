@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-in-the-herosection-component-locate-the-stat-element-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-3-div-3-div-1-and-update-its-text-content-to-display-2026",
-      "featureTitle": "In the HeroSection component, locate the stat element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[3]/div[3]/div[1] and update its text content to display '2026'.",
+      "featureId": "feature-in-the-footer-component-replace-the-third-social-media-link-s-svg-icon-located-at-xpath-html-1-body-1-div-1-div-1-main-1-footer-1-div-3-div-1-div-1-div-2-a-3-svg-1-with-the-whatsapp-svg-logo-and-update-its-href-to-https-whatsapp-com-channel-0029vb8beftfxuuarlwqvs0c-the-link-must-open-in-a-new-tab-with-rel-noopener-noreferrer-the-whatsapp-icon-should-match-the-same-size-and-styling-hover-effects-color-as-the-other-social-icons-in-the-footer",
+      "featureTitle": "In the Footer component, replace the third social media link's SVG icon (located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/footer[1]/div[3]/div[1]/div[1]/div[2]/a[3]/svg[1]) with the WhatsApp SVG logo, and update its href to https://whatsapp.com/channel/0029Vb8BEFtFXUuarLwqVs0C. The link must open in a new tab with rel='noopener noreferrer'. The WhatsApp icon should match the same size and styling (hover effects, color) as the other social icons in the footer.",
       "files": [
-        "frontend/src/components/HeroSection.tsx"
+        "frontend/src/components/Footer.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -16,7 +16,7 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-28"
+        "REQ-1"
       ],
       "confidence": "high"
     }
