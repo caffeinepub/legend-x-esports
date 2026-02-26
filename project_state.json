@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "New project",
+  "summary": "Professional Esports Tournament's App project",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-in-the-footer-component-replace-the-text-content-of-the-second-anchor-link-inside-the-seventh-div-s-second-column-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-2-a-2-with-the-word-details",
-      "title": "In the Footer component, replace the text content of the second anchor link inside the seventh div's second column (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]) with the word 'Details'.",
+      "id": "feature-in-the-hero-section-replace-the-subtitle-tagline-text-that-currently-reads-professional-esports-organization-with-professional-esports-tournament-s-app-target-the-element-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-1-this-corresponds-to-a-text-block-inside-herosection-tsx-update-only-this-specific-text-node-do-not-change-any-other-content",
+      "title": "In the Hero section, replace the subtitle/tagline text that currently reads 'Professional eSports organization' with 'Professional Esports Tournament's App'. Target the element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[1] — this corresponds to a text block inside HeroSection.tsx. Update only this specific text node; do not change any other content.",
       "reqIds": [
         "REQ-1"
       ],
@@ -16,7 +16,8 @@
     }
   ],
   "new_feature_requests": [],
-  "projectName": "Replace anchor link text with 'Details' in footer section",
+  "gameProjectType": "none",
+  "projectName": "Professional Esports Tournament's App",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

@@ -1,9 +1,9 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the text of a specific anchor link in the footer with the word "Details".
+**Goal:** Update the subtitle/tagline text in the Hero section from "Professional eSports organization" to "Professional Esports Tournament's App".
 
 **Planned changes:**
-- In the Footer component, change the text content of the second anchor link in the seventh section's second column to "Details", keeping the href and styling unchanged.
+- In `HeroSection.tsx`, change the subtitle text from "Professional eSports organization" to "Professional Esports Tournament's App"
 
-**User-visible outcome:** The specified footer link now displays "Details" instead of its previous label.
+**User-visible outcome:** The Hero section now displays "Professional Esports Tournament's App" as the subtitle/tagline text.

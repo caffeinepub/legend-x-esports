@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-in-the-footer-component-replace-the-text-content-of-the-second-anchor-link-inside-the-seventh-div-s-second-column-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-2-a-2-with-the-word-details",
-      "featureTitle": "In the Footer component, replace the text content of the second anchor link inside the seventh div's second column (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]) with the word 'Details'.",
+      "featureId": "feature-in-the-hero-section-replace-the-subtitle-tagline-text-that-currently-reads-professional-esports-organization-with-professional-esports-tournament-s-app-target-the-element-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-1-this-corresponds-to-a-text-block-inside-herosection-tsx-update-only-this-specific-text-node-do-not-change-any-other-content",
+      "featureTitle": "In the Hero section, replace the subtitle/tagline text that currently reads 'Professional eSports organization' with 'Professional Esports Tournament's App'. Target the element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[1] — this corresponds to a text block inside HeroSection.tsx. Update only this specific text node; do not change any other content.",
       "files": [
-        "frontend/src/components/Footer.tsx"
+        "frontend/src/components/HeroSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",

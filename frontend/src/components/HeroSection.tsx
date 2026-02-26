@@ -46,7 +46,7 @@ export default function HeroSection() {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 border border-esports-red/40 bg-esports-red/10 text-esports-red font-heading text-xs tracking-widest uppercase">
           <Zap size={12} className="animate-pulse-glow" />
-          Professional Esports Organization
+          Professional Esports Tournament's App
         </div>
 
         {/* Main Title */}

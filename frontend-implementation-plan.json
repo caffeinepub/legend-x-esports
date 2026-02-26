@@ -1,21 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace anchor link text with 'Details' in footer section",
+  "title": "Update Hero Section Tagline Text",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Update the second anchor link text in the footer's second navigation column to display 'Details'",
+      "summary": "Replace the Hero section subtitle text 'Professional eSports organization' with 'Professional Esports Tournament's App'",
       "acceptanceCriteria": [
-        "The second anchor link in the referenced footer navigation column displays the text 'Details' instead of its previous label.",
-        "The link's href and styling remain unchanged.",
-        "No other footer links or elements are affected."
+        "The selected element in the Hero section displays the text 'Professional Esports Tournament's App'",
+        "The text 'Professional eSports organization' no longer appears in that element",
+        "No other sections or components are altered"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Footer.tsx",
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Locate the second anchor element within the second column of the footer navigation structure and replace its text content with 'Details'. Preserve the href attribute, className, and all other properties of the anchor element. Ensure no other elements in the footer are modified."
+          "description": "Update the subtitle/tagline text node in the Hero section from 'Professional eSports organization' to 'Professional Esports Tournament's App'. Locate the text element corresponding to XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[1] and replace only that specific text content. Do not modify any other elements, styling, or layout."
         }
       ]
     }

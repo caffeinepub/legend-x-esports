@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-26T21:56:17.513Z",
+  "generatedAt": "2026-02-26T22:05:04.996Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,13 +12,13 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "In the Footer component, replace the text content of the second anchor link inside the seventh div's second column (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]) with the word 'Details'.",
+        "summary": "In the Hero section, replace the subtitle/tagline text that currently reads 'Professional eSports organization' with 'Professional Esports Tournament's App'. Target the element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[1] — this corresponds to a text block inside HeroSection.tsx. Update only this specific text node; do not change any other content.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Footer.tsx"
+          "frontend/src/components/HeroSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/Footer.tsx"
+          "frontend/src/components/HeroSection.tsx"
         ]
       }
     ]
@@ -28,7 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/HeroSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

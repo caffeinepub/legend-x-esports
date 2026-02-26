@@ -1,14 +1,30 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-26T21:56:17.510Z",
-  "summary": "The diff shows that REQ-1 has been implemented: the second anchor link in the footer navigation column now reads 'Details' (previously 'About'), with href '#about' unchanged. The footerLinks array in Footer.tsx confirms the label change from 'About' to 'Details' while preserving the href and styling. No other footer links or elements appear to have been modified beyond this single text change.",
+  "generatedAt": "2026-02-26T22:05:04.993Z",
+  "summary": "The diff shows HeroSection.tsx was updated to replace the badge text with 'Professional Esports Tournament's App'. The file summary confirms the badge text now reads 'Professional Esports Tournament's App' instead of 'Professional Esports Organization'. REQ-1 appears to be implemented. However, there are additional changes beyond the single text node requirement.",
   "missing_requirements": [],
-  "hallucinated_features": [],
-  "confidence": 0.95,
+  "hallucinated_features": [
+    {
+      "description": "The Footer.tsx second navigation link was changed to read 'Details' instead of 'About', which is a change to a component other than HeroSection.tsx",
+      "reason": "The build request explicitly states 'Do not alter layout, styling, or any other content' and 'No other sections or components are altered'. The file summary mentions the Footer was modified with a link change.",
+      "evidence": [
+        "frontend-file-summaries.txt"
+      ]
+    },
+    {
+      "description": "Global text-shadow/glow rules were added in index.css targeting all text elements (h1-h6, p, span, a, button, label, li, etc.) with a subtle red glow and dark drop-shadow",
+      "reason": "The build request explicitly prohibits altering styling or any other content outside the single text node in HeroSection.tsx. Adding global glow/shadow CSS rules affects the entire app styling.",
+      "evidence": [
+        "frontend-file-summaries.txt",
+        "frontend/src/index.css"
+      ]
+    }
+  ],
+  "confidence": 0.8,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/HeroSection.tsx",
     "project_state.json"
   ]
 }

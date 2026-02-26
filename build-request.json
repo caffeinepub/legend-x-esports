@@ -1,35 +1,36 @@
 {
   "kind": "build_request",
-  "title": "Replace anchor link text with 'Details' in footer section",
+  "title": "Update app title/heading to 'Professional Esports Tournament's App'",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "In the Footer component, replace the text content of the second anchor link inside the seventh div's second column (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]) with the word 'Details'.",
+      "text": "In the Hero section, replace the subtitle/tagline text that currently reads 'Professional eSports organization' with 'Professional Esports Tournament's App'. Target the element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[1] — this corresponds to a text block inside HeroSection.tsx. Update only this specific text node; do not change any other content.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-1"
         ],
         "quotes": [
-          "Is ki jagha likho Details"
+          "Professional eSports organization",
+          "Ki jagha likho Professional Esports Tournament's App"
         ]
       },
       "acceptanceCriteria": [
-        "The second anchor link in the referenced footer navigation column displays the text 'Details' instead of its previous label.",
-        "The link's href and styling remain unchanged.",
-        "No other footer links or elements are affected."
+        "The selected element in the Hero section displays the text 'Professional Esports Tournament's App'",
+        "The text 'Professional eSports organization' no longer appears in that element",
+        "No other sections or components are altered"
       ]
     }
   ],
   "constraints": [
-    "Only change the text content of the specific anchor element identified by the XPath; do not alter its href, class, or any other attribute.",
-    "Do not modify any other elements in the footer or elsewhere."
+    "Only modify the single text node identified by the provided XPath in HeroSection.tsx",
+    "Do not alter layout, styling, or any other content"
   ],
   "nonGoals": [
-    "Redesigning or restructuring the footer layout.",
-    "Changing any other navigation links or social icons.",
-    "Backend changes of any kind."
+    "Redesigning the Hero section",
+    "Changing any other headings or labels across the app",
+    "Backend changes"
   ],
   "imageRequirements": {
     "required": [],
