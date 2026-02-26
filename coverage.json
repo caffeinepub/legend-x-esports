@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-26T21:47:19.386Z",
+  "generatedAt": "2026-02-26T21:56:17.513Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,7 +12,7 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "In the Footer component, replace the third social media link's SVG icon (located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/footer[1]/div[3]/div[1]/div[1]/div[2]/a[3]/svg[1]) with the WhatsApp SVG logo, and update its href to https://whatsapp.com/channel/0029Vb8BEFtFXUuarLwqVs0C. The link must open in a new tab with rel='noopener noreferrer'. The WhatsApp icon should match the same size and styling (hover effects, color) as the other social icons in the footer.",
+        "summary": "In the Footer component, replace the text content of the second anchor link inside the seventh div's second column (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]) with the word 'Details'.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/Footer.tsx"
@@ -25,8 +25,6 @@
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
-    "caffeine.lock.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
