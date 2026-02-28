@@ -1,43 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Update PWA app icon to fire-and-ice tiger illustration",
-  "projectName": "Legend X Esports",
+  "title": "Update footer link text to 'Dollars.ai'",
+  "projectName": "Dollars.ai",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Generate new PWA app icons (192×192 and 512×512) inspired by the uploaded image: a dramatic split fire-and-ice dual tiger design with a dark background — a glowing blue ice tiger on the left and a blazing red/orange fire tiger on the right, facing outward. The icon should be rendered as a square icon suitable for PWA use.",
+      "text": "In Footer.tsx, locate the anchor element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/footer[1]/div[3]/div[2]/p[2]/a[1] and update its visible text content to 'Dollars.ai'.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "Ye wala lagao icon"
+          "Dollars.ai"
         ]
       },
       "acceptanceCriteria": [
-        "Two PNG icon files are generated: icon-192x192.png and icon-512x512.png featuring the fire-and-ice dual tiger design",
-        "Icons are placed in frontend/public/assets/generated/ or the existing icon asset path used by the PWA manifest",
-        "frontend/public/manifest.json icon entries point to the new icon files",
-        "frontend/index.html favicon and apple-touch-icon references are updated to use the new icon"
+        "The footer anchor element previously showing 'Dollars 💵' or similar text now displays 'Dollars.ai'.",
+        "The link's href and styling remain unchanged.",
+        "No other footer elements are modified."
       ]
     }
   ],
   "constraints": [
-    "Do not modify files under frontend/src/hooks/ or frontend/src/components/ui/",
-    "Do not change the PWA manifest structure — only update icon file references"
+    "Only the anchor element at the specified XPath in Footer.tsx should be changed.",
+    "Do not alter any other footer content, links, or layout."
   ],
   "nonGoals": [
-    "Changing the app name, theme colors, or any other PWA metadata",
-    "Modifying any backend logic",
-    "Redesigning any UI components"
+    "Changing the app name or branding elsewhere in the project.",
+    "Modifying backend logic.",
+    "Updating any other footer links or navigation items."
   ],
   "imageRequirements": {
-    "required": [
-      "Square PWA app icon featuring a split dual-tiger composition: glowing neon blue ice tiger on the left half and blazing red-orange fire tiger on the right half, dramatic dark background with intense neon glow lighting (app-icon-512.dim_512x512.png)",
-      "Square PWA app icon featuring a split dual-tiger composition: glowing neon blue ice tiger on the left half and blazing red-orange fire tiger on the right half, dramatic dark background with intense neon glow lighting (app-icon-192.dim_192x192.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

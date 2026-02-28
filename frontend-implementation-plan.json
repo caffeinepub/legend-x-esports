@@ -1,27 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update PWA app icon to fire-and-ice tiger illustration",
+  "title": "Update footer link text to 'Dollars.ai'",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace existing PWA app icons with new fire-and-ice dual tiger design",
+      "summary": "Update the footer anchor element text from current value to 'Dollars.ai'",
       "acceptanceCriteria": [
-        "Two PNG icon files are generated: icon-192x192.png and icon-512x512.png featuring the fire-and-ice dual tiger design",
-        "Icons are placed in frontend/public/assets/generated/ or the existing icon asset path used by the PWA manifest",
-        "frontend/public/manifest.json icon entries point to the new icon files",
-        "frontend/index.html favicon and apple-touch-icon references are updated to use the new icon"
+        "The footer anchor element previously showing 'Dollars 💵' or similar text now displays 'Dollars.ai'.",
+        "The link's href and styling remain unchanged.",
+        "No other footer elements are modified."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/manifest.json",
+          "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "Update the icons array to reference the newly generated fire-and-ice tiger icon files. Change icon src paths from current generated icon assets to frontend/public/assets/generated/app-icon-192.dim_192x192.png and frontend/public/assets/generated/app-icon-512.dim_512x512.png while preserving sizes and type fields."
-        },
-        {
-          "path": "frontend/index.html",
-          "operation": "modify",
-          "description": "Update favicon and apple-touch-icon link elements to reference the new fire-and-ice tiger icon. Change the favicon href to ./assets/generated/app-icon-192.dim_192x192.png and apple-touch-icon href to ./assets/generated/app-icon-512.dim_512x512.png to match the newly generated PWA icon files."
+          "description": "Locate the anchor element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/footer[1]/div[3]/div[2]/p[2]/a[1] within the Footer component and update its visible text content to 'Dollars.ai'. Preserve the existing href attribute and all styling/className properties. Do not modify any other footer elements, links, or layout structure."
         }
       ]
     }

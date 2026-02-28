@@ -99,7 +99,7 @@ export default function Footer() {
                 href="mailto:contact@legendxesports.gg"
                 className="block text-esports-gray-light hover:text-esports-red transition-colors"
               >
-                contact@legendxesports.gg
+                Dollars.ai
               </a>
               <div className="pt-2">
                 <span className="font-heading text-xs tracking-widest uppercase text-esports-gray">

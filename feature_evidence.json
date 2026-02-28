@@ -2,11 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-generate-new-pwa-app-icons-192-192-and-512-512-inspired-by-the-uploaded-image-a-dramatic-split-fire-and-ice-dual-tiger-design-with-a-dark-background-a-glowing-blue-ice-tiger-on-the-left-and-a-blazing-red-orange-fire-tiger-on-the-right-facing-outward-the-icon-should-be-rendered-as-a-square-icon-suitable-for-pwa-use",
-      "featureTitle": "Generate new PWA app icons (192×192 and 512×512) inspired by the uploaded image: a dramatic split fire-and-ice dual tiger design with a dark background — a glowing blue ice tiger on the left and a blazing red/orange fire tiger on the right, facing outward. The icon should be rendered as a square icon suitable for PWA use.",
+      "featureId": "feature-in-footer-tsx-locate-the-anchor-element-at-xpath-html-1-body-1-div-1-div-1-main-1-footer-1-div-3-div-2-p-2-a-1-and-update-its-visible-text-content-to-dollars-ai",
+      "featureTitle": "In Footer.tsx, locate the anchor element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/footer[1]/div[3]/div[2]/p[2]/a[1] and update its visible text content to 'Dollars.ai'.",
       "files": [
-        "frontend/index.html",
-        "frontend/public/manifest.json"
+        "frontend/src/components/Footer.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",

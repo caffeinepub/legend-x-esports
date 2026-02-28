@@ -1,15 +1,14 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "New project",
+  "summary": "A project named Dollars.ai is being developed, currently working on icon design with 'Dollars 💵' text display.",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Square PWA app icon featuring a split dual-tiger composition: glowing neon blue ice tiger on the left half and blazing red-orange fire tiger on the right half, dramatic dark background with intense neon glow lighting (app-icon-512.dim_512x512.png)\n- Square PWA app icon featuring a split dual-tiger composition: glowing neon blue ice tiger on the left half and blazing red-orange fire tiger on the right half, dramatic dark background with intense neon glow lighting (app-icon-192.dim_192x192.png)",
   "existing_features": [
     {
-      "id": "feature-generate-new-pwa-app-icons-192-192-and-512-512-inspired-by-the-uploaded-image-a-dramatic-split-fire-and-ice-dual-tiger-design-with-a-dark-background-a-glowing-blue-ice-tiger-on-the-left-and-a-blazing-red-orange-fire-tiger-on-the-right-facing-outward-the-icon-should-be-rendered-as-a-square-icon-suitable-for-pwa-use",
-      "title": "Generate new PWA app icons (192×192 and 512×512) inspired by the uploaded image: a dramatic split fire-and-ice dual tiger design with a dark background — a glowing blue ice tiger on the left and a blazing red/orange fire tiger on the right, facing outward. The icon should be rendered as a square icon suitable for PWA use.",
+      "id": "feature-in-footer-tsx-locate-the-anchor-element-at-xpath-html-1-body-1-div-1-div-1-main-1-footer-1-div-3-div-2-p-2-a-1-and-update-its-visible-text-content-to-dollars-ai",
+      "title": "In Footer.tsx, locate the anchor element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/footer[1]/div[3]/div[2]/p[2]/a[1] and update its visible text content to 'Dollars.ai'.",
       "reqIds": [
         "REQ-1"
       ],
@@ -17,7 +16,8 @@
     }
   ],
   "new_feature_requests": [],
-  "projectName": "Legend X Esports",
+  "gameProjectType": "none",
+  "projectName": "Dollars.ai",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }
