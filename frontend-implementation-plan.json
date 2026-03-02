@@ -1,21 +1,28 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update CTA button text to 'Join Now For Tournament'",
+  "title": "Replace bullet animation with cartoon boy-shooting-target animation",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Update the animated 'Join Now' CTA button text in HeroSection to read 'Join Now For Tournament'",
+      "summary": "Replace the existing looping bullet-with-smoke-trail SVG animation in the HeroSection CTA button with a small inline cartoon-style looping animation showing a boy shooting at a target board",
       "acceptanceCriteria": [
-        "The animated CTA button in HeroSection displays the text 'Join Now For Tournament'.",
-        "All existing fire-style animations, colors, and button structure remain unchanged.",
-        "No other buttons or text elements are affected."
+        "The old bullet/smoke animation span is replaced with the new cartoon shooting scene.",
+        "A cartoon boy figure is visible on the left side of the animation.",
+        "A bullseye/aiming target board is visible on the right side of the animation.",
+        "The boy performs a shooting animation aimed toward the target board.",
+        "The target board shows a hit reaction (flash, shake, or impact effect) when shot.",
+        "The animation loops continuously without any manual interaction.",
+        "The overall size of the animation is small (approx 80–120px wide, 40–50px tall) matching the original bullet animation size.",
+        "The art style is cartoon/chibi with bold outlines and bright colors.",
+        "The animation is implemented using inline SVG or CSS keyframes — no external image files required.",
+        "The CTA button layout is not broken by the new animation."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Update the text content of the second CTA button (the animated 'Join Now' fire-style button) to read 'Join Now For Tournament'. Locate the button element that currently displays 'Join Now' with fire-style animations and change only its visible label text while preserving all existing animations, styles, classes, and markup structure."
+          "description": "Locate the existing bullet-with-smoke-trail SVG animation span element within the CTA button (at the specified XPath location). Remove the entire bullet animation span. Create a new inline SVG animation scene (approximately 80–120px wide, 40–50px tall) that includes: (1) a cartoon boy character on the left side in a shooting pose with a gun aimed right, (2) a bullseye/aiming target board on the right side, and (3) CSS keyframe animations to create a looping shooting sequence where the boy fires and the target reacts with a hit flash or shake effect. Use bold cartoon/chibi art style with bright colors and simple outlines. Ensure the animation is self-contained using only inline SVG elements and CSS keyframes, with no external dependencies. Verify that the new animation fits within the same compact size as the original bullet animation and does not break the CTA button layout."
         }
       ]
     }

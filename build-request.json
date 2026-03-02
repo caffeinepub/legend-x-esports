@@ -1,33 +1,45 @@
 {
   "kind": "build_request",
-  "title": "Update CTA button text to 'Join Now For Tournament'",
+  "title": "Replace bullet animation with cartoon boy-shooting-target animation",
+  "projectName": "Legend X Esports",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "In HeroSection.tsx, update the text of the second CTA button (the animated 'Join Now' fire-style button) so that it reads 'Join Now For Tournament'. The element is identified by XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4]/span[1]. Only the visible label text should change; all existing animations, styles, and structure must remain intact.",
+      "text": "Remove the existing looping black bullet-with-smoke-trail SVG animation from the CTA button span element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4] in HeroSection.tsx. Replace it with a small inline cartoon-style looping animation scene that fits the same compact size as the original bullet. The animation must show: (1) a small cartoon boy standing on the LEFT side in a shooting pose with a gun aimed to the right, (2) a target/aiming board (bullseye board) on the RIGHT side, (3) a looping shooting animation where the boy fires and the target board reacts (e.g., hit flash or shake effect). The entire animation must be rendered using inline SVG or CSS keyframe animations — no external image dependencies. The style must be cartoon/chibi-style with simple bold outlines and bright colors. The animation must loop continuously and remain small (roughly 80–120px wide, 40–50px tall) to fit inside or near the CTA button without breaking layout.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-recent"
+          "msg-4"
         ],
         "quotes": [
-          "Join Now\nFor Tournament\nYe likho"
+          "animation bnao chote chote bilkul yhi size ke jis me left side per larka khara ho or Right side per aim rakh kar shoot karrha ho right side per Jahan shoot karrha ho wahan per ye aiming board ho jis per fire kre cartoon type animation ho chote chote se"
         ]
       },
       "acceptanceCriteria": [
-        "The animated CTA button in HeroSection displays the text 'Join Now For Tournament'.",
-        "All existing fire-style animations, colors, and button structure remain unchanged.",
-        "No other buttons or text elements are affected."
+        "The old bullet/smoke animation span is replaced with the new cartoon shooting scene.",
+        "A cartoon boy figure is visible on the left side of the animation.",
+        "A bullseye/aiming target board is visible on the right side of the animation.",
+        "The boy performs a shooting animation aimed toward the target board.",
+        "The target board shows a hit reaction (flash, shake, or impact effect) when shot.",
+        "The animation loops continuously without any manual interaction.",
+        "The overall size of the animation is small (approx 80–120px wide, 40–50px tall) matching the original bullet animation size.",
+        "The art style is cartoon/chibi with bold outlines and bright colors.",
+        "The animation is implemented using inline SVG or CSS keyframes — no external image files required.",
+        "The CTA button layout is not broken by the new animation."
       ]
     }
   ],
   "constraints": [
-    "Only modify the label text of the targeted button element; do not alter its animations, styles, or surrounding markup."
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui.",
+    "Animation must be self-contained inline SVG or CSS — no external image assets for the character or target.",
+    "Keep the animation the same compact size as the original bullet animation to avoid layout disruption."
   ],
   "nonGoals": [
-    "Changing button styling, colors, or animations.",
-    "Modifying any other buttons or sections on the page."
+    "Replacing or redesigning the CTA button itself.",
+    "Adding sound effects or audio.",
+    "Creating a full game or interactive shooting mechanic.",
+    "Changing any other section of the landing page."
   ],
   "imageRequirements": {
     "required": [],

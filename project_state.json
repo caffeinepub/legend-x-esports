@@ -1,23 +1,32 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Project with a button that says 'Join Now For Tournament'",
-  "architectural_notes": [],
+  "summary": "Small cartoon-style shooting animation: a boy stands on the left side aiming and shooting toward the right side, where an aiming/target board is placed. The animation is small-sized and loop-based with cartoon style.",
+  "architectural_notes": [
+    "Animation should be small-sized, cartoon style, with a boy on the left shooting toward a target/aiming board on the right"
+  ],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-in-herosection-tsx-update-the-text-of-the-second-cta-button-the-animated-join-now-fire-style-button-so-that-it-reads-join-now-for-tournament-the-element-is-identified-by-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-2-a-2-span-4-span-1-only-the-visible-label-text-should-change-all-existing-animations-styles-and-structure-must-remain-intact",
-      "title": "In HeroSection.tsx, update the text of the second CTA button (the animated 'Join Now' fire-style button) so that it reads 'Join Now For Tournament'. The element is identified by XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4]/span[1]. Only the visible label text should change; all existing animations, styles, and structure must remain intact.",
+      "id": "feature-remove-the-existing-looping-black-bullet-with-smoke-trail-svg-animation-from-the-cta-button-span-element-located-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-2-a-2-span-4-in-herosection-tsx-replace-it-with-a-small-inline-cartoon-style-looping-animation-scene-that-fits-the-same-compact-size-as-the-original-bullet-the-animation-must-show-1-a-small-cartoon-boy-standing-on-the-left-side-in-a-shooting-pose-with-a-gun-aimed-to-the-right-2-a-target-aiming-board-bullseye-board-on-the-right-side-3-a-looping-shooting-animation-where-the-boy-fires-and-the-target-board-reacts-e-g-hit-flash-or-shake-effect-the-entire-animation-must-be-rendered-using-inline-svg-or-css-keyframe-animations-no-external-image-dependencies-the-style-must-be-cartoon-chibi-style-with-simple-bold-outlines-and-bright-colors-the-animation-must-loop-continuously-and-remain-small-roughly-80-120px-wide-40-50px-tall-to-fit-inside-or-near-the-cta-button-without-breaking-layout",
+      "title": "Remove the existing looping black bullet-with-smoke-trail SVG animation from the CTA button span element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4] in HeroSection.tsx. Replace it with a small inline cartoon-style looping animation scene that fits the same compact size as the original bullet. The animation must show: (1) a small cartoon boy standing on the LEFT side in a shooting pose with a gun aimed to the right, (2) a target/aiming board (bullseye board) on the RIGHT side, (3) a looping shooting animation where the boy fires and the target board reacts (e.g., hit flash or shake effect). The entire animation must be rendered using inline SVG or CSS keyframe animations — no external image dependencies. The style must be cartoon/chibi-style with simple bold outlines and bright colors. The animation must loop continuously and remain small (roughly 80–120px wide, 40–50px tall) to fit inside or near the CTA button without breaking layout.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     }
   ],
-  "new_feature_requests": [],
-  "gameProjectType": "none",
-  "projectName": "Update CTA button text to 'Join Now For Tournament'",
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Small cartoon animation with boy on left side aiming and shooting toward a target board on the right side",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "2d",
+  "projectName": "Cartoon Shooting Animation",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

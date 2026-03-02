@@ -1,14 +1,15 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-03-02T00:28:52.568Z",
-  "summary": "The diff shows HeroSection.tsx was modified and the file summary confirms the animated fire-style button now reads 'JOIN NOW FOR TOURNAMENT'. The text change is implemented correctly, and the animations, styles, and structure are described as intact. REQ-1 appears to be fully satisfied.",
+  "generatedAt": "2026-03-02T00:43:44.552Z",
+  "summary": "The diff implements REQ-1 by replacing the old bullet/smoke animation in HeroSection.tsx with a new ShootingAnimation component. The implementation includes: a cartoon boy on the left, a bullseye target on the right, muzzle flash, bullet travel, target shake, hit flash, impact sparks, gun smoke, and a BANG! text pop — all via inline SVG and CSS keyframes. The animation is scoped to ~160px wide × 44px tall, fitting the compact size requirement. No external image assets are used. The old bullet-fly/bullet-smoke keyframes have been removed from index.css and moved inline. All acceptance criteria appear to be addressed.",
   "missing_requirements": [],
   "hallucinated_features": [],
-  "confidence": 0.92,
+  "confidence": 0.91,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/HeroSection.tsx",
+    "frontend/src/index.css",
     "project_state.json"
   ]
 }
