@@ -1,32 +1,36 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update text labels to 'Legend', 'X', 'Arena'",
+  "title": "Center hero text elements and replace duplicate brand text with logo",
   "requirements": [
     {
-      "id": "REQ-2",
-      "summary": "Update all instances of the team/brand name text labels across the frontend so they are displayed as three separate styled elements: 'Legend', 'X', and 'Arena' — each word on its own line or as a distinct styled segment, consistent with the esports visual theme",
+      "id": "REQ-3",
+      "summary": "Center the three styled brand name elements ('Legend', 'X', 'Arena') in the hero section horizontally on the page",
       "acceptanceCriteria": [
-        "The brand/team name is rendered as three distinct text elements: 'Legend', 'X', and 'Arena'",
-        "Each word ('Legend', 'X', 'Arena') is visually separated and styled consistently with the existing esports theme",
-        "The label appears correctly in the Navbar, HeroSection, and Footer wherever the team name is displayed",
-        "No other text content is altered"
+        "The three h1 brand name elements in the hero section are centered horizontally.",
+        "Centering applies consistently on all screen sizes."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Navbar.tsx",
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Update the brand logo text to display 'Legend', 'X', and 'Arena' as three distinct styled text elements separated visually (e.g., using line breaks or styled spans). Maintain the existing esports theme styling and ensure the logo remains recognizable and accessible."
-        },
+          "description": "Locate the container div holding the three h1 elements ('Legend', 'X', 'Arena') in the hero section and update its styling to center its children horizontally. Add flex centering classes (such as 'flex justify-center' or 'text-center') to the parent container so the brand name elements are centered instead of left-aligned. Ensure the centering is responsive across all screen sizes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Remove duplicate 'Legend X Arena' text labels in the top-left area of the hero section and replace with the original logo image",
+      "acceptanceCriteria": [
+        "The duplicate 'Legend', 'X', 'Arena' text shown in the top-left area of the hero section is removed.",
+        "The original logo image (as used in the Navbar) is displayed in its place.",
+        "No duplicate brand text labels appear anywhere in the hero section's top-left area."
+      ],
+      "file_operations": [
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Update any team/brand name text in the hero section to display 'Legend', 'X', and 'Arena' as three separate styled elements. Each word should be visually distinct, maintaining consistency with the esports visual theme and the updated Navbar styling."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Update the brand logo text in the footer to display 'Legend', 'X', and 'Arena' as three distinct styled elements. Ensure the styling is consistent with the Navbar and HeroSection updates while fitting naturally within the footer layout."
+          "description": "Identify and remove the duplicate 'Legend X Arena' text labels (the second occurrence of brand name elements) appearing in the top-left area of the hero section. Replace them with an img element that references the same logo asset used in Navbar.tsx. Use the workspace file path 'frontend/public/assets/generated/legend-x-logo.dim_512x512.png' for the logo src. Apply appropriate sizing and positioning to match the visual hierarchy of the hero section's top-left area."
         }
       ]
     }

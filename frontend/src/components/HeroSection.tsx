@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 // --- Shooting Animation Component ---
 function ShootingAnimation() {
@@ -288,18 +288,19 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-24">
-          {/* Left: Text */}
-          <div className="flex flex-col gap-6">
-            {/* Brand Label */}
-            <div className="inline-flex items-center gap-2 mb-2">
-              <span className="w-8 h-0.5 bg-primary" />
-              <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase">
-                Official Esports Team
-              </span>
+          {/* Left: Text — centered */}
+          <div className="flex flex-col gap-6 items-center text-center">
+            {/* Logo Image (replaces duplicate brand text) */}
+            <div className="mb-2">
+              <img
+                src="/assets/generated/legend-x-logo.dim_512x512.png"
+                alt="Legend X Arena Logo"
+                className="h-20 w-auto object-contain drop-shadow-[0_0_16px_var(--color-primary)]"
+              />
             </div>
 
             {/* Hero Title — Legend / X / Arena */}
-            <div className="flex flex-col leading-none gap-1">
+            <div className="flex flex-col leading-none gap-1 items-center">
               <h1
                 className="font-black uppercase tracking-widest text-foreground"
                 style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)", letterSpacing: "0.12em" }}
@@ -326,7 +327,7 @@ export default function HeroSection() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 mt-2">
+            <div className="flex flex-wrap gap-4 mt-2 justify-center">
               <a
                 href="#roster"
                 className="btn-glow px-8 py-3 text-sm font-bold tracking-wider uppercase rounded"

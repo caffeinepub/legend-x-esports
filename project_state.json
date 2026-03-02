@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
+  "projectStateVersion": 7,
   "summary": "New project",
   "architectural_notes": [],
   "known_issues": [],
@@ -11,6 +11,22 @@
       "title": "Update all instances of the team/brand name text labels across the frontend so they are displayed as three separate styled elements: 'Legend', 'X', and 'Arena' — each word on its own line or as a distinct styled segment, consistent with the esports visual theme.",
       "reqIds": [
         "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-center-the-three-styled-brand-name-elements-legend-x-arena-displayed-in-the-hero-section-the-h1-elements-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-2-div-1-div-1-div-2-h1-1-h1-2-and-h1-3-so-they-are-horizontally-centered-on-the-page-instead-of-left-aligned",
+      "title": "Center the three styled brand name elements ('Legend', 'X', 'Arena') displayed in the hero section (the h1 elements at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[2]/h1[1], h1[2], and h1[3]) so they are horizontally centered on the page instead of left-aligned.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-left-side-top-area-of-the-hero-section-remove-the-duplicate-legend-x-arena-text-labels-the-second-occurrence-of-the-brand-name-and-replace-them-with-the-original-logo-image-asset-the-same-logo-used-in-the-navbar",
+      "title": "In the left side top area of the hero section, remove the duplicate 'Legend X Arena' text labels (the second occurrence of the brand name) and replace them with the original logo image asset (the same logo used in the Navbar).",
+      "reqIds": [
+        "REQ-4"
       ],
       "version": 1
     }
@@ -27,6 +43,18 @@
     {
       "id": "AR-2",
       "summary": "Update text labels to display as: 'Legend', 'X', 'Arena' (styled/written in a specific way as requested by the user).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Center the 'Legend X Arena' text/elements on the page.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Remove the duplicate 'Legend X Arena' text shown on the left side (top area) and replace it with the original logo instead.",
       "reqIds": [],
       "status": "pending"
     }

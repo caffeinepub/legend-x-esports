@@ -1,37 +1,53 @@
 {
   "kind": "build_request",
-  "title": "Update text labels to 'Legend', 'X', 'Arena'",
+  "title": "Center hero text elements and replace duplicate brand text with logo",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-2",
-      "text": "Update all instances of the team/brand name text labels across the frontend so they are displayed as three separate styled elements: 'Legend', 'X', and 'Arena' — each word on its own line or as a distinct styled segment, consistent with the esports visual theme.",
+      "id": "REQ-3",
+      "text": "Center the three styled brand name elements ('Legend', 'X', 'Arena') displayed in the hero section (the h1 elements at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[2]/h1[1], h1[2], and h1[3]) so they are horizontally centered on the page instead of left-aligned.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-1"
         ],
         "quotes": [
-          "Legend\nX\nArena"
+          "In ko senter me kro"
         ]
       },
       "acceptanceCriteria": [
-        "The brand/team name is rendered as three distinct text elements: 'Legend', 'X', and 'Arena'",
-        "Each word ('Legend', 'X', 'Arena') is visually separated and styled consistently with the existing esports theme",
-        "The label appears correctly in the Navbar, HeroSection, and Footer wherever the team name is displayed",
-        "No other text content is altered"
+        "The three h1 brand name elements in the hero section are centered horizontally.",
+        "Centering applies consistently on all screen sizes."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "In the left side top area of the hero section, remove the duplicate 'Legend X Arena' text labels (the second occurrence of the brand name) and replace them with the original logo image asset (the same logo used in the Navbar).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "left side per uper Jo likha he dusri Baar legend x arena to us ko remove Karke logo lagao wapis wohi wala"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The duplicate 'Legend', 'X', 'Arena' text shown in the top-left area of the hero section is removed.",
+        "The original logo image (as used in the Navbar) is displayed in its place.",
+        "No duplicate brand text labels appear anywhere in the hero section's top-left area."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui/",
-    "Do not change any other content, layout, or styling beyond the text label update"
+    "Do not modify files listed in frontend.immutablePaths.",
+    "Only modify the selected elements identified by the provided XPath expressions and their immediate container in HeroSection.tsx.",
+    "Use the same logo asset already referenced in Navbar.tsx — do not introduce a new asset."
   ],
   "nonGoals": [
-    "Changing the overall brand identity or color scheme",
-    "Modifying backend data or Motoko actor",
-    "Adding new sections or components",
-    "Reverting or altering any version history changes beyond the text label update"
+    "Redesigning the overall hero section layout.",
+    "Changing the styled appearance (colors, fonts, effects) of the 'Legend', 'X', 'Arena' elements.",
+    "Modifying the Footer or Navbar brand name elements."
   ],
   "imageRequirements": {
     "required": [],

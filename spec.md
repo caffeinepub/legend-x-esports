@@ -1,10 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Update all brand/team name text labels across the frontend to display as three distinct styled segments: "Legend", "X", and "Arena".
+**Goal:** Center the hero section's brand name elements and replace duplicate brand text in the top-left area with the logo image.
 
 **Planned changes:**
-- Replace existing brand/team name text labels in the Navbar, HeroSection, and Footer with three separate styled elements: "Legend", "X", and "Arena"
-- Each word is visually separated and styled consistently with the existing esports theme
+- Center the three styled h1 brand name elements ('Legend', 'X', 'Arena') horizontally in the hero section, consistently across all screen sizes.
+- Remove the duplicate 'Legend X Arena' text labels from the top-left area of the hero section.
+- Replace the removed duplicate text with the same logo image asset already used in the Navbar.
 
-**User-visible outcome:** The team/brand name appears as three distinct styled text segments — "Legend", "X", and "Arena" — in the Navbar, HeroSection, and Footer throughout the site.
+**User-visible outcome:** The hero section brand name elements are centered on the page, and the top-left area shows the logo instead of duplicate brand text.
