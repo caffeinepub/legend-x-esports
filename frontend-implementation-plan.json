@@ -1,93 +1,32 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Revert all settings to Version 44",
+  "title": "Update text labels to 'Legend', 'X', 'Arena'",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Fully revert the entire frontend to its Version 44 state — restore all component styles, animations, CSS custom properties, Tailwind configuration, and layout settings exactly as they were in Version 44",
+      "id": "REQ-2",
+      "summary": "Update all instances of the team/brand name text labels across the frontend so they are displayed as three separate styled elements: 'Legend', 'X', and 'Arena' — each word on its own line or as a distinct styled segment, consistent with the esports visual theme",
       "acceptanceCriteria": [
-        "All frontend components (HeroSection, Navbar, AboutSection, RosterSection, NewsSection, Footer, etc.) match Version 44 exactly.",
-        "CSS custom properties in index.css and src/index.css match Version 44 values.",
-        "Tailwind configuration in tailwind.config.js matches Version 44 values.",
-        "HeroSection shooting animation is identical to Version 44.",
-        "No visual or behavioral differences remain from any post-Version-44 changes."
+        "The brand/team name is rendered as three distinct text elements: 'Legend', 'X', and 'Arena'",
+        "Each word ('Legend', 'X', 'Arena') is visually separated and styled consistently with the existing esports theme",
+        "The label appears correctly in the Navbar, HeroSection, and Footer wherever the team name is displayed",
+        "No other text content is altered"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/index.css",
+          "path": "frontend/src/components/Navbar.tsx",
           "operation": "modify",
-          "description": "Restore all CSS custom properties, Tailwind imports, utility classes, and design system tokens to their exact Version 44 values, including color definitions, typography, glow effects, and esports-themed styling."
-        },
-        {
-          "path": "frontend/index.css",
-          "operation": "modify",
-          "description": "Restore the Tailwind base CSS file to Version 44 state, ensuring all OKLCH-based CSS custom properties for light and dark themes match Version 44 exactly, covering background, foreground, card, sidebar, chart, and destructive color tokens."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Restore the Tailwind configuration to Version 44 state, including all theme extensions for esports-specific color tokens, custom fonts, box shadows, border radii, and animation keyframes using oklch color values."
+          "description": "Update the brand logo text to display 'Legend', 'X', and 'Arena' as three distinct styled text elements separated visually (e.g., using line breaks or styled spans). Maintain the existing esports theme styling and ensure the logo remains recognizable and accessible."
         },
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Restore the HeroSection component to Version 44 state, ensuring the looping SVG shooting animation with burst sequences, muzzle flashes, and bullet keyframe animations matches Version 44 exactly, including all animation timings, SVG paths, and styling."
-        },
-        {
-          "path": "frontend/src/components/Navbar.tsx",
-          "operation": "modify",
-          "description": "Restore the Navbar component to Version 44 state, including scroll-aware styling, desktop nav links, CTA button styling, and mobile menu behavior exactly as it was in Version 44."
-        },
-        {
-          "path": "frontend/src/components/AboutSection.tsx",
-          "operation": "modify",
-          "description": "Restore the AboutSection component to Version 44 state, including team mission text layout, clipped profile image panel, decorative accents, and four-card values grid (Discipline, Excellence, Victory, Brotherhood) with exact Version 44 styling."
-        },
-        {
-          "path": "frontend/src/components/RosterSection.tsx",
-          "operation": "modify",
-          "description": "Restore the RosterSection component to Version 44 state, including grid layout, loading/error/empty states, and PlayerCard rendering with exact Version 44 styling and animations."
-        },
-        {
-          "path": "frontend/src/components/NewsSection.tsx",
-          "operation": "modify",
-          "description": "Restore the NewsSection component to Version 44 state, including announcement fetching, loading skeletons, error handling, empty states, and AnnouncementCard grid layout with exact Version 44 styling."
+          "description": "Update any team/brand name text in the hero section to display 'Legend', 'X', and 'Arena' as three separate styled elements. Each word should be visually distinct, maintaining consistency with the esports visual theme and the updated Navbar styling."
         },
         {
           "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "Restore the Footer component to Version 44 state, including branding layout, social media links, quick navigation links, and all styling elements exactly as they were in Version 44."
-        },
-        {
-          "path": "frontend/src/components/PlayerCard.tsx",
-          "operation": "modify",
-          "description": "Restore the PlayerCard component to Version 44 state, including avatar image rendering, role badge styling, player name display, hover effects, and fallback avatar handling with exact Version 44 styling."
-        },
-        {
-          "path": "frontend/src/components/AnnouncementCard.tsx",
-          "operation": "modify",
-          "description": "Restore the AnnouncementCard component to Version 44 state, including card layout, title/body display, timestamp formatting, and hover effects with exact Version 44 styling."
-        },
-        {
-          "path": "frontend/src/components/PWAInstallBanner.tsx",
-          "operation": "modify",
-          "description": "Restore the PWAInstallBanner component to Version 44 state, including banner positioning, prompt handling, iOS fallback instructions, and all styling exactly as it was in Version 44."
-        },
-        {
-          "path": "frontend/src/components/AdminPanel.tsx",
-          "operation": "modify",
-          "description": "Restore the AdminPanel component to Version 44 state, including floating widget positioning, tabbed UI layout, roster/announcement management forms, and all styling exactly as it was in Version 44."
-        },
-        {
-          "path": "frontend/src/pages/LandingPage.tsx",
-          "operation": "modify",
-          "description": "Restore the LandingPage component to Version 44 state, ensuring the composition and layout of Hero, About, Roster, News, and Footer sections matches Version 44 exactly."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Restore the App root component to Version 44 state, ensuring the composition of PWAInstallBanner, Navbar, LandingPage, and AdminPanel matches Version 44 layout and styling exactly."
+          "description": "Update the brand logo text in the footer to display 'Legend', 'X', and 'Arena' as three distinct styled elements. Ensure the styling is consistent with the Navbar and HeroSection updates while fitting naturally within the footer layout."
         }
       ]
     }

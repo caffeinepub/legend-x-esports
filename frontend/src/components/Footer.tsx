@@ -1,84 +1,96 @@
-import { Heart } from 'lucide-react';
-import { SiX, SiDiscord, SiWhatsapp, SiYoutube, SiInstagram } from 'react-icons/si';
-
-const socialLinks = [
-  { icon: SiX, label: 'X (Twitter)', href: 'https://x.com', hoverClass: 'hover:text-esports-red hover:border-esports-red/40 hover:bg-esports-red/10' },
-  { icon: SiDiscord, label: 'Discord', href: 'https://discord.gg', hoverClass: 'hover:text-esports-red hover:border-esports-red/40 hover:bg-esports-red/10' },
-  { icon: SiWhatsapp, label: 'WhatsApp', href: 'https://whatsapp.com/channel/0029Vb8BEFtFXUuarLwqVs0C', hoverClass: 'hover:text-[#25D366] hover:border-[#25D366]/40 hover:bg-[#25D366]/10' },
-  { icon: SiYoutube, label: 'YouTube', href: 'https://youtube.com/@mrqlegendff?si=IUBFSTd9J-PGWeNQ', hoverClass: 'hover:text-esports-red hover:border-esports-red/40 hover:bg-esports-red/10' },
-  { icon: SiInstagram, label: 'Instagram', href: 'https://instagram.com', hoverClass: 'hover:text-esports-red hover:border-esports-red/40 hover:bg-esports-red/10' },
-];
-
-const footerLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Details', href: '#about' },
-  { label: 'Roster', href: '#roster' },
-  { label: 'News', href: '#news' },
-  { label: 'Contact', href: '#contact' },
-];
+import { SiYoutube, SiInstagram, SiFacebook } from "react-icons/si";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
-  const appId = encodeURIComponent(typeof window !== 'undefined' ? window.location.hostname : 'legend-x-esports');
+  const currentYear = new Date().getFullYear();
+  const appId = encodeURIComponent(
+    typeof window !== "undefined" ? window.location.hostname : "legend-x-arena"
+  );
+
+  const navLinks = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Roster", href: "#roster" },
+    { label: "News", href: "#news" },
+  ];
+
+  const socialLinks = [
+    {
+      icon: SiYoutube,
+      href: "https://www.youtube.com/@MrQLegendYT",
+      label: "YouTube",
+    },
+    {
+      icon: SiInstagram,
+      href: "https://www.instagram.com/mrqlegend",
+      label: "Instagram",
+    },
+    {
+      icon: SiFacebook,
+      href: "https://www.facebook.com/mrqlegend",
+      label: "Facebook",
+    },
+  ];
 
   return (
-    <footer id="contact" className="relative bg-esports-dark border-t border-esports-dark-4 overflow-hidden">
-      {/* Top divider glow */}
-      <div className="section-divider" />
-
-      {/* Background accent */}
-      <div
-        className="absolute inset-0 opacity-5 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse at bottom center, oklch(0.55 0.22 25), transparent 60%)' }}
-      />
-
-      <div className="container mx-auto px-4 sm:px-6 py-16 relative z-10">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+    <footer className="bg-background border-t border-border pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <img
-                src="/assets/quality_restoration_20260128182709920-4.jpg"
-                alt="Legend X Esports"
-                className="h-10 w-10 rounded-full object-cover object-top border border-esports-red/50 shadow-[0_0_8px_oklch(0.55_0.22_25/0.4)]"
-              />
-              <span className="font-display text-xl tracking-widest">
-                LEGEND <span className="text-esports-red">X</span> ESPORTS
+          <div className="flex flex-col gap-4">
+            {/* Brand Logo — Legend / X / Arena */}
+            <div className="flex flex-col leading-none gap-0.5">
+              <span
+                className="font-black uppercase tracking-widest text-foreground"
+                style={{ fontSize: "1.1rem", letterSpacing: "0.18em" }}
+              >
+                Legend
+              </span>
+              <span
+                className="font-black uppercase text-primary"
+                style={{ fontSize: "2rem", lineHeight: "1", letterSpacing: "0.05em" }}
+              >
+                X
+              </span>
+              <span
+                className="font-black uppercase tracking-widest text-foreground"
+                style={{ fontSize: "1.1rem", letterSpacing: "0.18em" }}
+              >
+                Arena
               </span>
             </div>
-            <p className="font-body text-sm text-esports-gray leading-relaxed mb-6">
-              Professional esports organization dedicated to excellence, competition, and building the next generation of champions.
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
+              Pakistan's premier esports team. Competing at the highest level
+              and inspiring the next generation of gamers.
             </p>
             {/* Social Links */}
-            <div className="flex items-center gap-3">
-              {socialLinks.map(({ icon: Icon, label, href, hoverClass }) => (
+            <div className="flex gap-4 mt-2">
+              {socialLinks.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className={`p-2 bg-esports-dark-3 border border-esports-dark-4 text-esports-gray transition-all duration-200 ${hoverClass}`}
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
-                  <Icon size={16} />
+                  <Icon size={20} />
                 </a>
               ))}
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-heading text-sm tracking-widest uppercase text-esports-red mb-4">
+          <div className="flex flex-col gap-4">
+            <h3 className="text-sm font-bold tracking-widest uppercase text-foreground">
               Quick Links
-            </h4>
-            <ul className="space-y-2">
-              {footerLinks.map((link) => (
-                <li key={link.href}>
+            </h3>
+            <ul className="flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <li key={link.label}>
                   <a
                     href={link.href}
-                    className="font-body text-sm text-esports-gray hover:text-foreground transition-colors flex items-center gap-2 group"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
                   >
-                    <span className="w-0 h-px bg-esports-red group-hover:w-4 transition-all duration-200" />
                     {link.label}
                   </a>
                 </li>
@@ -87,41 +99,36 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="font-heading text-sm tracking-widest uppercase text-esports-red mb-4">
-              Contact Us
-            </h4>
-            <div className="space-y-3 font-body text-sm text-esports-gray">
-              <p>
-                For partnerships, sponsorships, or general inquiries, reach out to us on our social channels or via email.
-              </p>
-              <a
-                href="mailto:contact@legendxesports.gg"
-                className="block text-esports-gray-light hover:text-esports-red transition-colors"
-              >
-                Dollars.ai
-              </a>
-              <div className="pt-2">
-                <span className="font-heading text-xs tracking-widest uppercase text-esports-gray">
-                  Based in the Philippines
-                </span>
-              </div>
-            </div>
+          <div className="flex flex-col gap-4">
+            <h3 className="text-sm font-bold tracking-widest uppercase text-foreground">
+              Contact
+            </h3>
+            <ul className="flex flex-col gap-2 text-sm text-muted-foreground">
+              <li>
+                <a
+                  href="mailto:contact@legendxarena.com"
+                  className="hover:text-primary transition-colors duration-200"
+                >
+                  Dollars.ai
+                </a>
+              </li>
+              <li>Pakistan</li>
+            </ul>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-esports-dark-4 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-body text-xs text-esports-gray text-center sm:text-left">
-            © {year} Legend X Esports. All rights reserved.
-          </p>
-          <p className="font-body text-xs text-esports-gray flex items-center gap-1">
-            Built with <Heart size={12} className="text-esports-red fill-esports-red" /> using{' '}
+        {/* Bottom Bar */}
+        <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
+          <p>© {currentYear} Legend X Arena. All rights reserved.</p>
+          <p>
+            Built with{" "}
+            <span className="text-primary">♥</span>{" "}
+            using{" "}
             <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appId}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-esports-red hover:text-esports-gold transition-colors"
+              className="hover:text-primary transition-colors duration-200 underline underline-offset-2"
             >
               caffeine.ai
             </a>

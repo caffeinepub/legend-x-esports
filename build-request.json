@@ -1,36 +1,37 @@
 {
   "kind": "build_request",
-  "title": "Revert all settings to Version 44",
-  "priority": "high",
+  "title": "Update text labels to 'Legend', 'X', 'Arena'",
+  "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Fully revert the entire frontend to its Version 44 state — restore all component styles, animations, CSS custom properties, Tailwind configuration, and layout settings exactly as they were in Version 44, undoing any changes introduced in Version 45 or Version 46.",
+      "id": "REQ-2",
+      "text": "Update all instances of the team/brand name text labels across the frontend so they are displayed as three separate styled elements: 'Legend', 'X', and 'Arena' — each word on its own line or as a distinct styled segment, consistent with the esports visual theme.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-1"
         ],
         "quotes": [
-          "44 wala version wala kar Pagal sari setting kyun Kharab kardi Tum ne"
+          "Legend\nX\nArena"
         ]
       },
       "acceptanceCriteria": [
-        "All frontend components (HeroSection, Navbar, AboutSection, RosterSection, NewsSection, Footer, etc.) match Version 44 exactly.",
-        "CSS custom properties in index.css and src/index.css match Version 44 values.",
-        "Tailwind configuration in tailwind.config.js matches Version 44 values.",
-        "HeroSection shooting animation is identical to Version 44.",
-        "No visual or behavioral differences remain from any post-Version-44 changes."
+        "The brand/team name is rendered as three distinct text elements: 'Legend', 'X', and 'Arena'",
+        "Each word ('Legend', 'X', 'Arena') is visually separated and styled consistently with the existing esports theme",
+        "The label appears correctly in the Navbar, HeroSection, and Footer wherever the team name is displayed",
+        "No other text content is altered"
       ]
     }
   ],
   "constraints": [
-    "Do not modify any backend files.",
-    "Do not modify immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui."
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui/",
+    "Do not change any other content, layout, or styling beyond the text label update"
   ],
   "nonGoals": [
-    "Introducing any new features or changes beyond restoring Version 44 state.",
-    "Modifying backend logic or data models."
+    "Changing the overall brand identity or color scheme",
+    "Modifying backend data or Motoko actor",
+    "Adding new sections or components",
+    "Reverting or altering any version history changes beyond the text label update"
   ],
   "imageRequirements": {
     "required": [],
