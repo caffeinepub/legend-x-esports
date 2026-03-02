@@ -1,18 +1,40 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-03-02T00:43:44.555Z",
+  "generatedAt": "2026-03-02T00:57:00.865Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
+    "total": 3,
+    "implemented": 3,
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Remove the existing looping black bullet-with-smoke-trail SVG animation from the CTA button span element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4] in HeroSection.tsx. Replace it with a small inline cartoon-style looping animation scene that fits the same compact size as the original bullet. The animation must show: (1) a small cartoon boy standing on the LEFT side in a shooting pose with a gun aimed to the right, (2) a target/aiming board (bullseye board) on the RIGHT side, (3) a looping shooting animation where the boy fires and the target board reacts (e.g., hit flash or shake effect). The entire animation must be rendered using inline SVG or CSS keyframe animations — no external image dependencies. The style must be cartoon/chibi-style with simple bold outlines and bright colors. The animation must loop continuously and remain small (roughly 80–120px wide, 40–50px tall) to fit inside or near the CTA button without breaking layout.",
+        "summary": "Enlarge and bold the 'Join Now For Tournament' button text. The element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4] should have a noticeably larger font size (e.g., increase by at least one to two size steps) and heavier font weight so the call-to-action label is more prominent.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Reduce the size of the animated shooting boy character in HeroSection. Scale down the SVG boy element (decrease its width/height or transform scale) so it occupies less vertical and horizontal space in the hero scene while keeping the animation intact.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/HeroSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/HeroSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Shrink the target board(s) in the HeroSection shooting animation. Reduce the width and height of the board SVG element(s) so they appear noticeably smaller within the scene.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/HeroSection.tsx"
@@ -29,7 +51,6 @@
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
     "frontend/src/components/HeroSection.tsx",
-    "frontend/src/index.css",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

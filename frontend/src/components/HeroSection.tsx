@@ -8,7 +8,7 @@ function ShootingAnimation() {
       style={{
         display: 'block',
         width: '100%',
-        height: '44px',
+        height: '52px',
         overflow: 'visible',
         position: 'relative',
         marginTop: '6px',
@@ -19,27 +19,27 @@ function ShootingAnimation() {
         /* Boy arm recoil */
         @keyframes boy-shoot {
           0%, 60%, 100% { transform: rotate(0deg); }
-          10%, 20% { transform: rotate(-8deg) translateY(-1px); }
+          10%, 20% { transform: rotate(-6deg) translateY(-1px); }
         }
         /* Muzzle flash */
         @keyframes muzzle-flash {
-          0%, 8%, 25%, 100% { opacity: 0; transform: scale(0.5); }
+          0%, 8%, 25%, 100% { opacity: 0; transform: scale(0.4); }
           12%, 18% { opacity: 1; transform: scale(1); }
         }
-        /* Bullet travel */
+        /* Bullet travel — longer distance */
         @keyframes shoot-bullet {
           0%, 5% { transform: translateX(0px); opacity: 0; }
           8% { opacity: 1; transform: translateX(0px); }
-          45% { opacity: 1; transform: translateX(62px); }
-          50%, 100% { opacity: 0; transform: translateX(62px); }
+          45% { opacity: 1; transform: translateX(130px); }
+          50%, 100% { opacity: 0; transform: translateX(130px); }
         }
         /* Target shake on hit */
         @keyframes target-hit {
           0%, 40%, 100% { transform: translateX(0px) rotate(0deg); }
-          52% { transform: translateX(-3px) rotate(-4deg); }
-          56% { transform: translateX(3px) rotate(3deg); }
-          60% { transform: translateX(-2px) rotate(-2deg); }
-          64% { transform: translateX(2px) rotate(1deg); }
+          52% { transform: translateX(-2px) rotate(-3deg); }
+          56% { transform: translateX(2px) rotate(2deg); }
+          60% { transform: translateX(-1px) rotate(-1deg); }
+          64% { transform: translateX(1px) rotate(0.5deg); }
           68% { transform: translateX(0px) rotate(0deg); }
         }
         /* Hit flash on target */
@@ -50,18 +50,18 @@ function ShootingAnimation() {
         /* Stars/impact sparks */
         @keyframes spark-1 {
           0%, 40%, 100% { opacity: 0; transform: translate(0,0) scale(0); }
-          52% { opacity: 1; transform: translate(-5px, -6px) scale(1); }
-          65% { opacity: 0; transform: translate(-8px, -10px) scale(0.5); }
+          52% { opacity: 1; transform: translate(-4px, -5px) scale(1); }
+          65% { opacity: 0; transform: translate(-6px, -8px) scale(0.4); }
         }
         @keyframes spark-2 {
           0%, 40%, 100% { opacity: 0; transform: translate(0,0) scale(0); }
-          52% { opacity: 1; transform: translate(5px, -5px) scale(1); }
-          65% { opacity: 0; transform: translate(8px, -9px) scale(0.5); }
+          52% { opacity: 1; transform: translate(4px, -4px) scale(1); }
+          65% { opacity: 0; transform: translate(6px, -7px) scale(0.4); }
         }
         @keyframes spark-3 {
           0%, 40%, 100% { opacity: 0; transform: translate(0,0) scale(0); }
-          52% { opacity: 1; transform: translate(0px, -7px) scale(1); }
-          65% { opacity: 0; transform: translate(0px, -12px) scale(0.5); }
+          52% { opacity: 1; transform: translate(0px, -6px) scale(1); }
+          65% { opacity: 0; transform: translate(0px, -10px) scale(0.4); }
         }
         /* Boy body bob */
         @keyframes boy-idle {
@@ -70,27 +70,36 @@ function ShootingAnimation() {
         }
         /* Smoke puff from gun */
         @keyframes gun-smoke {
-          0%, 5%, 100% { opacity: 0; transform: translateX(0) scale(0.3); }
-          20% { opacity: 0.7; transform: translateX(4px) scale(1); }
-          40% { opacity: 0.3; transform: translateX(8px) scale(1.4); }
-          55% { opacity: 0; transform: translateX(12px) scale(1.8); }
+          0%, 5%, 100% { opacity: 0; transform: translateX(0) scale(0.2); }
+          20% { opacity: 0.6; transform: translateX(3px) scale(0.8); }
+          40% { opacity: 0.25; transform: translateX(6px) scale(1.2); }
+          55% { opacity: 0; transform: translateX(9px) scale(1.5); }
+        }
+        /* BANG text */
+        @keyframes bang-pop {
+          0%, 40%, 65%, 100% { opacity: 0; transform: scale(0.5); }
+          50%, 58% { opacity: 1; transform: scale(1); }
         }
       `}</style>
 
       <svg
         width="100%"
-        height="44"
-        viewBox="0 0 160 44"
+        height="52"
+        viewBox="0 0 220 52"
         preserveAspectRatio="xMidYMid meet"
         xmlns="http://www.w3.org/2000/svg"
         style={{ display: 'block', overflow: 'visible' }}
       >
-        {/* ══════════════════════════════════════════ */}
-        {/*  CARTOON BOY — left side (x≈10–42)        */}
-        {/* ══════════════════════════════════════════ */}
-        <g style={{ animation: 'boy-idle 1.2s ease-in-out infinite' }}>
+        {/* ══════════════════════════════════════════════════════ */}
+        {/*  CARTOON BOY — far left, smaller scale (~0.45x)       */}
+        {/*  Reduced from 0.62 to 0.45 for a more compact look    */}
+        {/* ══════════════════════════════════════════════════════ */}
+        <g
+          transform="translate(4, 8) scale(0.45)"
+          style={{ animation: 'boy-idle 1.2s ease-in-out infinite' }}
+        >
           {/* Shadow */}
-          <ellipse cx="26" cy="43" rx="10" ry="2" fill="#000" opacity="0.25" />
+          <ellipse cx="26" cy="43" rx="10" ry="2" fill="#000" opacity="0.2" />
 
           {/* Legs */}
           <rect x="20" y="32" width="5" height="10" rx="2" fill="#2563EB" />
@@ -115,145 +124,152 @@ function ShootingAnimation() {
           {/* Eye shine */}
           <circle cx="23.6" cy="12.4" r="0.5" fill="white" />
           <circle cx="29.6" cy="12.4" r="0.5" fill="white" />
-          {/* Smile */}
-          <path d="M23 16 Q26 18.5 29 16" stroke="#92400E" strokeWidth="1" fill="none" strokeLinecap="round" />
+          {/* Smile / determined face */}
+          <path d="M23 16 Q26 17.5 29 16" stroke="#92400E" strokeWidth="1" fill="none" strokeLinecap="round" />
           {/* Ear */}
           <circle cx="18" cy="13" r="2" fill="#FBBF24" />
           <circle cx="34" cy="13" r="2" fill="#FBBF24" />
 
-          {/* Shooting arm (right arm extended forward) */}
+          {/* ── TWO-HANDED SHOOTING POSE ── */}
+          {/* Both arms extended forward holding the gun */}
           <g style={{ transformOrigin: '34px 24px', animation: 'boy-shoot 1.6s ease-in-out infinite' }}>
-            {/* Upper arm */}
-            <rect x="34" y="21" width="8" height="4" rx="2" fill="#FBBF24" />
-            {/* Hand */}
-            <circle cx="44" cy="23" r="3" fill="#FBBF24" />
-            {/* Gun */}
-            <rect x="42" y="20" width="12" height="5" rx="1.5" fill="#374151" />
+            {/* Upper arm (right) */}
+            <rect x="34" y="20" width="9" height="4" rx="2" fill="#FBBF24" />
+            {/* Upper arm (left / second hand) — slightly below */}
+            <rect x="34" y="25" width="9" height="4" rx="2" fill="#FBBF24" />
+
+            {/* Right hand */}
+            <circle cx="44" cy="22" r="3" fill="#FBBF24" />
+            {/* Left hand (second hand on gun) */}
+            <circle cx="44" cy="27" r="3" fill="#FBBF24" />
+
+            {/* Gun body */}
+            <rect x="42" y="19" width="13" height="6" rx="1.5" fill="#374151" />
             {/* Gun barrel */}
-            <rect x="52" y="21" width="8" height="3" rx="1" fill="#1F2937" />
+            <rect x="53" y="20.5" width="9" height="3" rx="1" fill="#1F2937" />
             {/* Gun grip */}
-            <rect x="44" y="24" width="5" height="4" rx="1" fill="#1F2937" />
+            <rect x="44" y="24" width="5" height="5" rx="1" fill="#1F2937" />
             {/* Gun trigger guard */}
             <path d="M46 25 Q48 28 50 25" stroke="#374151" strokeWidth="1" fill="none" />
+            {/* Second hand grip wrap on barrel */}
+            <rect x="48" y="19" width="5" height="6" rx="1" fill="#FBBF24" opacity="0.7" />
 
             {/* Muzzle flash */}
-            <g style={{ transformOrigin: '60px 22.5px', animation: 'muzzle-flash 1.6s ease-in-out infinite' }}>
-              <polygon points="60,22.5 65,19 63,22.5 65,26 60,22.5" fill="#FFD700" />
-              <polygon points="60,22.5 67,22.5 63,20 67,22.5 63,25 60,22.5" fill="#FF8C00" opacity="0.8" />
+            <g style={{ transformOrigin: '62px 22px', animation: 'muzzle-flash 1.6s ease-in-out infinite' }}>
+              <polygon points="62,22 67,18.5 65,22 67,25.5 62,22" fill="#FFD700" />
+              <polygon points="62,22 69,22 65,19.5 69,22 65,24.5 62,22" fill="#FF8C00" opacity="0.8" />
             </g>
 
             {/* Gun smoke */}
             <circle
-              cx="60"
+              cx="62"
               cy="22"
-              r="3"
+              r="2.5"
               fill="#9CA3AF"
               style={{ animation: 'gun-smoke 1.6s ease-in-out infinite' }}
             />
           </g>
-
-          {/* Left arm (down) */}
-          <rect x="10" y="21" width="8" height="4" rx="2" fill="#FBBF24" />
-          <circle cx="9" cy="23" r="3" fill="#FBBF24" />
         </g>
 
-        {/* ══════════════════════════════════════════ */}
-        {/*  FLYING BULLET                            */}
-        {/* ══════════════════════════════════════════ */}
+        {/* ══════════════════════════════════════════════════════ */}
+        {/*  FLYING BULLET — starts near gun muzzle (~x=46)       */}
+        {/*  travels across the long gap to the board (~x=176)    */}
+        {/* ══════════════════════════════════════════════════════ */}
         <g style={{ animation: 'shoot-bullet 1.6s ease-in-out infinite' }}>
           {/* Bullet body */}
-          <ellipse cx="68" cy="22.5" rx="5" ry="2.5" fill="#D97706" />
+          <ellipse cx="50" cy="26" rx="4" ry="2" fill="#D97706" />
           {/* Bullet tip */}
-          <ellipse cx="73" cy="22.5" rx="3" ry="2" fill="#F59E0B" />
+          <ellipse cx="54" cy="26" rx="2.5" ry="1.5" fill="#F59E0B" />
           {/* Bullet casing */}
-          <rect x="63" y="21" width="5" height="3" rx="0.5" fill="#92400E" />
+          <rect x="46" y="24.5" width="4" height="3" rx="0.5" fill="#92400E" />
           {/* Speed lines */}
-          <line x1="55" y1="21" x2="62" y2="21" stroke="#FFD700" strokeWidth="1" opacity="0.6" />
-          <line x1="55" y1="24" x2="62" y2="24" stroke="#FFD700" strokeWidth="1" opacity="0.4" />
+          <line x1="40" y1="25" x2="45" y2="25" stroke="#FFD700" strokeWidth="0.8" opacity="0.6" />
+          <line x1="40" y1="27" x2="45" y2="27" stroke="#FFD700" strokeWidth="0.8" opacity="0.4" />
         </g>
 
-        {/* ══════════════════════════════════════════ */}
-        {/*  TARGET BOARD — right side (x≈110–155)   */}
-        {/* ══════════════════════════════════════════ */}
-        <g style={{ transformOrigin: '133px 22px', animation: 'target-hit 1.6s ease-in-out infinite' }}>
+        {/* ══════════════════════════════════════════════════════ */}
+        {/*  TARGET BOARD — right side, SMALLER board             */}
+        {/*  Reduced from 46×50 to 32×36, repositioned            */}
+        {/* ══════════════════════════════════════════════════════ */}
+        <g style={{ transformOrigin: '196px 26px', animation: 'target-hit 1.6s ease-in-out infinite' }}>
           {/* Board post */}
-          <rect x="131" y="30" width="4" height="13" rx="1" fill="#92400E" />
+          <rect x="194" y="40" width="3" height="11" rx="1" fill="#92400E" />
           {/* Board base */}
-          <rect x="126" y="41" width="14" height="3" rx="1" fill="#78350F" />
+          <rect x="189" y="49" width="10" height="2.5" rx="1" fill="#78350F" />
 
-          {/* Board background */}
-          <rect x="112" y="6" width="42" height="36" rx="3" fill="#F5F5DC" stroke="#92400E" strokeWidth="2" />
+          {/* Board background — smaller: width 32, height 36 */}
+          <rect x="180" y="8" width="32" height="36" rx="2.5" fill="#F5F5DC" stroke="#92400E" strokeWidth="1.5" />
 
-          {/* Bullseye rings — outermost to innermost */}
-          <circle cx="133" cy="24" r="16" fill="#EF4444" />
-          <circle cx="133" cy="24" r="12" fill="white" />
-          <circle cx="133" cy="24" r="8" fill="#EF4444" />
-          <circle cx="133" cy="24" r="4" fill="white" />
+          {/* Bullseye rings — centered in smaller board */}
+          <circle cx="196" cy="26" r="13" fill="#EF4444" />
+          <circle cx="196" cy="26" r="9" fill="white" />
+          <circle cx="196" cy="26" r="6" fill="#EF4444" />
+          <circle cx="196" cy="26" r="3.5" fill="white" />
           {/* Bullseye center */}
-          <circle cx="133" cy="24" r="2" fill="#EF4444" />
+          <circle cx="196" cy="26" r="1.8" fill="#EF4444" />
 
           {/* Crosshair lines */}
-          <line x1="133" y1="8" x2="133" y2="40" stroke="#374151" strokeWidth="0.5" opacity="0.4" />
-          <line x1="117" y1="24" x2="149" y2="24" stroke="#374151" strokeWidth="0.5" opacity="0.4" />
+          <line x1="196" y1="10" x2="196" y2="42" stroke="#374151" strokeWidth="0.5" opacity="0.35" />
+          <line x1="182" y1="26" x2="210" y2="26" stroke="#374151" strokeWidth="0.5" opacity="0.35" />
 
           {/* Hit flash overlay */}
           <circle
-            cx="133"
-            cy="24"
-            r="16"
+            cx="196"
+            cy="26"
+            r="13"
             fill="#FFD700"
             style={{ animation: 'hit-flash 1.6s ease-in-out infinite' }}
           />
 
           {/* Impact sparks */}
-          <g style={{ transformOrigin: '133px 24px' }}>
+          <g style={{ transformOrigin: '196px 26px' }}>
             <polygon
-              points="133,24 131,18 133,20 135,18"
+              points="196,26 194,20 196,22 198,20"
               fill="#FFD700"
               style={{ animation: 'spark-1 1.6s ease-in-out infinite' }}
             />
             <polygon
-              points="133,24 139,20 136,22 139,18"
+              points="196,26 202,22 199,24 202,20"
               fill="#FF8C00"
               style={{ animation: 'spark-2 1.6s ease-in-out infinite' }}
             />
             <polygon
-              points="133,24 130,19 133,17 136,19"
+              points="196,26 193,21 196,19 199,21"
               fill="#EF4444"
               style={{ animation: 'spark-3 1.6s ease-in-out infinite' }}
             />
           </g>
 
-          {/* Bullet hole (appears after hit) */}
+          {/* Bullet hole */}
           <circle
-            cx="133"
-            cy="24"
-            r="1.5"
+            cx="196"
+            cy="26"
+            r="1.2"
             fill="#1a1a1a"
             style={{ animation: 'hit-flash 1.6s ease-in-out infinite' }}
           />
 
           {/* "BANG!" text pop */}
           <text
-            x="133"
-            y="4"
+            x="196"
+            y="5"
             textAnchor="middle"
-            fontSize="7"
+            fontSize="5"
             fontWeight="bold"
             fontFamily="'Bebas Neue', sans-serif"
             fill="#FFD700"
             stroke="#1a1a1a"
-            strokeWidth="0.5"
-            style={{ animation: 'hit-flash 1.6s ease-in-out infinite' }}
+            strokeWidth="0.4"
+            style={{ animation: 'bang-pop 1.6s ease-in-out infinite', transformOrigin: '196px 5px' }}
           >
             BANG!
           </text>
         </g>
 
-        {/* ══════════════════════════════════════════ */}
-        {/*  GROUND LINE                              */}
-        {/* ══════════════════════════════════════════ */}
-        <line x1="5" y1="43" x2="155" y2="43" stroke="#374151" strokeWidth="1" opacity="0.3" />
+        {/* ══════════════════════════════════════════════════════ */}
+        {/*  GROUND LINE                                          */}
+        {/* ══════════════════════════════════════════════════════ */}
+        <line x1="4" y1="51" x2="216" y2="51" stroke="#374151" strokeWidth="0.8" opacity="0.25" />
       </svg>
     </span>
   );
@@ -332,7 +348,7 @@ export default function HeroSection() {
           {/* Unique Fire Button */}
           <a
             href="#about"
-            className="fire-btn group relative inline-flex items-center gap-2 px-7 py-3 font-heading text-sm tracking-widest uppercase font-bold text-esports-dark overflow-hidden"
+            className="fire-btn group relative inline-flex items-center gap-2 px-7 py-3 font-heading tracking-widest uppercase font-bold text-esports-dark overflow-hidden"
             style={{ clipPath: 'polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)' }}
           >
             {/* Animated gradient background */}
@@ -360,13 +376,18 @@ export default function HeroSection() {
             <span className="relative z-10 flex flex-col items-center gap-0 w-full">
               <span className="flex items-center gap-2">
                 <Flame
-                  size={16}
+                  size={20}
                   className="animate-flame-flicker"
                   style={{ filter: 'drop-shadow(0 0 4px #FF4500)' }}
                 />
-                <span style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>JOIN NOW FOR TOURNAMENT</span>
+                <span
+                  className="text-xl sm:text-2xl font-extrabold"
+                  style={{ textShadow: '0 1px 6px rgba(0,0,0,0.6)', letterSpacing: '0.08em' }}
+                >
+                  JOIN NOW FOR TOURNAMENT
+                </span>
                 <Flame
-                  size={16}
+                  size={20}
                   className="animate-flame-flicker"
                   style={{ filter: 'drop-shadow(0 0 4px #FF4500)', animationDelay: '0.3s' }}
                 />

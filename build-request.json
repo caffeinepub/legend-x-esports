@@ -1,45 +1,73 @@
 {
   "kind": "build_request",
-  "title": "Replace bullet animation with cartoon boy-shooting-target animation",
+  "title": "Enlarge 'Join Now For Tournament' text, resize animated boy, and shrink boards",
   "projectName": "Legend X Esports",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Remove the existing looping black bullet-with-smoke-trail SVG animation from the CTA button span element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4] in HeroSection.tsx. Replace it with a small inline cartoon-style looping animation scene that fits the same compact size as the original bullet. The animation must show: (1) a small cartoon boy standing on the LEFT side in a shooting pose with a gun aimed to the right, (2) a target/aiming board (bullseye board) on the RIGHT side, (3) a looping shooting animation where the boy fires and the target board reacts (e.g., hit flash or shake effect). The entire animation must be rendered using inline SVG or CSS keyframe animations — no external image dependencies. The style must be cartoon/chibi-style with simple bold outlines and bright colors. The animation must loop continuously and remain small (roughly 80–120px wide, 40–50px tall) to fit inside or near the CTA button without breaking layout.",
+      "text": "Enlarge and bold the 'Join Now For Tournament' button text. The element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4] should have a noticeably larger font size (e.g., increase by at least one to two size steps) and heavier font weight so the call-to-action label is more prominent.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-4"
         ],
         "quotes": [
-          "animation bnao chote chote bilkul yhi size ke jis me left side per larka khara ho or Right side per aim rakh kar shoot karrha ho right side per Jahan shoot karrha ho wahan per ye aiming board ho jis per fire kre cartoon type animation ho chote chote se"
+          "Join Now For Tournament Wala Thora SA Bhara kro text ko"
         ]
       },
       "acceptanceCriteria": [
-        "The old bullet/smoke animation span is replaced with the new cartoon shooting scene.",
-        "A cartoon boy figure is visible on the left side of the animation.",
-        "A bullseye/aiming target board is visible on the right side of the animation.",
-        "The boy performs a shooting animation aimed toward the target board.",
-        "The target board shows a hit reaction (flash, shake, or impact effect) when shot.",
-        "The animation loops continuously without any manual interaction.",
-        "The overall size of the animation is small (approx 80–120px wide, 40–50px tall) matching the original bullet animation size.",
-        "The art style is cartoon/chibi with bold outlines and bright colors.",
-        "The animation is implemented using inline SVG or CSS keyframes — no external image files required.",
-        "The CTA button layout is not broken by the new animation."
+        "The 'Join Now For Tournament' span text is visibly larger and bolder than before.",
+        "The button still renders correctly on mobile and desktop without overflow or layout breakage."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Reduce the size of the animated shooting boy character in HeroSection. Scale down the SVG boy element (decrease its width/height or transform scale) so it occupies less vertical and horizontal space in the hero scene while keeping the animation intact.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "animation wala boy"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The animated boy character is visibly smaller than the current version.",
+        "All CSS keyframe animations (shooting, firing) continue to play correctly on the smaller character.",
+        "The hero layout remains balanced and the character does not overlap other elements."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Shrink the target board(s) in the HeroSection shooting animation. Reduce the width and height of the board SVG element(s) so they appear noticeably smaller within the scene.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "aik board ko chota chota kro"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The target board(s) are visibly smaller than the current version.",
+        "The shooting animation still targets the board correctly after the resize.",
+        "No visual artifacts or misalignment in the hero scene after scaling down the board."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui.",
-    "Animation must be self-contained inline SVG or CSS — no external image assets for the character or target.",
-    "Keep the animation the same compact size as the original bullet animation to avoid layout disruption."
+    "Do not modify any files under frontend/src/hooks/ (immutable paths).",
+    "Do not alter the shooting animation logic or keyframes — only resize/scale the involved SVG elements.",
+    "Apply changes only to the identified element and HeroSection component; do not affect other sections."
   ],
   "nonGoals": [
-    "Replacing or redesigning the CTA button itself.",
-    "Adding sound effects or audio.",
-    "Creating a full game or interactive shooting mechanic.",
-    "Changing any other section of the landing page."
+    "Redesigning the overall hero section layout.",
+    "Changing colors or theme of the hero animation.",
+    "Adding new animation sequences or characters.",
+    "Modifying backend logic."
   ],
   "imageRequirements": {
     "required": [],

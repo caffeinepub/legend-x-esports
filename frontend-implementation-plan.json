@@ -1,28 +1,52 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace bullet animation with cartoon boy-shooting-target animation",
+  "title": "Enlarge 'Join Now For Tournament' text, resize animated boy, and shrink boards",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the existing looping bullet-with-smoke-trail SVG animation in the HeroSection CTA button with a small inline cartoon-style looping animation showing a boy shooting at a target board",
+      "summary": "Enlarge and bold the 'Join Now For Tournament' button text to make the call-to-action more prominent",
       "acceptanceCriteria": [
-        "The old bullet/smoke animation span is replaced with the new cartoon shooting scene.",
-        "A cartoon boy figure is visible on the left side of the animation.",
-        "A bullseye/aiming target board is visible on the right side of the animation.",
-        "The boy performs a shooting animation aimed toward the target board.",
-        "The target board shows a hit reaction (flash, shake, or impact effect) when shot.",
-        "The animation loops continuously without any manual interaction.",
-        "The overall size of the animation is small (approx 80–120px wide, 40–50px tall) matching the original bullet animation size.",
-        "The art style is cartoon/chibi with bold outlines and bright colors.",
-        "The animation is implemented using inline SVG or CSS keyframes — no external image files required.",
-        "The CTA button layout is not broken by the new animation."
+        "The 'Join Now For Tournament' span text is visibly larger and bolder than before.",
+        "The button still renders correctly on mobile and desktop without overflow or layout breakage."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Locate the existing bullet-with-smoke-trail SVG animation span element within the CTA button (at the specified XPath location). Remove the entire bullet animation span. Create a new inline SVG animation scene (approximately 80–120px wide, 40–50px tall) that includes: (1) a cartoon boy character on the left side in a shooting pose with a gun aimed right, (2) a bullseye/aiming target board on the right side, and (3) CSS keyframe animations to create a looping shooting sequence where the boy fires and the target reacts with a hit flash or shake effect. Use bold cartoon/chibi art style with bright colors and simple outlines. Ensure the animation is self-contained using only inline SVG elements and CSS keyframes, with no external dependencies. Verify that the new animation fits within the same compact size as the original bullet animation and does not break the CTA button layout."
+          "description": "Locate the 'Join Now For Tournament' button text element (matching XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4]) and increase its font size by at least one to two Tailwind size steps (e.g., from text-base to text-lg or text-xl) and apply a heavier font weight class (e.g., font-bold or font-extrabold). Ensure the parent button container can accommodate the larger text without overflow on mobile viewports."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Reduce the size of the animated shooting boy character in HeroSection while preserving all animations",
+      "acceptanceCriteria": [
+        "The animated boy character is visibly smaller than the current version.",
+        "All CSS keyframe animations (shooting, firing) continue to play correctly on the smaller character.",
+        "The hero layout remains balanced and the character does not overlap other elements."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Scale down the animated shooting boy SVG element by reducing its width and height attributes or applying a CSS transform scale. Adjust the SVG dimensions (e.g., reduce from current size by 20-30%) or apply a scale transform (e.g., scale(0.7)) to the boy's container. Verify that the shooting and firing CSS keyframe animations defined in the component still apply correctly to the resized element without visual artifacts."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Shrink the target board(s) in the HeroSection shooting animation scene",
+      "acceptanceCriteria": [
+        "The target board(s) are visibly smaller than the current version.",
+        "The shooting animation still targets the board correctly after the resize.",
+        "No visual artifacts or misalignment in the hero scene after scaling down the board."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Locate the target board SVG element(s) in the shooting animation scene and reduce their width and height attributes. Scale down the board dimensions (e.g., reduce by 20-30% from current size) while ensuring the animated projectile still visually aligns with the board target. Test that the overall hero composition remains balanced after the board resize."
         }
       ]
     }

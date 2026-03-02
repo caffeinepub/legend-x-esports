@@ -1,16 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the existing bullet-with-smoke-trail SVG animation in the HeroSection CTA button with a small inline cartoon shooting scene animation.
+**Goal:** Adjust sizing of key visual elements in the HeroSection — enlarge the "Join Now For Tournament" button text, shrink the animated shooting boy character, and reduce the size of the target board(s).
 
 **Planned changes:**
-- Remove the looping black bullet/smoke-trail SVG animation from the CTA button span in `HeroSection.tsx`
-- Add a new inline SVG/CSS keyframe cartoon animation in its place featuring:
-  - A small cartoon/chibi-style boy on the left side in a shooting pose aimed right
-  - A bullseye/aiming target board on the right side
-  - A looping shooting animation where the boy fires and the target reacts with a hit flash or shake effect
-- Keep the animation size approximately 80–120px wide and 40–50px tall to match the original size and avoid layout disruption
-- Use bold outlines and bright colors in a cartoon/chibi art style
-- No external image files; fully self-contained inline SVG or CSS keyframes
+- Increase font size (by 1–2 size steps) and font weight of the "Join Now For Tournament" button span text to make it more prominent
+- Scale down the animated shooting boy SVG element in HeroSection while keeping all keyframe animations intact
+- Reduce the width and height of the target board SVG element(s) in the HeroSection shooting animation
 
-**User-visible outcome:** The CTA button displays a looping cartoon boy-shooting-target animation instead of the old bullet animation, with the same compact size and no layout changes.
+**User-visible outcome:** The hero section call-to-action text is larger and bolder, the animated boy character appears smaller, and the target boards are noticeably reduced in size — all without breaking the shooting animation or overall layout.

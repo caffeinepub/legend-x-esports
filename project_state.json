@@ -1,18 +1,35 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Small cartoon-style shooting animation: a boy stands on the left side aiming and shooting toward the right side, where an aiming/target board is placed. The animation is small-sized and loop-based with cartoon style.",
+  "summary": "Game/app project with animated character, tournament UI, and interactive boards. User is refining UI elements: enlarging 'Join Now For Tournament' text, adjusting the animated boy character size, and making boards smaller.",
   "architectural_notes": [
-    "Animation should be small-sized, cartoon style, with a boy on the left shooting toward a target/aiming board on the right"
+    "Project includes animated character with dual-hand firing animation",
+    "UI contains tournament join section with text and decorative boards"
   ],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-remove-the-existing-looping-black-bullet-with-smoke-trail-svg-animation-from-the-cta-button-span-element-located-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-2-a-2-span-4-in-herosection-tsx-replace-it-with-a-small-inline-cartoon-style-looping-animation-scene-that-fits-the-same-compact-size-as-the-original-bullet-the-animation-must-show-1-a-small-cartoon-boy-standing-on-the-left-side-in-a-shooting-pose-with-a-gun-aimed-to-the-right-2-a-target-aiming-board-bullseye-board-on-the-right-side-3-a-looping-shooting-animation-where-the-boy-fires-and-the-target-board-reacts-e-g-hit-flash-or-shake-effect-the-entire-animation-must-be-rendered-using-inline-svg-or-css-keyframe-animations-no-external-image-dependencies-the-style-must-be-cartoon-chibi-style-with-simple-bold-outlines-and-bright-colors-the-animation-must-loop-continuously-and-remain-small-roughly-80-120px-wide-40-50px-tall-to-fit-inside-or-near-the-cta-button-without-breaking-layout",
-      "title": "Remove the existing looping black bullet-with-smoke-trail SVG animation from the CTA button span element located at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4] in HeroSection.tsx. Replace it with a small inline cartoon-style looping animation scene that fits the same compact size as the original bullet. The animation must show: (1) a small cartoon boy standing on the LEFT side in a shooting pose with a gun aimed to the right, (2) a target/aiming board (bullseye board) on the RIGHT side, (3) a looping shooting animation where the boy fires and the target board reacts (e.g., hit flash or shake effect). The entire animation must be rendered using inline SVG or CSS keyframe animations — no external image dependencies. The style must be cartoon/chibi-style with simple bold outlines and bright colors. The animation must loop continuously and remain small (roughly 80–120px wide, 40–50px tall) to fit inside or near the CTA button without breaking layout.",
+      "id": "feature-enlarge-and-bold-the-join-now-for-tournament-button-text-the-element-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-2-a-2-span-4-should-have-a-noticeably-larger-font-size-e-g-increase-by-at-least-one-to-two-size-steps-and-heavier-font-weight-so-the-call-to-action-label-is-more-prominent",
+      "title": "Enlarge and bold the 'Join Now For Tournament' button text. The element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4] should have a noticeably larger font size (e.g., increase by at least one to two size steps) and heavier font weight so the call-to-action label is more prominent.",
       "reqIds": [
         "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-reduce-the-size-of-the-animated-shooting-boy-character-in-herosection-scale-down-the-svg-boy-element-decrease-its-width-height-or-transform-scale-so-it-occupies-less-vertical-and-horizontal-space-in-the-hero-scene-while-keeping-the-animation-intact",
+      "title": "Reduce the size of the animated shooting boy character in HeroSection. Scale down the SVG boy element (decrease its width/height or transform scale) so it occupies less vertical and horizontal space in the hero scene while keeping the animation intact.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-shrink-the-target-board-s-in-the-herosection-shooting-animation-reduce-the-width-and-height-of-the-board-svg-element-s-so-they-appear-noticeably-smaller-within-the-scene",
+      "title": "Shrink the target board(s) in the HeroSection shooting animation. Reduce the width and height of the board SVG element(s) so they appear noticeably smaller within the scene.",
+      "reqIds": [
+        "REQ-3"
       ],
       "version": 1
     }
@@ -20,13 +37,25 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Small cartoon animation with boy on left side aiming and shooting toward a target board on the right side",
+      "summary": "Make 'Join Now For Tournament' text larger/bolder",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Resize animated boy character to be smaller",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Make boards smaller in size",
       "reqIds": [],
       "status": "pending"
     }
   ],
   "gameProjectType": "2d",
-  "projectName": "Cartoon Shooting Animation",
+  "projectName": "Legend X Esports",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }
