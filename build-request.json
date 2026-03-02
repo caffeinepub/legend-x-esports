@@ -1,53 +1,73 @@
 {
   "kind": "build_request",
-  "title": "Center hero text elements and replace duplicate brand text with logo",
+  "title": "Update Meet the Team heading, News section CTA text, and remove gun animation",
+  "projectName": "Legend X Arena",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-3",
-      "text": "Center the three styled brand name elements ('Legend', 'X', 'Arena') displayed in the hero section (the h1 elements at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[2]/h1[1], h1[2], and h1[3]) so they are horizontally centered on the page instead of left-aligned.",
+      "id": "REQ-5",
+      "text": "In the 'Meet the Team' (Roster) section, change the section heading text to 'Meet With LEGEND'.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-4"
         ],
         "quotes": [
-          "In ko senter me kro"
+          "Jo meet the team he wahan lilkho :Meet With LEGEND"
         ]
       },
       "acceptanceCriteria": [
-        "The three h1 brand name elements in the hero section are centered horizontally.",
-        "Centering applies consistently on all screen sizes."
+        "The Roster/Meet the Team section heading displays 'Meet With LEGEND' instead of the previous heading text.",
+        "The heading styling remains consistent with the esports visual theme."
       ]
     },
     {
-      "id": "REQ-4",
-      "text": "In the left side top area of the hero section, remove the duplicate 'Legend X Arena' text labels (the second occurrence of the brand name) and replace them with the original logo image asset (the same logo used in the Navbar).",
+      "id": "REQ-6",
+      "text": "In the News section, change the call-to-action button or label text to read 'Join Now' on the first line and 'For Tournament' on the second line (or as two distinct styled lines). This targets the two anchor/button elements at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[3]/a[1] and /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[3]/a[2].",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-4"
         ],
         "quotes": [
-          "left side per uper Jo likha he dusri Baar legend x arena to us ko remove Karke logo lagao wapis wohi wala"
+          "news wale par likho Join Now For Tournament"
         ]
       },
       "acceptanceCriteria": [
-        "The duplicate 'Legend', 'X', 'Arena' text shown in the top-left area of the hero section is removed.",
-        "The original logo image (as used in the Navbar) is displayed in its place.",
-        "No duplicate brand text labels appear anywhere in the hero section's top-left area."
+        "The News section displays a CTA element with 'Join Now' and 'For Tournament' as the text content.",
+        "The two link elements at the specified XPaths are updated to show 'Join Now' and 'For Tournament' respectively.",
+        "The styling remains consistent with the esports visual theme."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Remove the gun/shooting canvas animation from the hero section. The canvas element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[2]/div[1]/canvas[1] renders a shooting animation (drawn arm, gun, bullets, shell casings, muzzle flash, recoil effects) — remove this entire animation and its associated canvas element, animation logic, and related code from HeroSection.tsx.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "gun wala koi Bhi animation he us ko remove kro"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The canvas element for the gun/shooting animation is no longer present in the hero section.",
+        "No gun, arm, bullet, shell casing, muzzle flash, or recoil animation renders anywhere on the page.",
+        "The hero section layout remains intact and visually coherent after the canvas is removed.",
+        "All animation-related JavaScript/canvas code in HeroSection.tsx is cleaned up."
       ]
     }
   ],
   "constraints": [
-    "Do not modify files listed in frontend.immutablePaths.",
-    "Only modify the selected elements identified by the provided XPath expressions and their immediate container in HeroSection.tsx.",
-    "Use the same logo asset already referenced in Navbar.tsx — do not introduce a new asset."
+    "Do not modify files listed under frontend.immutablePaths.",
+    "Only update the specified elements — do not alter other hero section content or unrelated components."
   ],
   "nonGoals": [
-    "Redesigning the overall hero section layout.",
-    "Changing the styled appearance (colors, fonts, effects) of the 'Legend', 'X', 'Arena' elements.",
-    "Modifying the Footer or Navbar brand name elements."
+    "Reverting the frontend to Version 44.",
+    "Changing any backend logic or data models.",
+    "Modifying the Navbar or Footer components.",
+    "Altering the 'Legend X Arena' brand name styling or centering already implemented."
   ],
   "imageRequirements": {
     "required": [],

@@ -27,6 +27,22 @@ export default function NewsSection() {
           <p className="mt-4 font-body text-esports-gray max-w-xl">
             Stay up to date with the latest news, tournament results, and team announcements from Legend X Esports.
           </p>
+
+          {/* Tournament CTA */}
+          <div className="flex flex-wrap gap-4 mt-8">
+            <a
+              href="#roster"
+              className="btn-glow px-8 py-3 text-sm font-bold tracking-wider uppercase rounded"
+            >
+              Join Now
+            </a>
+            <a
+              href="#roster"
+              className="px-8 py-3 text-sm font-bold tracking-wider uppercase rounded border border-esports-red text-esports-red hover:bg-esports-red hover:text-white transition-colors duration-200"
+            >
+              For Tournament
+            </a>
+          </div>
         </div>
 
         {/* Loading State */}

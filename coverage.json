@@ -1,29 +1,40 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-03-02T23:38:52.172Z",
+  "generatedAt": "2026-03-02T23:47:19.735Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 2,
-    "implemented": 2,
+    "total": 3,
+    "implemented": 3,
     "items": [
       {
-        "id": "REQ-3",
-        "summary": "Center the three styled brand name elements ('Legend', 'X', 'Arena') displayed in the hero section (the h1 elements at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[2]/h1[1], h1[2], and h1[3]) so they are horizontally centered on the page instead of left-aligned.",
+        "id": "REQ-5",
+        "summary": "In the 'Meet the Team' (Roster) section, change the section heading text to 'Meet With LEGEND'.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/HeroSection.tsx"
+          "frontend/src/components/RosterSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/HeroSection.tsx"
+          "frontend/src/components/RosterSection.tsx"
         ]
       },
       {
-        "id": "REQ-4",
-        "summary": "In the left side top area of the hero section, remove the duplicate 'Legend X Arena' text labels (the second occurrence of the brand name) and replace them with the original logo image asset (the same logo used in the Navbar).",
+        "id": "REQ-6",
+        "summary": "In the News section, change the call-to-action button or label text to read 'Join Now' on the first line and 'For Tournament' on the second line (or as two distinct styled lines). This targets the two anchor/button elements at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[3]/a[1] and /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[3]/a[2].",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/NewsSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/NewsSection.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Remove the gun/shooting canvas animation from the hero section. The canvas element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[2]/div[1]/canvas[1] renders a shooting animation (drawn arm, gun, bullets, shell casings, muzzle flash, recoil effects) — remove this entire animation and its associated canvas element, animation logic, and related code from HeroSection.tsx.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/HeroSection.tsx"
@@ -40,6 +51,8 @@
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
     "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/NewsSection.tsx",
+    "frontend/src/components/RosterSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

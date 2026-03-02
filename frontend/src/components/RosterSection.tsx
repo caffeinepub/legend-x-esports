@@ -22,7 +22,7 @@ export default function RosterSection() {
             <span className="font-heading text-xs tracking-widest uppercase text-esports-gold">Meet Up</span>
           </div>
           <h2 className="font-display text-5xl sm:text-6xl md:text-7xl text-foreground leading-none">
-            How to Meet the <span className="text-esports-gold">LEGEND</span>👇
+            Meet With <span className="text-esports-gold">LEGEND</span>
           </h2>
           <p className="mt-4 font-body text-esports-gray max-w-xl">
             If you want to contact the LEGEND, you can reach out via social media like YouTube or TikTok, and they will send you their WhatsApp number there. Thank you.

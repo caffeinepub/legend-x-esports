@@ -1,11 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Center the hero section's brand name elements and replace duplicate brand text in the top-left area with the logo image.
+**Goal:** Update specific text labels and remove the gun animation from the Legend X Arena frontend.
 
 **Planned changes:**
-- Center the three styled h1 brand name elements ('Legend', 'X', 'Arena') horizontally in the hero section, consistently across all screen sizes.
-- Remove the duplicate 'Legend X Arena' text labels from the top-left area of the hero section.
-- Replace the removed duplicate text with the same logo image asset already used in the Navbar.
+- Change the "Meet the Team" (Roster) section heading to "Meet With LEGEND"
+- Update the News section CTA links to display "Join Now" (first link) and "For Tournament" (second link)
+- Remove the gun/shooting canvas animation, its canvas element, and all related animation logic from HeroSection.tsx
 
-**User-visible outcome:** The hero section brand name elements are centered on the page, and the top-left area shows the logo instead of duplicate brand text.
+**User-visible outcome:** The Roster section shows the updated heading, the News section shows the new CTA text, and the hero section no longer displays any gun or shooting animation.

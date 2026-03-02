@@ -1,36 +1,53 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Center hero text elements and replace duplicate brand text with logo",
+  "title": "Update Meet the Team heading, News section CTA text, and remove gun animation",
   "requirements": [
     {
-      "id": "REQ-3",
-      "summary": "Center the three styled brand name elements ('Legend', 'X', 'Arena') in the hero section horizontally on the page",
+      "id": "REQ-5",
+      "summary": "Change the 'Meet the Team' section heading to 'Meet With LEGEND' in the Roster section",
       "acceptanceCriteria": [
-        "The three h1 brand name elements in the hero section are centered horizontally.",
-        "Centering applies consistently on all screen sizes."
+        "The Roster/Meet the Team section heading displays 'Meet With LEGEND' instead of the previous heading text.",
+        "The heading styling remains consistent with the esports visual theme."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/HeroSection.tsx",
+          "path": "frontend/src/components/RosterSection.tsx",
           "operation": "modify",
-          "description": "Locate the container div holding the three h1 elements ('Legend', 'X', 'Arena') in the hero section and update its styling to center its children horizontally. Add flex centering classes (such as 'flex justify-center' or 'text-center') to the parent container so the brand name elements are centered instead of left-aligned. Ensure the centering is responsive across all screen sizes."
+          "description": "Update the section heading text from the current roster heading to 'Meet With LEGEND'. Preserve all existing styling classes and structure."
         }
       ]
     },
     {
-      "id": "REQ-4",
-      "summary": "Remove duplicate 'Legend X Arena' text labels in the top-left area of the hero section and replace with the original logo image",
+      "id": "REQ-6",
+      "summary": "Update News section CTA button text to display 'Join Now' and 'For Tournament'",
       "acceptanceCriteria": [
-        "The duplicate 'Legend', 'X', 'Arena' text shown in the top-left area of the hero section is removed.",
-        "The original logo image (as used in the Navbar) is displayed in its place.",
-        "No duplicate brand text labels appear anywhere in the hero section's top-left area."
+        "The News section displays a CTA element with 'Join Now' and 'For Tournament' as the text content.",
+        "The two link elements at the specified XPaths are updated to show 'Join Now' and 'For Tournament' respectively.",
+        "The styling remains consistent with the esports visual theme."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/NewsSection.tsx",
+          "operation": "modify",
+          "description": "Locate the two anchor/button elements in the News section (matching XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[3]/a[1] and a[2]). Update the first element's text content to 'Join Now' and the second element's text content to 'For Tournament'. Maintain existing styling and layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Remove the gun/shooting canvas animation and all related code from the hero section",
+      "acceptanceCriteria": [
+        "The canvas element for the gun/shooting animation is no longer present in the hero section.",
+        "No gun, arm, bullet, shell casing, muzzle flash, or recoil animation renders anywhere on the page.",
+        "The hero section layout remains intact and visually coherent after the canvas is removed.",
+        "All animation-related JavaScript/canvas code in HeroSection.tsx is cleaned up."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Identify and remove the duplicate 'Legend X Arena' text labels (the second occurrence of brand name elements) appearing in the top-left area of the hero section. Replace them with an img element that references the same logo asset used in Navbar.tsx. Use the workspace file path 'frontend/public/assets/generated/legend-x-logo.dim_512x512.png' for the logo src. Apply appropriate sizing and positioning to match the visual hierarchy of the hero section's top-left area."
+          "description": "Remove the entire canvas element and all associated shooting animation logic from HeroSection.tsx. This includes: the canvas element itself (matching XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[2]/div[1]/canvas[1]), all useEffect/useRef hooks managing the animation, all drawing logic for the arm, gun, bullets, shell casings, muzzle flash, and recoil effects, and any related state or variables. Ensure the hero section layout remains visually coherent and intact after removal."
         }
       ]
     }
