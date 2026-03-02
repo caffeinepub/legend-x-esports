@@ -1,29 +1,23 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "User wants to remove some text and replace it with a unique animated button in yellow/red shades.",
+  "summary": "Project with a button that says 'Join Now For Tournament'",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-in-herosection-tsx-locate-the-second-anchor-button-element-inside-the-cta-buttons-container-matching-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-2-a-2-remove-its-existing-text-content-and-replace-it-with-a-visually-unique-animated-button-styled-in-yellow-and-red-shades-the-button-should-feature-a-gradient-background-blending-yellow-ffd700-amber-and-red-ef4444-rose-tones-a-pulsing-or-glowing-animation-e-g-pulse-glow-shimmer-sweep-or-fire-flicker-effect-using-tailwind-keyframes-or-inline-css-animations-a-unique-shape-or-border-treatment-e-g-angled-clip-path-flame-style-border-or-animated-border-dash-and-bold-uppercase-label-text-e-g-join-now-or-enlist-the-button-must-stand-out-from-existing-cta-buttons-on-the-page",
-      "title": "In HeroSection.tsx, locate the second anchor/button element inside the CTA buttons container (matching XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]). Remove its existing text content and replace it with a visually unique animated button styled in yellow and red shades. The button should feature: a gradient background blending yellow (#FFD700 / amber) and red (#EF4444 / rose) tones, a pulsing or glowing animation (e.g., pulse glow, shimmer sweep, or fire-flicker effect using Tailwind keyframes or inline CSS animations), a unique shape or border treatment (e.g., angled clip-path, flame-style border, or animated border-dash), and bold uppercase label text (e.g., 'JOIN NOW' or 'ENLIST'). The button must stand out from existing CTA buttons on the page.",
+      "id": "feature-in-herosection-tsx-update-the-text-of-the-second-cta-button-the-animated-join-now-fire-style-button-so-that-it-reads-join-now-for-tournament-the-element-is-identified-by-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-2-a-2-span-4-span-1-only-the-visible-label-text-should-change-all-existing-animations-styles-and-structure-must-remain-intact",
+      "title": "In HeroSection.tsx, update the text of the second CTA button (the animated 'Join Now' fire-style button) so that it reads 'Join Now For Tournament'. The element is identified by XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4]/span[1]. Only the visible label text should change; all existing animations, styles, and structure must remain intact.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Remove existing text and add a unique animated button with yellow and red shades",
-      "reqIds": [],
-      "status": "pending"
-    }
-  ],
-  "projectName": "Legend X Esports",
+  "new_feature_requests": [],
+  "gameProjectType": "none",
+  "projectName": "Update CTA button text to 'Join Now For Tournament'",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

@@ -1,39 +1,33 @@
 {
   "kind": "build_request",
-  "title": "Replace text with unique animated yellow/red button in HeroSection",
-  "projectName": "Legend X Esports",
+  "title": "Update CTA button text to 'Join Now For Tournament'",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "In HeroSection.tsx, locate the second anchor/button element inside the CTA buttons container (matching XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]). Remove its existing text content and replace it with a visually unique animated button styled in yellow and red shades. The button should feature: a gradient background blending yellow (#FFD700 / amber) and red (#EF4444 / rose) tones, a pulsing or glowing animation (e.g., pulse glow, shimmer sweep, or fire-flicker effect using Tailwind keyframes or inline CSS animations), a unique shape or border treatment (e.g., angled clip-path, flame-style border, or animated border-dash), and bold uppercase label text (e.g., 'JOIN NOW' or 'ENLIST'). The button must stand out from existing CTA buttons on the page.",
+      "text": "In HeroSection.tsx, update the text of the second CTA button (the animated 'Join Now' fire-style button) so that it reads 'Join Now For Tournament'. The element is identified by XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4]/span[1]. Only the visible label text should change; all existing animations, styles, and structure must remain intact.",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-recent"
         ],
         "quotes": [
-          "Is text ko remove kar ke aik button bnao yellow or red shade me ho or animation Bhi ho or unique sa Bhi ho"
+          "Join Now\nFor Tournament\nYe likho"
         ]
       },
       "acceptanceCriteria": [
-        "The original text content of the second CTA anchor at the specified XPath is removed.",
-        "A new button/anchor element is rendered in its place with a yellow-to-red gradient background.",
-        "The button has a continuous CSS animation (glow, pulse, shimmer, or flicker effect).",
-        "The button has a visually distinct style (border, shape, or effect) that differentiates it from other buttons on the page.",
-        "The button displays a short uppercase English label (e.g., 'JOIN NOW' or 'ENLIST').",
-        "The button remains fully clickable and preserves its original href/link target."
+        "The animated CTA button in HeroSection displays the text 'Join Now For Tournament'.",
+        "All existing fire-style animations, colors, and button structure remain unchanged.",
+        "No other buttons or text elements are affected."
       ]
     }
   ],
   "constraints": [
-    "Only modify the second anchor element inside the hero CTA container matching the specified XPath — do not alter other buttons or sections.",
-    "Do not edit any files under frontend/src/hooks/ or frontend/src/components/ui."
+    "Only modify the label text of the targeted button element; do not alter its animations, styles, or surrounding markup."
   ],
   "nonGoals": [
-    "Redesigning other sections of the hero or landing page.",
-    "Adding new backend functionality.",
-    "Changing the button's navigation target or link."
+    "Changing button styling, colors, or animations.",
+    "Modifying any other buttons or sections on the page."
   ],
   "imageRequirements": {
     "required": [],

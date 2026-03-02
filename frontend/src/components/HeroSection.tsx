@@ -104,7 +104,7 @@ export default function HeroSection() {
                 className="animate-flame-flicker"
                 style={{ filter: 'drop-shadow(0 0 4px #FF4500)' }}
               />
-              <span style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>JOIN NOW</span>
+              <span style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>JOIN NOW FOR TOURNAMENT</span>
               <Flame
                 size={16}
                 className="animate-flame-flicker"

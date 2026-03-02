@@ -1,29 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace text with unique animated yellow/red button in HeroSection",
+  "title": "Update CTA button text to 'Join Now For Tournament'",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the second CTA button text in HeroSection with a visually unique animated button featuring yellow-to-red gradient, pulsing/glowing animation, and distinctive styling",
+      "summary": "Update the animated 'Join Now' CTA button text in HeroSection to read 'Join Now For Tournament'",
       "acceptanceCriteria": [
-        "The original text content of the second CTA anchor at the specified XPath is removed.",
-        "A new button/anchor element is rendered in its place with a yellow-to-red gradient background.",
-        "The button has a continuous CSS animation (glow, pulse, shimmer, or flicker effect).",
-        "The button has a visually distinct style (border, shape, or effect) that differentiates it from other buttons on the page.",
-        "The button displays a short uppercase English label (e.g., 'JOIN NOW' or 'ENLIST').",
-        "The button remains fully clickable and preserves its original href/link target."
+        "The animated CTA button in HeroSection displays the text 'Join Now For Tournament'.",
+        "All existing fire-style animations, colors, and button structure remain unchanged.",
+        "No other buttons or text elements are affected."
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Locate the second anchor element inside the CTA buttons container (matching XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]). Remove its existing text content and replace it with a new button featuring: (1) a gradient background blending yellow (#FFD700/amber-400) and red (#EF4444/rose-500) tones using Tailwind's bg-gradient-to-r, (2) a pulsing glow animation defined via Tailwind animate-pulse or a custom keyframe in tailwind.config.js (e.g., 'fire-glow' with box-shadow changes), (3) a unique visual treatment such as an angled clip-path, flame-style border-image, or animated border using before/after pseudo-elements, and (4) bold uppercase label text (e.g., 'JOIN NOW' or 'ENLIST'). Ensure the button preserves its original href/link target and remains fully clickable."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Add a custom keyframe animation for the unique button effect (e.g., 'fire-glow' pulsing box-shadow in yellow/red hues, or 'shimmer-sweep' translating a gradient overlay). Register the animation in the theme.extend.animation and theme.extend.keyframes sections so it can be applied via Tailwind classes in HeroSection.tsx."
+          "description": "Update the text content of the second CTA button (the animated 'Join Now' fire-style button) to read 'Join Now For Tournament'. Locate the button element that currently displays 'Join Now' with fire-style animations and change only its visible label text while preserving all existing animations, styles, classes, and markup structure."
         }
       ]
     }
