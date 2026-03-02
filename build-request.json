@@ -1,73 +1,36 @@
 {
   "kind": "build_request",
-  "title": "Enlarge 'Join Now For Tournament' text, resize animated boy, and shrink boards",
-  "projectName": "Legend X Esports",
-  "priority": "normal",
+  "title": "Revert all settings to Version 44",
+  "priority": "high",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Enlarge and bold the 'Join Now For Tournament' button text. The element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4] should have a noticeably larger font size (e.g., increase by at least one to two size steps) and heavier font weight so the call-to-action label is more prominent.",
+      "text": "Fully revert the entire frontend to its Version 44 state — restore all component styles, animations, CSS custom properties, Tailwind configuration, and layout settings exactly as they were in Version 44, undoing any changes introduced in Version 45 or Version 46.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-1"
         ],
         "quotes": [
-          "Join Now For Tournament Wala Thora SA Bhara kro text ko"
+          "44 wala version wala kar Pagal sari setting kyun Kharab kardi Tum ne"
         ]
       },
       "acceptanceCriteria": [
-        "The 'Join Now For Tournament' span text is visibly larger and bolder than before.",
-        "The button still renders correctly on mobile and desktop without overflow or layout breakage."
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Reduce the size of the animated shooting boy character in HeroSection. Scale down the SVG boy element (decrease its width/height or transform scale) so it occupies less vertical and horizontal space in the hero scene while keeping the animation intact.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "animation wala boy"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The animated boy character is visibly smaller than the current version.",
-        "All CSS keyframe animations (shooting, firing) continue to play correctly on the smaller character.",
-        "The hero layout remains balanced and the character does not overlap other elements."
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Shrink the target board(s) in the HeroSection shooting animation. Reduce the width and height of the board SVG element(s) so they appear noticeably smaller within the scene.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "aik board ko chota chota kro"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The target board(s) are visibly smaller than the current version.",
-        "The shooting animation still targets the board correctly after the resize.",
-        "No visual artifacts or misalignment in the hero scene after scaling down the board."
+        "All frontend components (HeroSection, Navbar, AboutSection, RosterSection, NewsSection, Footer, etc.) match Version 44 exactly.",
+        "CSS custom properties in index.css and src/index.css match Version 44 values.",
+        "Tailwind configuration in tailwind.config.js matches Version 44 values.",
+        "HeroSection shooting animation is identical to Version 44.",
+        "No visual or behavioral differences remain from any post-Version-44 changes."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/hooks/ (immutable paths).",
-    "Do not alter the shooting animation logic or keyframes — only resize/scale the involved SVG elements.",
-    "Apply changes only to the identified element and HeroSection component; do not affect other sections."
+    "Do not modify any backend files.",
+    "Do not modify immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui."
   ],
   "nonGoals": [
-    "Redesigning the overall hero section layout.",
-    "Changing colors or theme of the hero animation.",
-    "Adding new animation sequences or characters.",
-    "Modifying backend logic."
+    "Introducing any new features or changes beyond restoring Version 44 state.",
+    "Modifying backend logic or data models."
   ],
   "imageRequirements": {
     "required": [],

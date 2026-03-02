@@ -1,11 +1,13 @@
 # Specification
 
 ## Summary
-**Goal:** Adjust sizing of key visual elements in the HeroSection — enlarge the "Join Now For Tournament" button text, shrink the animated shooting boy character, and reduce the size of the target board(s).
+**Goal:** Fully revert the frontend to its Version 44 state, undoing all changes introduced in Version 45 and Version 46.
 
 **Planned changes:**
-- Increase font size (by 1–2 size steps) and font weight of the "Join Now For Tournament" button span text to make it more prominent
-- Scale down the animated shooting boy SVG element in HeroSection while keeping all keyframe animations intact
-- Reduce the width and height of the target board SVG element(s) in the HeroSection shooting animation
+- Restore all frontend component styles and layouts (HeroSection, Navbar, AboutSection, RosterSection, NewsSection, Footer, etc.) to match Version 44 exactly
+- Revert CSS custom properties in index.css to Version 44 values
+- Revert Tailwind configuration in tailwind.config.js to Version 44 values
+- Restore HeroSection shooting animation to its Version 44 state
+- Remove any visual or behavioral differences introduced after Version 44
 
-**User-visible outcome:** The hero section call-to-action text is larger and bolder, the animated boy character appears smaller, and the target boards are noticeably reduced in size — all without breaking the shooting animation or overall layout.
+**User-visible outcome:** The frontend looks and behaves exactly as it did in Version 44, with no remnants of Version 45 or Version 46 changes.

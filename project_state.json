@@ -1,61 +1,22 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Game/app project with animated character, tournament UI, and interactive boards. User is refining UI elements: enlarging 'Join Now For Tournament' text, adjusting the animated boy character size, and making boards smaller.",
-  "architectural_notes": [
-    "Project includes animated character with dual-hand firing animation",
-    "UI contains tournament join section with text and decorative boards"
-  ],
+  "summary": "New project",
+  "architectural_notes": [],
   "known_issues": [],
-  "isFixRequest": false,
-  "existing_features": [
-    {
-      "id": "feature-enlarge-and-bold-the-join-now-for-tournament-button-text-the-element-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-2-a-2-span-4-should-have-a-noticeably-larger-font-size-e-g-increase-by-at-least-one-to-two-size-steps-and-heavier-font-weight-so-the-call-to-action-label-is-more-prominent",
-      "title": "Enlarge and bold the 'Join Now For Tournament' button text. The element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4] should have a noticeably larger font size (e.g., increase by at least one to two size steps) and heavier font weight so the call-to-action label is more prominent.",
-      "reqIds": [
-        "REQ-1"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-reduce-the-size-of-the-animated-shooting-boy-character-in-herosection-scale-down-the-svg-boy-element-decrease-its-width-height-or-transform-scale-so-it-occupies-less-vertical-and-horizontal-space-in-the-hero-scene-while-keeping-the-animation-intact",
-      "title": "Reduce the size of the animated shooting boy character in HeroSection. Scale down the SVG boy element (decrease its width/height or transform scale) so it occupies less vertical and horizontal space in the hero scene while keeping the animation intact.",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-shrink-the-target-board-s-in-the-herosection-shooting-animation-reduce-the-width-and-height-of-the-board-svg-element-s-so-they-appear-noticeably-smaller-within-the-scene",
-      "title": "Shrink the target board(s) in the HeroSection shooting animation. Reduce the width and height of the board SVG element(s) so they appear noticeably smaller within the scene.",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    }
-  ],
+  "isFixRequest": true,
+  "existing_features": [],
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Make 'Join Now For Tournament' text larger/bolder",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Resize animated boy character to be smaller",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "Make boards smaller in size",
-      "reqIds": [],
+      "summary": "Fully revert the entire frontend to its Version 44 state — restore all component styles, animations, CSS custom properties, Tailwind configuration, and layout settings exactly as they were in Version 44, undoing any changes introduced in Version 45 or Version 46.",
+      "reqIds": [
+        "REQ-1"
+      ],
       "status": "pending"
     }
   ],
-  "gameProjectType": "2d",
-  "projectName": "Legend X Esports",
+  "projectName": "Revert all settings to Version 44",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

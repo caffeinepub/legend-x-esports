@@ -1,52 +1,93 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Enlarge 'Join Now For Tournament' text, resize animated boy, and shrink boards",
+  "title": "Revert all settings to Version 44",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Enlarge and bold the 'Join Now For Tournament' button text to make the call-to-action more prominent",
+      "summary": "Fully revert the entire frontend to its Version 44 state — restore all component styles, animations, CSS custom properties, Tailwind configuration, and layout settings exactly as they were in Version 44",
       "acceptanceCriteria": [
-        "The 'Join Now For Tournament' span text is visibly larger and bolder than before.",
-        "The button still renders correctly on mobile and desktop without overflow or layout breakage."
+        "All frontend components (HeroSection, Navbar, AboutSection, RosterSection, NewsSection, Footer, etc.) match Version 44 exactly.",
+        "CSS custom properties in index.css and src/index.css match Version 44 values.",
+        "Tailwind configuration in tailwind.config.js matches Version 44 values.",
+        "HeroSection shooting animation is identical to Version 44.",
+        "No visual or behavioral differences remain from any post-Version-44 changes."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/HeroSection.tsx",
+          "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Locate the 'Join Now For Tournament' button text element (matching XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]/span[4]) and increase its font size by at least one to two Tailwind size steps (e.g., from text-base to text-lg or text-xl) and apply a heavier font weight class (e.g., font-bold or font-extrabold). Ensure the parent button container can accommodate the larger text without overflow on mobile viewports."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Reduce the size of the animated shooting boy character in HeroSection while preserving all animations",
-      "acceptanceCriteria": [
-        "The animated boy character is visibly smaller than the current version.",
-        "All CSS keyframe animations (shooting, firing) continue to play correctly on the smaller character.",
-        "The hero layout remains balanced and the character does not overlap other elements."
-      ],
-      "file_operations": [
+          "description": "Restore all CSS custom properties, Tailwind imports, utility classes, and design system tokens to their exact Version 44 values, including color definitions, typography, glow effects, and esports-themed styling."
+        },
+        {
+          "path": "frontend/index.css",
+          "operation": "modify",
+          "description": "Restore the Tailwind base CSS file to Version 44 state, ensuring all OKLCH-based CSS custom properties for light and dark themes match Version 44 exactly, covering background, foreground, card, sidebar, chart, and destructive color tokens."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Restore the Tailwind configuration to Version 44 state, including all theme extensions for esports-specific color tokens, custom fonts, box shadows, border radii, and animation keyframes using oklch color values."
+        },
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Scale down the animated shooting boy SVG element by reducing its width and height attributes or applying a CSS transform scale. Adjust the SVG dimensions (e.g., reduce from current size by 20-30%) or apply a scale transform (e.g., scale(0.7)) to the boy's container. Verify that the shooting and firing CSS keyframe animations defined in the component still apply correctly to the resized element without visual artifacts."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Shrink the target board(s) in the HeroSection shooting animation scene",
-      "acceptanceCriteria": [
-        "The target board(s) are visibly smaller than the current version.",
-        "The shooting animation still targets the board correctly after the resize.",
-        "No visual artifacts or misalignment in the hero scene after scaling down the board."
-      ],
-      "file_operations": [
+          "description": "Restore the HeroSection component to Version 44 state, ensuring the looping SVG shooting animation with burst sequences, muzzle flashes, and bullet keyframe animations matches Version 44 exactly, including all animation timings, SVG paths, and styling."
+        },
         {
-          "path": "frontend/src/components/HeroSection.tsx",
+          "path": "frontend/src/components/Navbar.tsx",
           "operation": "modify",
-          "description": "Locate the target board SVG element(s) in the shooting animation scene and reduce their width and height attributes. Scale down the board dimensions (e.g., reduce by 20-30% from current size) while ensuring the animated projectile still visually aligns with the board target. Test that the overall hero composition remains balanced after the board resize."
+          "description": "Restore the Navbar component to Version 44 state, including scroll-aware styling, desktop nav links, CTA button styling, and mobile menu behavior exactly as it was in Version 44."
+        },
+        {
+          "path": "frontend/src/components/AboutSection.tsx",
+          "operation": "modify",
+          "description": "Restore the AboutSection component to Version 44 state, including team mission text layout, clipped profile image panel, decorative accents, and four-card values grid (Discipline, Excellence, Victory, Brotherhood) with exact Version 44 styling."
+        },
+        {
+          "path": "frontend/src/components/RosterSection.tsx",
+          "operation": "modify",
+          "description": "Restore the RosterSection component to Version 44 state, including grid layout, loading/error/empty states, and PlayerCard rendering with exact Version 44 styling and animations."
+        },
+        {
+          "path": "frontend/src/components/NewsSection.tsx",
+          "operation": "modify",
+          "description": "Restore the NewsSection component to Version 44 state, including announcement fetching, loading skeletons, error handling, empty states, and AnnouncementCard grid layout with exact Version 44 styling."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Restore the Footer component to Version 44 state, including branding layout, social media links, quick navigation links, and all styling elements exactly as they were in Version 44."
+        },
+        {
+          "path": "frontend/src/components/PlayerCard.tsx",
+          "operation": "modify",
+          "description": "Restore the PlayerCard component to Version 44 state, including avatar image rendering, role badge styling, player name display, hover effects, and fallback avatar handling with exact Version 44 styling."
+        },
+        {
+          "path": "frontend/src/components/AnnouncementCard.tsx",
+          "operation": "modify",
+          "description": "Restore the AnnouncementCard component to Version 44 state, including card layout, title/body display, timestamp formatting, and hover effects with exact Version 44 styling."
+        },
+        {
+          "path": "frontend/src/components/PWAInstallBanner.tsx",
+          "operation": "modify",
+          "description": "Restore the PWAInstallBanner component to Version 44 state, including banner positioning, prompt handling, iOS fallback instructions, and all styling exactly as it was in Version 44."
+        },
+        {
+          "path": "frontend/src/components/AdminPanel.tsx",
+          "operation": "modify",
+          "description": "Restore the AdminPanel component to Version 44 state, including floating widget positioning, tabbed UI layout, roster/announcement management forms, and all styling exactly as it was in Version 44."
+        },
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Restore the LandingPage component to Version 44 state, ensuring the composition and layout of Hero, About, Roster, News, and Footer sections matches Version 44 exactly."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Restore the App root component to Version 44 state, ensuring the composition of PWAInstallBanner, Navbar, LandingPage, and AdminPanel matches Version 44 layout and styling exactly."
         }
       ]
     }
