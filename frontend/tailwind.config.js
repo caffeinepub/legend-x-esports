@@ -118,7 +118,31 @@ export default {
         'fade-in': {
           from: { opacity: '0' },
           to: { opacity: '1' }
-        }
+        },
+        // Fire button animations
+        'fire-shift': {
+          '0%':   { backgroundPosition: '0% 50%' },
+          '50%':  { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+        'shimmer-sweep': {
+          '0%':   { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        'fire-ring': {
+          '0%, 100%': {
+            boxShadow: '0 0 0 2px #FFD700, 0 0 14px 3px #FF4500, 0 0 30px 6px rgba(255,69,0,0.3)',
+          },
+          '50%': {
+            boxShadow: '0 0 0 2px #FF8C00, 0 0 28px 8px #FF4500, 0 0 55px 14px rgba(255,69,0,0.55)',
+          },
+        },
+        'flame-flicker': {
+          '0%, 100%': { transform: 'scaleY(1) rotate(-4deg)', opacity: '1' },
+          '25%':       { transform: 'scaleY(1.15) rotate(3deg)', opacity: '0.85' },
+          '50%':       { transform: 'scaleY(0.9) rotate(-6deg)', opacity: '1' },
+          '75%':       { transform: 'scaleY(1.1) rotate(5deg)', opacity: '0.9' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -126,6 +150,11 @@ export default {
         'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
         'slide-up': 'slide-up 0.5s ease-out',
         'fade-in': 'fade-in 0.4s ease-out',
+        // Fire button
+        'fire-shift':    'fire-shift 2.4s ease-in-out infinite',
+        'shimmer-sweep': 'shimmer-sweep 2s linear infinite',
+        'fire-ring':     'fire-ring 1.6s ease-in-out infinite',
+        'flame-flicker': 'flame-flicker 0.7s ease-in-out infinite',
       }
     }
   },

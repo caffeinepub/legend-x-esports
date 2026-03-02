@@ -1,36 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Update footer link text to 'Dollars.ai'",
-  "projectName": "Dollars.ai",
+  "title": "Replace text with unique animated yellow/red button in HeroSection",
+  "projectName": "Legend X Esports",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "In Footer.tsx, locate the anchor element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/footer[1]/div[3]/div[2]/p[2]/a[1] and update its visible text content to 'Dollars.ai'.",
+      "text": "In HeroSection.tsx, locate the second anchor/button element inside the CTA buttons container (matching XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]). Remove its existing text content and replace it with a visually unique animated button styled in yellow and red shades. The button should feature: a gradient background blending yellow (#FFD700 / amber) and red (#EF4444 / rose) tones, a pulsing or glowing animation (e.g., pulse glow, shimmer sweep, or fire-flicker effect using Tailwind keyframes or inline CSS animations), a unique shape or border treatment (e.g., angled clip-path, flame-style border, or animated border-dash), and bold uppercase label text (e.g., 'JOIN NOW' or 'ENLIST'). The button must stand out from existing CTA buttons on the page.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-recent"
         ],
         "quotes": [
-          "Dollars.ai"
+          "Is text ko remove kar ke aik button bnao yellow or red shade me ho or animation Bhi ho or unique sa Bhi ho"
         ]
       },
       "acceptanceCriteria": [
-        "The footer anchor element previously showing 'Dollars 💵' or similar text now displays 'Dollars.ai'.",
-        "The link's href and styling remain unchanged.",
-        "No other footer elements are modified."
+        "The original text content of the second CTA anchor at the specified XPath is removed.",
+        "A new button/anchor element is rendered in its place with a yellow-to-red gradient background.",
+        "The button has a continuous CSS animation (glow, pulse, shimmer, or flicker effect).",
+        "The button has a visually distinct style (border, shape, or effect) that differentiates it from other buttons on the page.",
+        "The button displays a short uppercase English label (e.g., 'JOIN NOW' or 'ENLIST').",
+        "The button remains fully clickable and preserves its original href/link target."
       ]
     }
   ],
   "constraints": [
-    "Only the anchor element at the specified XPath in Footer.tsx should be changed.",
-    "Do not alter any other footer content, links, or layout."
+    "Only modify the second anchor element inside the hero CTA container matching the specified XPath — do not alter other buttons or sections.",
+    "Do not edit any files under frontend/src/hooks/ or frontend/src/components/ui."
   ],
   "nonGoals": [
-    "Changing the app name or branding elsewhere in the project.",
-    "Modifying backend logic.",
-    "Updating any other footer links or navigation items."
+    "Redesigning other sections of the hero or landing page.",
+    "Adding new backend functionality.",
+    "Changing the button's navigation target or link."
   ],
   "imageRequirements": {
     "required": [],

@@ -1,4 +1,4 @@
-import { ChevronDown, Zap } from 'lucide-react';
+import { ChevronDown, Flame, Zap } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -69,8 +69,48 @@ export default function HeroSection() {
           <a href="#roster" className="btn-primary text-sm">
             How to Meet the Legend
           </a>
-          <a href="#about" className="btn-outline text-sm">
-            Our Story
+
+          {/* Unique Fire Button */}
+          <a
+            href="#about"
+            className="fire-btn group relative inline-flex items-center gap-2 px-7 py-3 font-heading text-sm tracking-widest uppercase font-bold text-esports-dark overflow-hidden"
+            style={{ clipPath: 'polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)' }}
+          >
+            {/* Animated gradient background */}
+            <span
+              className="absolute inset-0 animate-fire-shift"
+              style={{
+                background: 'linear-gradient(135deg, #FFD700 0%, #FF8C00 35%, #EF4444 65%, #FFD700 100%)',
+                backgroundSize: '200% 200%',
+              }}
+            />
+            {/* Shimmer sweep overlay */}
+            <span className="absolute inset-0 animate-shimmer-sweep opacity-40"
+              style={{
+                background: 'linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.55) 50%, transparent 70%)',
+                backgroundSize: '200% 100%',
+              }}
+            />
+            {/* Outer glow ring */}
+            <span className="absolute inset-0 animate-fire-ring rounded-none"
+              style={{
+                boxShadow: '0 0 0 2px #FFD700, 0 0 18px 4px #FF4500, 0 0 40px 8px rgba(255,69,0,0.35)',
+              }}
+            />
+            {/* Content */}
+            <span className="relative z-10 flex items-center gap-2">
+              <Flame
+                size={16}
+                className="animate-flame-flicker"
+                style={{ filter: 'drop-shadow(0 0 4px #FF4500)' }}
+              />
+              <span style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>JOIN NOW</span>
+              <Flame
+                size={16}
+                className="animate-flame-flicker"
+                style={{ filter: 'drop-shadow(0 0 4px #FF4500)', animationDelay: '0.3s' }}
+              />
+            </span>
           </a>
         </div>
 

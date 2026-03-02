@@ -1,23 +1,29 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "A project named Dollars.ai is being developed, currently working on icon design with 'Dollars 💵' text display.",
+  "summary": "User wants to remove some text and replace it with a unique animated button in yellow/red shades.",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-in-footer-tsx-locate-the-anchor-element-at-xpath-html-1-body-1-div-1-div-1-main-1-footer-1-div-3-div-2-p-2-a-1-and-update-its-visible-text-content-to-dollars-ai",
-      "title": "In Footer.tsx, locate the anchor element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/footer[1]/div[3]/div[2]/p[2]/a[1] and update its visible text content to 'Dollars.ai'.",
+      "id": "feature-in-herosection-tsx-locate-the-second-anchor-button-element-inside-the-cta-buttons-container-matching-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-7-div-2-a-2-remove-its-existing-text-content-and-replace-it-with-a-visually-unique-animated-button-styled-in-yellow-and-red-shades-the-button-should-feature-a-gradient-background-blending-yellow-ffd700-amber-and-red-ef4444-rose-tones-a-pulsing-or-glowing-animation-e-g-pulse-glow-shimmer-sweep-or-fire-flicker-effect-using-tailwind-keyframes-or-inline-css-animations-a-unique-shape-or-border-treatment-e-g-angled-clip-path-flame-style-border-or-animated-border-dash-and-bold-uppercase-label-text-e-g-join-now-or-enlist-the-button-must-stand-out-from-existing-cta-buttons-on-the-page",
+      "title": "In HeroSection.tsx, locate the second anchor/button element inside the CTA buttons container (matching XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[7]/div[2]/a[2]). Remove its existing text content and replace it with a visually unique animated button styled in yellow and red shades. The button should feature: a gradient background blending yellow (#FFD700 / amber) and red (#EF4444 / rose) tones, a pulsing or glowing animation (e.g., pulse glow, shimmer sweep, or fire-flicker effect using Tailwind keyframes or inline CSS animations), a unique shape or border treatment (e.g., angled clip-path, flame-style border, or animated border-dash), and bold uppercase label text (e.g., 'JOIN NOW' or 'ENLIST'). The button must stand out from existing CTA buttons on the page.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     }
   ],
-  "new_feature_requests": [],
-  "gameProjectType": "none",
-  "projectName": "Dollars.ai",
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Remove existing text and add a unique animated button with yellow and red shades",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Legend X Esports",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }
