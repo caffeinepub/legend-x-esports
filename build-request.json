@@ -1,73 +1,55 @@
 {
   "kind": "build_request",
-  "title": "Update Meet the Team heading, News section CTA text, and remove gun animation",
+  "title": "Rename 'Latest News' to 'Today News' and reorder Roster above News section",
   "projectName": "Legend X Arena",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-5",
-      "text": "In the 'Meet the Team' (Roster) section, change the section heading text to 'Meet With LEGEND'.",
+      "id": "REQ-8",
+      "text": "In the Latest News section (NewsSection.tsx), change the section heading text from 'Latest News' (or its current label) to 'Today News'.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-1"
         ],
         "quotes": [
-          "Jo meet the team he wahan lilkho :Meet With LEGEND"
+          "letest news wale text par likho: Today News"
         ]
       },
       "acceptanceCriteria": [
-        "The Roster/Meet the Team section heading displays 'Meet With LEGEND' instead of the previous heading text.",
-        "The heading styling remains consistent with the esports visual theme."
+        "The News section heading displays 'Today News' instead of 'Latest News' or any previous label.",
+        "No other text or layout in the News section is affected."
       ]
     },
     {
-      "id": "REQ-6",
-      "text": "In the News section, change the call-to-action button or label text to read 'Join Now' on the first line and 'For Tournament' on the second line (or as two distinct styled lines). This targets the two anchor/button elements at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[3]/a[1] and /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[3]/a[2].",
+      "id": "REQ-9",
+      "text": "In LandingPage.tsx, reorder the sections so that the RosterSection (Meet With LEGEND) is rendered above the NewsSection (Today News). Currently the order is Hero → About → Roster → News → Footer; keep this order but ensure Roster comes before News.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "msg-1"
         ],
         "quotes": [
-          "news wale par likho Join Now For Tournament"
+          "Meet Wale Ko Uper Kro Or News wale ko neeche ko kro aap"
         ]
       },
       "acceptanceCriteria": [
-        "The News section displays a CTA element with 'Join Now' and 'For Tournament' as the text content.",
-        "The two link elements at the specified XPaths are updated to show 'Join Now' and 'For Tournament' respectively.",
-        "The styling remains consistent with the esports visual theme."
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "text": "Remove the gun/shooting canvas animation from the hero section. The canvas element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[2]/div[1]/canvas[1] renders a shooting animation (drawn arm, gun, bullets, shell casings, muzzle flash, recoil effects) — remove this entire animation and its associated canvas element, animation logic, and related code from HeroSection.tsx.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-4"
-        ],
-        "quotes": [
-          "gun wala koi Bhi animation he us ko remove kro"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The canvas element for the gun/shooting animation is no longer present in the hero section.",
-        "No gun, arm, bullet, shell casing, muzzle flash, or recoil animation renders anywhere on the page.",
-        "The hero section layout remains intact and visually coherent after the canvas is removed.",
-        "All animation-related JavaScript/canvas code in HeroSection.tsx is cleaned up."
+        "On the landing page, the 'Meet With LEGEND' roster section appears visually above the 'Today News' section.",
+        "All other sections (Hero, About, Footer) remain in their current positions.",
+        "No content or styling is removed from either section."
       ]
     }
   ],
   "constraints": [
-    "Do not modify files listed under frontend.immutablePaths.",
-    "Only update the specified elements — do not alter other hero section content or unrelated components."
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui/.",
+    "Do not change the 'Meet With LEGEND' heading text already applied to RosterSection — preserve it.",
+    "Do not alter the 'Join Now / For Tournament' CTA button text already applied in the News section."
   ],
   "nonGoals": [
-    "Reverting the frontend to Version 44.",
     "Changing any backend logic or data models.",
-    "Modifying the Navbar or Footer components.",
-    "Altering the 'Legend X Arena' brand name styling or centering already implemented."
+    "Modifying the Hero or About sections.",
+    "Altering the Footer component.",
+    "Changing any styling, colors, or animations beyond what is explicitly requested."
   ],
   "imageRequirements": {
     "required": [],

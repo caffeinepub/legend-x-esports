@@ -19,10 +19,10 @@ export default function NewsSection() {
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-4">
             <div className="h-px flex-1 max-w-12 bg-esports-red" />
-            <span className="font-heading text-xs tracking-widest uppercase text-esports-red">Latest Updates</span>
+            <span className="font-heading text-xs tracking-widest uppercase text-esports-red">Today Updates</span>
           </div>
           <h2 className="font-display text-5xl sm:text-6xl md:text-7xl text-foreground leading-none">
-            NEWS &amp; <span className="text-esports-red">ANNOUNCEMENTS</span>
+            TODAY <span className="text-esports-red">NEWS</span>
           </h2>
           <p className="mt-4 font-body text-esports-gray max-w-xl">
             Stay up to date with the latest news, tournament results, and team announcements from Legend X Esports.

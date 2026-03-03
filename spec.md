@@ -1,11 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Update specific text labels and remove the gun animation from the Legend X Arena frontend.
+**Goal:** Rename the "Latest News" section heading to "Today News" and reorder the landing page so the Roster section appears above the News section.
 
 **Planned changes:**
-- Change the "Meet the Team" (Roster) section heading to "Meet With LEGEND"
-- Update the News section CTA links to display "Join Now" (first link) and "For Tournament" (second link)
-- Remove the gun/shooting canvas animation, its canvas element, and all related animation logic from HeroSection.tsx
+- Change the section heading in `NewsSection.tsx` from "Latest News" to "Today News"
+- In `LandingPage.tsx`, move the `RosterSection` to render above the `NewsSection`
 
-**User-visible outcome:** The Roster section shows the updated heading, the News section shows the new CTA text, and the hero section no longer displays any gun or shooting animation.
+**User-visible outcome:** On the landing page, the "Meet With LEGEND" roster section now appears above the "Today News" section, and the news section heading displays "Today News".

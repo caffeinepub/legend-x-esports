@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
+  "projectStateVersion": 11,
   "summary": "New project",
   "architectural_notes": [],
   "known_issues": [],
@@ -53,6 +53,14 @@
         "REQ-7"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-in-the-latest-news-section-newssection-tsx-change-the-section-heading-text-from-latest-news-or-its-current-label-to-today-news",
+      "title": "In the Latest News section (NewsSection.tsx), change the section heading text from 'Latest News' (or its current label) to 'Today News'.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -98,6 +106,32 @@
       "id": "AR-7",
       "summary": "Remove the gun-related animation that appears after the above text changes.",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "In the 'Meet the Team' section, change the heading text to 'Meet With LEGEND' (already partially done, confirm/re-apply).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "In the Latest News section, change the section heading/label text to 'Today News'.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Reorder sections so that 'Meet the Team' section appears above the 'Latest News' section on the page.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "In LandingPage.tsx, reorder the sections so that the RosterSection (Meet With LEGEND) is rendered above the NewsSection (Today News). Currently the order is Hero → About → Roster → News → Footer; keep this order but ensure Roster comes before News.",
+      "reqIds": [
+        "REQ-9"
+      ],
       "status": "pending"
     }
   ],

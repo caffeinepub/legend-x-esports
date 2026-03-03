@@ -2,27 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-in-the-meet-the-team-roster-section-change-the-section-heading-text-to-meet-with-legend",
-      "featureTitle": "In the 'Meet the Team' (Roster) section, change the section heading text to 'Meet With LEGEND'.",
-      "files": [
-        "frontend/src/components/RosterSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-5"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-in-the-news-section-change-the-call-to-action-button-or-label-text-to-read-join-now-on-the-first-line-and-for-tournament-on-the-second-line-or-as-two-distinct-styled-lines-this-targets-the-two-anchor-button-elements-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-2-div-1-div-1-div-3-a-1-and-html-1-body-1-div-1-div-1-main-1-section-1-div-2-div-1-div-1-div-3-a-2",
-      "featureTitle": "In the News section, change the call-to-action button or label text to read 'Join Now' on the first line and 'For Tournament' on the second line (or as two distinct styled lines). This targets the two anchor/button elements at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[3]/a[1] and /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[1]/div[3]/a[2].",
+      "featureId": "feature-in-the-latest-news-section-newssection-tsx-change-the-section-heading-text-from-latest-news-or-its-current-label-to-today-news",
+      "featureTitle": "In the Latest News section (NewsSection.tsx), change the section heading text from 'Latest News' (or its current label) to 'Today News'.",
       "files": [
         "frontend/src/components/NewsSection.tsx"
       ],
@@ -35,26 +16,7 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-6"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-the-gun-shooting-canvas-animation-from-the-hero-section-the-canvas-element-at-xpath-html-1-body-1-div-1-div-1-main-1-section-1-div-2-div-1-div-2-div-1-canvas-1-renders-a-shooting-animation-drawn-arm-gun-bullets-shell-casings-muzzle-flash-recoil-effects-remove-this-entire-animation-and-its-associated-canvas-element-animation-logic-and-related-code-from-herosection-tsx",
-      "featureTitle": "Remove the gun/shooting canvas animation from the hero section. The canvas element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[1]/div[2]/div[1]/div[2]/div[1]/canvas[1] renders a shooting animation (drawn arm, gun, bullets, shell casings, muzzle flash, recoil effects) — remove this entire animation and its associated canvas element, animation logic, and related code from HeroSection.tsx.",
-      "files": [
-        "frontend/src/components/HeroSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-7"
+        "REQ-8"
       ],
       "confidence": "high"
     }
